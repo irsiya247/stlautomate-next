@@ -1,0 +1,36 @@
+:root {
+  --bg: #0B1120;
+  --panel: rgba(15, 23, 42, 0.55);
+  --stroke: rgba(148, 163, 184, 0.12);
+  --glow: rgba(56, 189, 248, 0.25);
+}
+
+body {
+  background: var(--bg);
+}
+
+/* GLASS PANEL SYSTEM */
+.panel {
+  background: var(--panel);
+  border: 1px solid var(--stroke);
+  border-radius: 16px;
+  backdrop-filter: blur(12px);
+}
+
+/* PRIMARY CTA */
+.cta {
+  background: #38bdf8;
+  color: #0b1120;
+  font-weight: 600;
+  padding: 12px 18px;
+  border-radius: 12px;
+  box-shadow: 0 0 30px var(--glow);
+}
+
+/* SECONDARY CTA */
+.cta-secondary {
+  border: 1px solid var(--stroke);
+  color: #cbd5e1;
+  padding: 12px 18px;
+  border-radius: 12px;
+}
