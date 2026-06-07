@@ -48,7 +48,6 @@ export default function Home() {
 
         {/* VIDEO */}
         <section id="video" className="max-w-4xl mx-auto px-6 mt-20 scroll-mt-24">
-          <div className="text-[11px] tracking-[0.35em] text-sky-400 uppercase mb-4 text-center">See It In Action</div>
           <h2 className="text-2xl font-bold text-center mb-8">Watch how it works in 2 minutes</h2>
           <div className="relative w-full rounded-2xl overflow-hidden border border-slate-800 shadow-2xl" style={{ paddingTop: "56.25%" }}>
             <iframe
