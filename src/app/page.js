@@ -57,6 +57,7 @@ export default function Home() {
               frameBorder="0"
             />
           </div>
+          <p className="text-slate-500 text-sm text-center mt-4">This demo shows an HVAC company. The same system works for dental offices, plumbers, real estate agencies, law firms, and any service business that handles inbound leads.</p>
         </section>
 
         {/* TRUST STATS */}
