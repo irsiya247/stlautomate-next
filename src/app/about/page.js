@@ -59,7 +59,7 @@ export default function About() {
               </div>
 
               <div className="border border-slate-800 bg-slate-900/30 rounded-2xl p-8">
-                <img src="/akshay.jpg" alt="Akshay" className="w-14 h-14 rounded-full object-cover mb-5" />
+                <img src="/akshay.jpeg" alt="Akshay" className="w-14 h-14 rounded-full object-cover mb-5" />
                 <h3 className="text-xl font-bold mb-1">Akshay</h3>
                 <div className="text-sky-400 text-xs tracking-widest uppercase mb-4">Partner</div>
                 <p className="text-slate-400 text-sm leading-relaxed">
