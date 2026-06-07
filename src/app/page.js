@@ -71,61 +71,61 @@ export default function Home() {
 
           <div className="grid md:grid-cols-3 gap-6">
 
-            {/* AI Receptionist */}
+            {/* AI Receptionist Suite */}
             <div className="border border-slate-800 bg-slate-900/30 rounded-2xl p-7 flex flex-col">
-              <div className="text-sky-400 text-xs tracking-widest uppercase mb-3">AI Receptionist</div>
-              <h3 className="font-bold text-xl mb-3">Never miss a call again</h3>
+              <div className="text-sky-400 text-xs tracking-widest uppercase mb-3">Automated Receptionist Suite</div>
+              <h3 className="font-bold text-xl mb-3">Never lose a lead to a slow reply</h3>
               <p className="text-slate-400 text-sm leading-relaxed flex-1">
-                Our phone agent picks up every call, answers common questions, and books appointments — automatically, around the clock.
+                Three workflows working together: answers emails instantly, follows up automatically, and stops the moment someone books — so no lead ever falls through the cracks.
               </p>
               <ul className="mt-4 space-y-2 text-sm text-slate-300">
                 <li className="flex items-start gap-2">
                   <span className="text-sky-400 mt-0.5">✓</span>
-                  Answers calls when you&apos;re with a customer
+                  Replies to every email from your knowledge base
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-sky-400 mt-0.5">✓</span>
-                  Books appointments directly into your calendar
+                  Follows up with hot leads over 4 days automatically
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-sky-400 mt-0.5">✓</span>
-                  Handles FAQs so your team doesn&apos;t have to
+                  Detects bookings and stops follow-up instantly
                 </li>
               </ul>
-              <a href="/intake" className="mt-6 bg-sky-400 text-black px-5 py-2.5 rounded-full font-semibold text-sm text-center hover:bg-sky-300 transition-colors">
-                Get Started
+              <a href="/services#receptionist" className="mt-6 bg-sky-400 text-black px-5 py-2.5 rounded-full font-semibold text-sm text-center hover:bg-sky-300 transition-colors">
+                Learn More
               </a>
             </div>
 
-            {/* AI ADR */}
+            {/* AI SDR */}
             <div className="border border-slate-800 bg-slate-900/30 rounded-2xl p-7 flex flex-col">
-              <div className="text-sky-400 text-xs tracking-widest uppercase mb-3">AI ADR</div>
-              <h3 className="font-bold text-xl mb-3">Stop losing money to disputes</h3>
+              <div className="text-sky-400 text-xs tracking-widest uppercase mb-3">Automated Sales Outreach</div>
+              <h3 className="font-bold text-xl mb-3">Find new customers on autopilot</h3>
               <p className="text-slate-400 text-sm leading-relaxed flex-1">
-                Our automated dispute resolution tool handles billing complaints and chargebacks for you — faster than any back-and-forth email chain.
+                Give us a prospect list. Our system scores every lead, sends personalized outreach, follows up automatically, and books meetings when someone says yes.
               </p>
               <ul className="mt-4 space-y-2 text-sm text-slate-300">
                 <li className="flex items-start gap-2">
                   <span className="text-sky-400 mt-0.5">✓</span>
-                  Responds to disputes within minutes
+                  Scores prospects by title, industry, and size
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-sky-400 mt-0.5">✓</span>
-                  Keeps detailed records automatically
+                  Sends and follows up without any manual work
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-sky-400 mt-0.5">✓</span>
-                  Reduces chargebacks and billing headaches
+                  Books the meeting when someone is interested
                 </li>
               </ul>
-              <a href="/intake" className="mt-6 bg-sky-400 text-black px-5 py-2.5 rounded-full font-semibold text-sm text-center hover:bg-sky-300 transition-colors">
-                Get Started
+              <a href="/services#sdr" className="mt-6 bg-sky-400 text-black px-5 py-2.5 rounded-full font-semibold text-sm text-center hover:bg-sky-300 transition-colors">
+                Learn More
               </a>
             </div>
 
             {/* VAPI Receptionist */}
             <div className="border border-slate-800 bg-slate-900/30 rounded-2xl p-7 flex flex-col">
-              <div className="text-sky-400 text-xs tracking-widest uppercase mb-3">VAPI Receptionist</div>
+              <div className="text-sky-400 text-xs tracking-widest uppercase mb-3">Phone Receptionist</div>
               <h3 className="font-bold text-xl mb-3">A voice agent that sounds human</h3>
               <p className="text-slate-400 text-sm leading-relaxed flex-1">
                 A fully custom voice assistant for your phone line — built on enterprise-grade voice infrastructure so every caller gets a professional experience.
@@ -144,8 +144,8 @@ export default function Home() {
                   Works with your existing phone number
                 </li>
               </ul>
-              <a href="/intake" className="mt-6 bg-sky-400 text-black px-5 py-2.5 rounded-full font-semibold text-sm text-center hover:bg-sky-300 transition-colors">
-                Get Started
+              <a href="/services#vapi" className="mt-6 bg-sky-400 text-black px-5 py-2.5 rounded-full font-semibold text-sm text-center hover:bg-sky-300 transition-colors">
+                Learn More
               </a>
             </div>
 
