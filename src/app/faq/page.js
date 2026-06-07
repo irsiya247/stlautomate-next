@@ -66,7 +66,7 @@ function FAQItem({ q, a }) {
 
 export default function FAQ() {
   return (
-    <main className="min-h-screen bg-[#0B1120] text-white relative overflow-hidden">
+    <main className="min-h-screen bg-[#030712] text-white relative overflow-hidden">
 
       <div className="absolute inset-0 opacity-[0.05] pointer-events-none">
         <div className="w-full h-full" style={{
@@ -99,7 +99,7 @@ export default function FAQ() {
               Email us directly or book a call. Either way, you&apos;ll get a real answer from the person who built the thing.
             </p>
             <div className="flex flex-wrap gap-4 justify-center">
-              <a href="/intake" className="bg-sky-400 text-black px-6 py-3 rounded-full font-semibold hover:bg-sky-300 transition-colors">
+              <a href="/intake" className="bg-sky-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-sky-500 transition-colors">
                 Book a Free Call
               </a>
               <a href="mailto:matt@stlautomate.com" className="border border-slate-700 px-6 py-3 rounded-full text-slate-300 hover:border-slate-500 transition-colors">

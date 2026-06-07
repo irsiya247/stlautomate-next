@@ -1,6 +1,6 @@
 export default function HowItWorks() {
   return (
-    <main className="min-h-screen bg-[#0B1120] text-white relative overflow-hidden">
+    <main className="min-h-screen bg-[#030712] text-white relative overflow-hidden">
 
       <div className="absolute inset-0 opacity-[0.05] pointer-events-none">
         <div className="w-full h-full" style={{
@@ -152,7 +152,7 @@ export default function HowItWorks() {
             <p className="text-slate-400 mb-8 max-w-lg mx-auto">
               The first call is free and takes 30 minutes. We&apos;ll tell you exactly what we&apos;d build and what it would cost — no pressure, no pitch deck.
             </p>
-            <a href="/intake" className="bg-sky-400 text-black px-8 py-4 rounded-full font-semibold text-lg inline-block hover:bg-sky-300 transition-colors">
+            <a href="/intake" className="bg-sky-600 text-white px-8 py-4 rounded-full font-semibold text-lg inline-block hover:bg-sky-500 transition-colors">
               Book That Call
             </a>
           </div>

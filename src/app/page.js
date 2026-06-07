@@ -2,7 +2,7 @@ import WorkflowEngine from "@/components/WorkflowEngine";
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-[#0B1120] text-white relative overflow-hidden">
+    <main className="min-h-screen bg-[#030712] text-white relative overflow-hidden">
 
       {/* BACKGROUND GRID */}
       <div className="absolute inset-0 opacity-[0.05] pointer-events-none">
@@ -38,7 +38,7 @@ export default function Home() {
           </p>
 
           <div className="mt-10 flex flex-wrap gap-4">
-            <a href="#video" className="bg-sky-400 text-black px-6 py-3 rounded-full font-semibold hover:bg-sky-300 transition-colors">
+            <a href="#video" className="bg-sky-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-sky-500 transition-colors">
               See It In Action
             </a>
             <a href="/intake" className="border border-slate-700 px-6 py-3 rounded-full text-slate-300 hover:border-slate-500 transition-colors">
@@ -106,7 +106,7 @@ export default function Home() {
                   Detects bookings and stops follow-up instantly
                 </li>
               </ul>
-              <a href="/services#receptionist" className="mt-6 bg-sky-400 text-black px-5 py-2.5 rounded-full font-semibold text-sm text-center hover:bg-sky-300 transition-colors">
+              <a href="/services#receptionist" className="mt-6 bg-sky-600 text-white px-5 py-2.5 rounded-full font-semibold text-sm text-center hover:bg-sky-500 transition-colors">
                 Learn More
               </a>
             </div>
@@ -132,7 +132,7 @@ export default function Home() {
                   Books the meeting when someone is interested
                 </li>
               </ul>
-              <a href="/services#sdr" className="mt-6 bg-sky-400 text-black px-5 py-2.5 rounded-full font-semibold text-sm text-center hover:bg-sky-300 transition-colors">
+              <a href="/services#sdr" className="mt-6 bg-sky-600 text-white px-5 py-2.5 rounded-full font-semibold text-sm text-center hover:bg-sky-500 transition-colors">
                 Learn More
               </a>
             </div>
@@ -158,7 +158,7 @@ export default function Home() {
                   Works with your existing phone number
                 </li>
               </ul>
-              <a href="/services#vapi" className="mt-6 bg-sky-400 text-black px-5 py-2.5 rounded-full font-semibold text-sm text-center hover:bg-sky-300 transition-colors">
+              <a href="/services#vapi" className="mt-6 bg-sky-600 text-white px-5 py-2.5 rounded-full font-semibold text-sm text-center hover:bg-sky-500 transition-colors">
                 Learn More
               </a>
             </div>
@@ -194,30 +194,4 @@ export default function Home() {
           <div className="border border-slate-800 bg-slate-900/20 rounded-2xl p-8">
             <div className="mb-6">
               <h2 className="text-xl font-bold">Live Automation Dashboard</h2>
-              <p className="text-slate-400 text-sm mt-1">
-                See your workflows running in real time
-              </p>
-            </div>
-            <WorkflowEngine />
-          </div>
-        </section>
-
-        {/* CTA */}
-        <section className="max-w-6xl mx-auto px-6 mt-20 text-center border-t border-slate-800 pt-16 pb-24">
-          <h2 className="text-3xl font-bold">
-            Ready to stop losing customers to voicemail?
-          </h2>
-          <p className="text-slate-400 mt-3 text-base max-w-xl mx-auto">
-            Takes 15 minutes to get started. No contracts. No technical setup on your end.
-          </p>
-          <div className="mt-8 flex flex-wrap gap-4 justify-center">
-            <a href="/intake" className="bg-sky-400 text-black px-8 py-4 rounded-full font-semibold text-lg inline-block hover:bg-sky-300 transition-colors">
-              Book a Free Call
-            </a>
-          </div>
-        </section>
-
-      </div>
-    </main>
-  );
-}
+              <p className="t

@@ -1,6 +1,6 @@
 export default function Tech() {
   return (
-    <main className="min-h-screen bg-[#0B1120] text-white relative overflow-hidden">
+    <main className="min-h-screen bg-[#030712] text-white relative overflow-hidden">
 
       <div className="absolute inset-0 opacity-[0.05] pointer-events-none">
         <div className="w-full h-full" style={{
@@ -183,7 +183,7 @@ export default function Tech() {
             <p className="text-slate-400 mb-8 max-w-lg mx-auto">
               If you have architecture questions, integration edge cases, or security requirements — book a technical call. We&apos;ll go into as much detail as you need.
             </p>
-            <a href="/intake" className="bg-sky-400 text-black px-8 py-4 rounded-full font-semibold text-lg inline-block hover:bg-sky-300 transition-colors">
+            <a href="/intake" className="bg-sky-600 text-white px-8 py-4 rounded-full font-semibold text-lg inline-block hover:bg-sky-500 transition-colors">
               Book a Technical Call
             </a>
           </div>

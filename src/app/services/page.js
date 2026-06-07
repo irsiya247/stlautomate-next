@@ -1,6 +1,6 @@
 export default function Services() {
   return (
-    <main className="min-h-screen bg-[#0B1120] text-white relative overflow-hidden">
+    <main className="min-h-screen bg-[#030712] text-white relative overflow-hidden">
 
       {/* BACKGROUND GRID */}
       <div className="absolute inset-0 opacity-[0.05] pointer-events-none">
@@ -35,7 +35,7 @@ export default function Services() {
                 <p className="text-slate-300 text-base leading-relaxed mb-8">
                   Most businesses lose customers because they respond too slowly or forget to follow up. This system eliminates both problems entirely.
                 </p>
-                <a href="/intake" className="bg-sky-400 text-black px-6 py-3 rounded-full font-semibold hover:bg-sky-300 transition-colors inline-block">
+                <a href="/intake" className="bg-sky-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-sky-500 transition-colors inline-block">
                   Get This For My Business
                 </a>
               </div>
@@ -93,7 +93,7 @@ export default function Services() {
                 <p className="text-slate-300 text-base leading-relaxed mb-8">
                   Every missed call is a potential customer that called your competitor instead. This stops that from happening.
                 </p>
-                <a href="/intake" className="bg-sky-400 text-black px-6 py-3 rounded-full font-semibold hover:bg-sky-300 transition-colors inline-block">
+                <a href="/intake" className="bg-sky-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-sky-500 transition-colors inline-block">
                   Get This For My Business
                 </a>
               </div>
@@ -141,7 +141,7 @@ export default function Services() {
                 <p className="text-slate-300 text-base leading-relaxed mb-8">
                   This is what a full-time sales rep does — prospecting, emailing, following up, booking calls — automated and running around the clock.
                 </p>
-                <a href="/intake" className="bg-sky-400 text-black px-6 py-3 rounded-full font-semibold hover:bg-sky-300 transition-colors inline-block">
+                <a href="/intake" className="bg-sky-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-sky-500 transition-colors inline-block">
                   Get This For My Business
                 </a>
               </div>
@@ -181,7 +181,7 @@ export default function Services() {
             <p className="text-slate-400 text-lg mb-8 max-w-xl mx-auto">
               Book a free 15-minute call. We&apos;ll listen to how your business works today and tell you exactly which tool fits — or if you need more than one.
             </p>
-            <a href="/intake" className="bg-sky-400 text-black px-8 py-4 rounded-full font-semibold text-lg inline-block hover:bg-sky-300 transition-colors">
+            <a href="/intake" className="bg-sky-600 text-white px-8 py-4 rounded-full font-semibold text-lg inline-block hover:bg-sky-500 transition-colors">
               Book a Free Call
             </a>
           </div>
@@ -191,3 +191,4 @@ export default function Services() {
     </main>
   );
 }
+      
