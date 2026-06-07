@@ -19,7 +19,7 @@ export default function HowItWorks() {
             Simple for you. <span className="text-sky-400">Powerful under the hood.</span>
           </h1>
           <p className="text-slate-400 text-lg max-w-2xl mb-20">
-            You don&apos;t need to understand how it works — you just need to know it does. But if you&apos;re curious, here&apos;s exactly what happens from the moment you reach out to the moment your system goes live.
+            You don&apos;t need to understand how it works. You just need to know it does. But if you&apos;re curious, here&apos;s exactly what happens from the moment you reach out to the moment your system goes live.
           </p>
 
           {/* STEPS */}
@@ -35,7 +35,7 @@ export default function HowItWorks() {
                 <div className="text-sky-400 text-xs tracking-widest uppercase mb-2">Week 1</div>
                 <h2 className="text-2xl font-bold mb-4">We learn your business</h2>
                 <p className="text-slate-400 leading-relaxed mb-4">
-                  We start with a 30-minute call — no slides, no demos, just questions. We want to understand how your business works today: how leads come in, how you follow up, what your team does manually every day, and where things fall through the cracks.
+                  We start with a 30-minute call. No slides, no demos, just questions. We want to understand how your business works today: how leads come in, how you follow up, what your team does manually every day, and where things fall through the cracks.
                 </p>
                 <p className="text-slate-400 leading-relaxed">
                   By the end of that call, we know exactly which system to build and what it needs to do.
@@ -56,7 +56,7 @@ export default function HowItWorks() {
               </div>
               <div className="pb-8 border-b border-slate-800">
                 <div className="text-sky-400 text-xs tracking-widest uppercase mb-2">Week 1–2</div>
-                <h2 className="text-2xl font-bold mb-4">We build it — you don&apos;t touch a thing</h2>
+                <h2 className="text-2xl font-bold mb-4">We build it. You don&apos;t touch a thing</h2>
                 <p className="text-slate-400 leading-relaxed mb-4">
                   We configure every workflow, write every script, and connect every integration. If it&apos;s an email system, we load your knowledge base and set the response logic. If it&apos;s a phone agent, we write the script, set the voice, and define how calls get handled.
                 </p>
@@ -97,12 +97,12 @@ export default function HowItWorks() {
               </div>
               <div className="pb-8 border-b border-slate-800">
                 <div className="text-sky-400 text-xs tracking-widest uppercase mb-2">Go-Live</div>
-                <h2 className="text-2xl font-bold mb-4">It goes live — and just runs</h2>
+                <h2 className="text-2xl font-bold mb-4">It goes live and just runs</h2>
                 <p className="text-slate-400 leading-relaxed mb-4">
-                  Your system is live. Emails get answered. Calls get handled. Leads get followed up with. Bookings get detected. You get WhatsApp or Slack alerts when something needs your attention — and silence when everything is handled.
+                  Your system is live. Emails get answered. Calls get handled. Leads get followed up with. Bookings get detected. You get WhatsApp or Slack alerts when something needs your attention. When everything is running smoothly, you get silence.
                 </p>
                 <p className="text-slate-400 leading-relaxed">
-                  Most clients tell us they forget it&apos;s running — until they check the logs and see how much it did while they were focused on actual work.
+                  Most clients tell us they forget it&apos;s running, until they check the logs and see how much it did while they were focused on actual work.
                 </p>
               </div>
             </div>
@@ -116,7 +116,7 @@ export default function HowItWorks() {
                 <div className="text-sky-400 text-xs tracking-widest uppercase mb-2">Ongoing</div>
                 <h2 className="text-2xl font-bold mb-4">We stay on as your automation partner</h2>
                 <p className="text-slate-400 leading-relaxed mb-4">
-                  Your business changes. New services, new team members, new questions customers keep asking. We update the system as you grow so it stays accurate and useful — not something you set up once and slowly forget about.
+                  Your business changes. New services, new team members, new questions customers keep asking. We update the system as you grow so it stays accurate and useful, not something you set up once and slowly forget about.
                 </p>
                 <p className="text-slate-400 leading-relaxed">
                   We&apos;re a small team in St. Louis. You&apos;ll have a direct line to the person who built your system.
@@ -150,7 +150,7 @@ export default function HowItWorks() {
           <div className="mt-20 text-center">
             <h2 className="text-3xl font-bold mb-4">Ready to get started?</h2>
             <p className="text-slate-400 mb-8 max-w-lg mx-auto">
-              The first call is free and takes 30 minutes. We&apos;ll tell you exactly what we&apos;d build and what it would cost — no pressure, no pitch deck.
+              The first call is free and takes 30 minutes. We&apos;ll tell you exactly what we&apos;d build and what it would cost. No pressure, no pitch deck.
             </p>
             <a href="/intake" className="bg-sky-600 text-white px-8 py-4 rounded-full font-semibold text-lg inline-block hover:bg-sky-500 transition-colors">
               Book That Call

@@ -29,7 +29,7 @@ export default function Home() {
 
           <h1 className="mt-6 text-5xl md:text-7xl font-extrabold leading-[1.05]">
             Your business,{" "}
-            <span className="text-sky-400">running 24/7</span> —<br />
+            <span className="text-sky-400">running 24/7</span><br />
             without hiring more staff.
           </h1>
 
@@ -64,7 +64,7 @@ export default function Home() {
         {/* TRUST STATS */}
         <section className="max-w-6xl mx-auto px-6 mt-20 grid grid-cols-2 md:grid-cols-4 gap-8 border-t border-slate-800 pt-12">
           {[
-            { value: "24/7", label: "Phones answered — even at 2am" },
+            { value: "24/7", label: "Phones answered, even at 2am" },
             { value: "< 1 min", label: "Average response time" },
             { value: "0", label: "Calls sent to voicemail" },
             { value: "3 tools", label: "Built for your business" },
@@ -90,7 +90,7 @@ export default function Home() {
               <div className="text-sky-400 text-xs tracking-widest uppercase mb-3">Automated Receptionist Suite</div>
               <h3 className="font-bold text-xl mb-3">Never lose a lead to a slow reply</h3>
               <p className="text-slate-400 text-sm leading-relaxed flex-1">
-                Three workflows working together: answers emails instantly, follows up automatically, and stops the moment someone books — so no lead ever falls through the cracks.
+                Three workflows working together: answers emails instantly, follows up automatically, and stops the moment someone books. No lead ever falls through the cracks.
               </p>
               <ul className="mt-4 space-y-2 text-sm text-slate-300">
                 <li className="flex items-start gap-2">
@@ -142,7 +142,7 @@ export default function Home() {
               <div className="text-sky-400 text-xs tracking-widest uppercase mb-3">Phone Receptionist</div>
               <h3 className="font-bold text-xl mb-3">A voice agent that sounds human</h3>
               <p className="text-slate-400 text-sm leading-relaxed flex-1">
-                A fully custom voice assistant for your phone line — built on enterprise-grade voice infrastructure so every caller gets a professional experience.
+                A fully custom voice assistant for your phone line, built on enterprise-grade voice infrastructure so every caller gets a professional experience.
               </p>
               <ul className="mt-4 space-y-2 text-sm text-slate-300">
                 <li className="flex items-start gap-2">
@@ -204,7 +204,7 @@ export default function Home() {
         <section className="max-w-4xl mx-auto px-6 mt-20 pb-24 text-center">
           <h2 className="text-4xl font-extrabold mb-4">Ready to stop losing customers?</h2>
           <p className="text-slate-400 text-lg mb-8 max-w-2xl mx-auto">
-            Book a free 15-minute call. We&apos;ll tell you exactly what we&apos;d build for your business and what it costs — no pitch, no pressure.
+            Book a free 15-minute call. We&apos;ll tell you exactly what we&apos;d build for your business and what it costs. No pitch, no pressure.
           </p>
           <a href="/intake" className="bg-sky-600 text-white px-8 py-4 rounded-full font-semibold text-lg inline-block hover:bg-sky-500 transition-colors">
             Book a Free Call

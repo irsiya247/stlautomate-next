@@ -19,7 +19,7 @@ export default function Tech() {
             The stack, <span className="text-sky-400">if you want to know.</span>
           </h1>
           <p className="text-slate-400 text-lg max-w-2xl mb-6">
-            Most of our clients don&apos;t care about this page — and that&apos;s fine. But if you&apos;re evaluating us technically, or you&apos;re the person who has to sign off on what goes into your infrastructure, here&apos;s exactly what we use and why.
+            Most of our clients don&apos;t care about this page, and that&apos;s fine. But if you&apos;re evaluating us technically, or you&apos;re the person who has to sign off on what goes into your infrastructure, here&apos;s exactly what we use and why.
           </p>
           <p className="text-slate-500 text-sm mb-20">
             No black boxes. No vendor lock-in pitch. Just the actual tools and architecture.
@@ -32,10 +32,10 @@ export default function Tech() {
             <div className="grid md:grid-cols-2 gap-8 items-start">
               <div className="space-y-4 text-slate-400 leading-relaxed">
                 <p>
-                  Every automation we build runs on <span className="text-white font-medium">n8n</span> — an open-source workflow automation platform that handles triggers, logic branching, API calls, and integrations in a single visual pipeline.
+                  Every automation we build runs on <span className="text-white font-medium">n8n</span>, an open-source workflow automation platform that handles triggers, logic branching, API calls, and integrations in a single visual pipeline.
                 </p>
                 <p>
-                  We chose n8n because it gives us fine-grained control over every node in the workflow without abstracting away the logic. When something goes wrong, we can see exactly where and why — not just that it failed.
+                  We chose n8n because it gives us fine-grained control over every node in the workflow without abstracting away the logic. When something goes wrong, we can see exactly where and why, not just that something failed.
                 </p>
                 <p>
                   Each client&apos;s workflows are isolated. Your data doesn&apos;t touch another client&apos;s workflow under any circumstance.
@@ -67,10 +67,10 @@ export default function Tech() {
             <div className="grid md:grid-cols-2 gap-8 items-start">
               <div className="space-y-4 text-slate-400 leading-relaxed">
                 <p>
-                  Our Phone Receptionist is built on <span className="text-white font-medium">VAPI</span> — a voice AI platform designed specifically for building production phone agents. It handles call routing, speech-to-text, LLM inference, and text-to-speech in a single low-latency pipeline.
+                  Our Phone Receptionist is built on <span className="text-white font-medium">VAPI</span>, a voice AI platform designed specifically for building production phone agents. It handles call routing, speech-to-text, LLM inference, and text-to-speech in a single low-latency pipeline.
                 </p>
                 <p>
-                  VAPI&apos;s end-of-call webhook fires a structured JSON payload — caller ID, transcript, call duration, and metadata — into our n8n workflow, which then scores the lead, logs it, and fires alerts.
+                  VAPI&apos;s end-of-call webhook fires a structured JSON payload (caller ID, transcript, call duration, and metadata) into our n8n workflow, which then scores the lead, logs it, and fires alerts.
                 </p>
                 <p>
                   Average latency from speech to response is under 800ms in production. Callers experience a natural conversation, not a robotic pause.
@@ -106,7 +106,7 @@ export default function Tech() {
                   Lead scoring runs through a custom JavaScript scoring engine inside n8n, backed by <span className="text-white font-medium">Groq</span> for fast LLM inference on unstructured inputs like email bodies and call transcripts.
                 </p>
                 <p>
-                  Scoring factors include job title seniority, company size, industry vertical, inbound source, and intent signals extracted from message content. Scores map to three tiers — Hot, Warm, Cold — which determine routing, follow-up cadence, and alert priority.
+                  Scoring factors include job title seniority, company size, industry vertical, inbound source, and intent signals extracted from message content. Scores map to three tiers: Hot, Warm, and Cold. These determine routing, follow-up cadence, and alert priority.
                 </p>
                 <p>
                   For the Automated Receptionist Suite, RAG (retrieval-augmented generation) is used to pull answers from a client-specific knowledge base stored in Google Sheets, ensuring responses are always grounded in your actual business information.
@@ -163,16 +163,16 @@ export default function Tech() {
             <h2 className="text-3xl font-bold mb-6">What happens to your data</h2>
             <div className="space-y-4 text-slate-400 leading-relaxed max-w-3xl">
               <p>
-                We come from a cybersecurity background. Data handling isn&apos;t an afterthought — it&apos;s part of the architecture.
+                We come from a cybersecurity background. Data handling isn&apos;t an afterthought. It&apos;s part of the architecture.
               </p>
               <p>
                 Customer data processed by your workflows stays in your own Google Sheets and CRM. We don&apos;t aggregate client data, we don&apos;t train models on your leads, and we don&apos;t store sensitive contact information in our own databases.
               </p>
               <p>
-                Credentials are stored in n8n&apos;s encrypted credential store — never in workflow code, never in plain text. API keys are scoped to the minimum permissions required for each integration.
+                Credentials are stored in n8n&apos;s encrypted credential store, never in workflow code, never in plain text. API keys are scoped to the minimum permissions required for each integration.
               </p>
               <p>
-                If you have specific compliance requirements — HIPAA, PCI, SOC 2 — tell us on the intake call. Some configurations require additional setup; we&apos;ll be straight with you about what&apos;s possible.
+                If you have specific compliance requirements such as HIPAA, PCI, or SOC 2, tell us on the intake call. Some configurations require additional setup; we&apos;ll be straight with you about what&apos;s possible.
               </p>
             </div>
           </section>
@@ -181,7 +181,7 @@ export default function Tech() {
           <div className="border border-slate-800 bg-slate-900/20 rounded-2xl p-10 text-center">
             <h2 className="text-2xl font-bold mb-3">Want to go deeper?</h2>
             <p className="text-slate-400 mb-8 max-w-lg mx-auto">
-              If you have architecture questions, integration edge cases, or security requirements — book a technical call. We&apos;ll go into as much detail as you need.
+              If you have architecture questions, integration edge cases, or security requirements, book a technical call. We&apos;ll go into as much detail as you need.
             </p>
             <a href="/intake" className="bg-sky-600 text-white px-8 py-4 rounded-full font-semibold text-lg inline-block hover:bg-sky-500 transition-colors">
               Book a Technical Call

@@ -30,7 +30,7 @@ export default function Services() {
                 <div className="text-sky-400 text-xs tracking-widest uppercase mb-3">Product 01</div>
                 <h2 className="text-4xl font-extrabold mb-4">Automated Receptionist Suite</h2>
                 <p className="text-slate-400 text-lg leading-relaxed mb-6">
-                  Your inbox becomes a 24/7 sales assistant. Every email gets answered instantly, every lead gets followed up automatically, and every booking gets detected the moment it happens — so your team never has to chase anyone.
+                  Your inbox becomes a 24/7 sales assistant. Every email gets answered instantly, every lead gets followed up automatically, and every booking gets detected the moment it happens. Your team never has to chase anyone.
                 </p>
                 <p className="text-slate-300 text-base leading-relaxed mb-8">
                   Most businesses lose customers because they respond too slowly or forget to follow up. This system eliminates both problems entirely.
@@ -48,7 +48,7 @@ export default function Services() {
                     <h3 className="font-semibold text-white">Email Receptionist</h3>
                   </div>
                   <p className="text-slate-400 text-sm leading-relaxed">
-                    Reads every inbound email, pulls the right answer from your business knowledge base, and replies within seconds — day or night. Scores each lead as Hot, Warm, or Cold so you always know who matters most.
+                    Reads every inbound email, pulls the right answer from your business knowledge base, and replies within seconds, day or night. Scores each lead as Hot, Warm, or Cold so you always know who matters most.
                   </p>
                 </div>
 
@@ -58,7 +58,7 @@ export default function Services() {
                     <h3 className="font-semibold text-white">Automatic Follow-Up</h3>
                   </div>
                   <p className="text-slate-400 text-sm leading-relaxed">
-                    Hot leads get two follow-up emails over 4 days. Warm leads get one at 72 hours. No one falls through the cracks — and it all stops automatically the moment they book.
+                    Hot leads get two follow-up emails over 4 days. Warm leads get one at 72 hours. No one falls through the cracks. It all stops automatically the moment they book.
                   </p>
                 </div>
 
@@ -68,7 +68,7 @@ export default function Services() {
                     <h3 className="font-semibold text-white">Booking Detector</h3>
                   </div>
                   <p className="text-slate-400 text-sm leading-relaxed">
-                    Checks your calendar every 15 minutes. The moment a lead books an appointment, the follow-up stops and the lead is marked as Booked — so you never accidentally email someone who already said yes.
+                    Checks your calendar every 15 minutes. The moment a lead books an appointment, the follow-up stops and the lead is marked as Booked. You will never accidentally email someone who already said yes.
                   </p>
                 </div>
 
@@ -88,7 +88,7 @@ export default function Services() {
                 <div className="text-sky-400 text-xs tracking-widest uppercase mb-3">Product 02</div>
                 <h2 className="text-4xl font-extrabold mb-4">Phone Receptionist</h2>
                 <p className="text-slate-400 text-lg leading-relaxed mb-6">
-                  A voice agent that answers your phone line, has real conversations with callers, and scores every call — so you always know which calls are worth calling back first.
+                  A voice agent that answers your phone line, has real conversations with callers, and scores every call. You will always know which calls are worth calling back first.
                 </p>
                 <p className="text-slate-300 text-base leading-relaxed mb-8">
                   Every missed call is a potential customer that called your competitor instead. This stops that from happening.
@@ -102,7 +102,7 @@ export default function Services() {
                 <div className="border border-slate-700 bg-slate-900/40 rounded-xl p-5">
                   <h3 className="font-semibold text-white mb-2">Answers every call, 24/7</h3>
                   <p className="text-slate-400 text-sm leading-relaxed">
-                    A natural-sounding voice agent picks up every call — during business hours, after hours, and on weekends. Callers get real answers, not a voicemail.
+                    A natural-sounding voice agent picks up every call: during business hours, after hours, and on weekends. Callers get real answers, not a voicemail.
                   </p>
                 </div>
                 <div className="border border-slate-700 bg-slate-900/40 rounded-xl p-5">
@@ -114,7 +114,7 @@ export default function Services() {
                 <div className="border border-slate-700 bg-slate-900/40 rounded-xl p-5">
                   <h3 className="font-semibold text-white mb-2">Alerts you on the right calls</h3>
                   <p className="text-slate-400 text-sm leading-relaxed">
-                    Hot and Warm callers trigger an instant WhatsApp alert to you — so you can call back the people who actually want to buy, not waste time on tire-kickers.
+                    Hot and Warm callers trigger an instant WhatsApp alert to you. Call back the people who actually want to buy, not tire-kickers.
                   </p>
                 </div>
                 <div className="border border-slate-700 bg-slate-900/40 rounded-xl p-5">
@@ -136,10 +136,10 @@ export default function Services() {
                 <div className="text-sky-400 text-xs tracking-widest uppercase mb-3">Product 03</div>
                 <h2 className="text-4xl font-extrabold mb-4">Automated Sales Outreach</h2>
                 <p className="text-slate-400 text-lg leading-relaxed mb-6">
-                  Give us a list of businesses you want to reach. Our system sends personalized emails, follows up on its own, detects when someone is interested, and books the meeting — without you lifting a finger.
+                  Give us a list of businesses you want to reach. Our system sends personalized emails, follows up on its own, detects when someone is interested, and books the meeting, without you lifting a finger.
                 </p>
                 <p className="text-slate-300 text-base leading-relaxed mb-8">
-                  This is what a full-time sales rep does — prospecting, emailing, following up, booking calls — automated and running around the clock.
+                  This is what a full-time sales rep does: prospecting, emailing, following up, booking calls. All of it automated and running around the clock.
                 </p>
                 <a href="/intake" className="bg-sky-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-sky-500 transition-colors inline-block">
                   Get This For My Business
@@ -156,7 +156,7 @@ export default function Services() {
                 <div className="border border-slate-700 bg-slate-900/40 rounded-xl p-5">
                   <h3 className="font-semibold text-white mb-2">Sends and follows up automatically</h3>
                   <p className="text-slate-400 text-sm leading-relaxed">
-                    The system sends the first email, waits, follows up, and sends a second touch — all on its own. If someone doesn&apos;t respond, it moves on. No manual work.
+                    The system sends the first email, waits, follows up, and sends a second touch, all on its own. If someone doesn&apos;t respond, it moves on. No manual work.
                   </p>
                 </div>
                 <div className="border border-slate-700 bg-slate-900/40 rounded-xl p-5">
@@ -179,7 +179,7 @@ export default function Services() {
           <div className="border-t border-slate-800 pt-20 text-center">
             <h2 className="text-3xl font-bold mb-4">Not sure which one you need?</h2>
             <p className="text-slate-400 text-lg mb-8 max-w-xl mx-auto">
-              Book a free 15-minute call. We&apos;ll listen to how your business works today and tell you exactly which tool fits — or if you need more than one.
+              Book a free 15-minute call. We&apos;ll listen to how your business works today and tell you exactly which tool fits, or whether you need more than one.
             </p>
             <a href="/intake" className="bg-sky-600 text-white px-8 py-4 rounded-full font-semibold text-lg inline-block hover:bg-sky-500 transition-colors">
               Book a Free Call

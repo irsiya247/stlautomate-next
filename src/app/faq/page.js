@@ -4,27 +4,27 @@ import { useState } from "react";
 const faqs = [
   {
     q: "Do I need any technical knowledge to use this?",
-    a: "None at all. We handle everything — setup, configuration, testing, and go-live. You don't install any software, log into any new platform, or learn anything new. We build it, we run it, and we maintain it. You just see the results."
+    a: "None at all. We handle everything: setup, configuration, testing, and go-live. You don't install any software, log into any new platform, or learn anything new. We build it, we run it, and we maintain it. You just see the results."
   },
   {
     q: "What does it actually cost?",
-    a: "It depends on which system you need and how complex your setup is. We don't publish fixed pricing because every business is different — a dental office needs something different than a plumbing company. What we can tell you: our setup fees are a fraction of what you'd pay a full-time hire, and there's no long-term contract. Book a free call and we'll give you a straight number."
+    a: "It depends on which system you need and how complex your setup is. We don't publish fixed pricing because every business is different. A dental office needs something different than a plumbing company. What we can tell you: our setup fees are a fraction of what you'd pay a full-time hire, and there's no long-term contract. Book a free call and we'll give you a straight number."
   },
   {
     q: "How long does it take to get set up?",
-    a: "Most systems are live within one to two weeks from our first call. The first week is spent learning your business and building the system. The second week is testing and refinement. We don't cut corners on testing — a system that misbehaves with real customers is worse than no system at all."
+    a: "Most systems are live within one to two weeks from our first call. The first week is spent learning your business and building the system. The second week is testing and refinement. We don't cut corners on testing. A system that misbehaves with real customers is worse than no system at all."
   },
   {
     q: "What if I already have a receptionist or a sales person?",
-    a: "This isn't a replacement — it's backup and overflow. Your receptionist can't answer every call at once, and they go home at 5pm. Your sales person can't follow up with every lead the same hour it comes in. Our systems handle the volume so your people can focus on the conversations that actually need a human."
+    a: "This isn't a replacement. It is backup and overflow. Your receptionist can't answer every call at once, and they go home at 5pm. Your sales person can't follow up with every lead the same hour it comes in. Our systems handle the volume so your people can focus on the conversations that actually need a human."
   },
   {
     q: "Does the phone agent actually sound like a real person?",
-    a: "Yes. We use professional voice infrastructure with natural-sounding speech. Most callers don't know they're talking to an automated system unless they ask directly — and we configure the agent to be honest if they do. We don't do deceptive bots. We do helpful ones."
+    a: "Yes. We use professional voice infrastructure with natural-sounding speech. Most callers don't know they're talking to an automated system unless they ask directly. We configure the agent to be honest if they do. We don't do deceptive bots. We do helpful ones."
   },
   {
     q: "What happens when something goes wrong?",
-    a: "You have a direct line to the person who built your system — not a support ticket, not a help desk. If something breaks or behaves unexpectedly, we fix it. We also monitor systems proactively so most issues get caught before you even notice them."
+    a: "You have a direct line to the person who built your system, not a support ticket, not a help desk. If something breaks or behaves unexpectedly, we fix it. We also monitor systems proactively so most issues get caught before you even notice them."
   },
   {
     q: "Will this work with the tools I already use?",
@@ -32,11 +32,11 @@ const faqs = [
   },
   {
     q: "Is this just for St. Louis businesses?",
-    a: "No — we work with businesses anywhere. That said, if you're in St. Louis, you also have the option of meeting in person, which some clients prefer when they want to see a live demo or just shake hands before signing on."
+    a: "No. We work with businesses anywhere. That said, if you're in St. Louis, you also have the option of meeting in person, which some clients prefer when they want to see a live demo or just shake hands before signing on."
   },
   {
     q: "What do you mean by 'lead scoring'?",
-    a: "When a contact reaches out — by email or phone — our system evaluates signals like their job title, company size, what they're asking about, and how they found you. Based on that, it labels them Hot, Warm, or Cold. Hot leads get faster follow-up and an immediate alert to you. Cold leads get a polite response and get logged. You always know who to prioritize."
+    a: "When a contact reaches out by email or phone, our system evaluates signals like their job title, company size, what they're asking about, and how they found you. Based on that, it labels them Hot, Warm, or Cold. Hot leads get faster follow-up and an immediate alert to you. Cold leads get a polite response and get logged. You always know who to prioritize."
   },
   {
     q: "Is there a contract or minimum commitment?",

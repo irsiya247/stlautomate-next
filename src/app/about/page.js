@@ -26,10 +26,10 @@ export default function About() {
               STL Automate started with a job search.
             </p>
             <p>
-              Our founder Matthew spent years in cybersecurity — a field that runs on precision, systems thinking, and knowing exactly where the vulnerabilities are. When he found himself in a job search, he noticed something: the process was almost entirely manual. Researching companies, tailoring applications, following up, tracking responses. Hours of repetitive work for every single opportunity.
+              Our founder Matthew spent years in cybersecurity, a field that runs on precision, systems thinking, and knowing exactly where the vulnerabilities are. When he found himself in a job search, he noticed something: the process was almost entirely manual. Researching companies, tailoring applications, following up, tracking responses. Hours of repetitive work for every single opportunity.
             </p>
             <p>
-              So he automated it. Not to cut corners — to free up time for the parts that actually required him. The personalized conversations. The relationship-building. The judgment calls that no spreadsheet could make.
+              So he automated it. Not to cut corners. To free up time for the parts that actually required him. The personalized conversations. The relationship-building. The judgment calls that no spreadsheet could make.
             </p>
             <p>
               That experience turned into a question: how many small business owners are doing the same thing every day? Answering the same emails. Following up with the same leads. Playing phone tag with customers who just want a quick answer.
@@ -38,7 +38,7 @@ export default function About() {
               A lot of them, it turns out.
             </p>
             <p>
-              STL Automate exists to give small businesses the same leverage that large companies have — without the large company budget or the IT department to manage it. We build the systems, we run the setup, and we stay on as your partner as your business grows.
+              STL Automate exists to give small businesses the same leverage that large companies have, without the large company budget or the IT department to manage it. We build the systems, we run the setup, and we stay on as your partner as your business grows.
             </p>
           </div>
 
@@ -54,7 +54,7 @@ export default function About() {
                 <h3 className="text-xl font-bold mb-1">Matthew</h3>
                 <div className="text-sky-400 text-xs tracking-widest uppercase mb-4">Founder</div>
                 <p className="text-slate-400 text-sm leading-relaxed">
-                  Cybersecurity background. Born and raised in St. Louis. Builds the systems, manages every client relationship, and is the person you&apos;ll actually talk to — before, during, and after your project goes live.
+                  Cybersecurity background. Born and raised in St. Louis. Builds the systems, manages every client relationship, and is the person you&apos;ll actually talk to, before, during, and after your project goes live.
                 </p>
               </div>
 
@@ -83,13 +83,13 @@ export default function About() {
                 It&apos;s a fair question. Here&apos;s our honest answer: automation doesn&apos;t replace the relationship. It protects it.
               </p>
               <p>
-                When your phone gets answered automatically, your customer doesn&apos;t go to voicemail — and you don&apos;t spend your evening returning calls. When a lead gets followed up with automatically, you don&apos;t have to remember to do it — and neither does anyone else on your team.
+                When your phone gets answered automatically, your customer doesn&apos;t go to voicemail, and you don&apos;t spend your evening returning calls. When a lead gets followed up with automatically, you don&apos;t have to remember to do it. Neither does anyone else on your team.
               </p>
               <p>
                 The result is that when you <em>do</em> talk to a customer, it&apos;s because the moment actually calls for a human. Not because the system missed them.
               </p>
               <p>
-                We&apos;re a small team. We don&apos;t take on more clients than we can give real attention to. Every system we build gets tested, every client gets a direct line to the person who built it, and every question gets a real answer — not a ticket number.
+                We&apos;re a small team. We don&apos;t take on more clients than we can give real attention to. Every system we build gets tested, every client gets a direct line to the person who built it, and every question gets a real answer, not a ticket number.
               </p>
               <p>
                 That&apos;s the part that doesn&apos;t get automated.
@@ -104,7 +104,7 @@ export default function About() {
             <h2 className="text-3xl font-bold mb-6">Why St. Louis</h2>
             <div className="space-y-5 text-slate-300 text-lg leading-relaxed">
               <p>
-                Matthew grew up here. St. Louis has a particular kind of business culture — people value relationships, they value straight talk, and they can tell pretty quickly when someone is trying to sell them something they don&apos;t need.
+                Matthew grew up here. St. Louis has a particular kind of business culture. People value relationships, they value straight talk, and they can tell pretty quickly when someone is trying to sell them something they don&apos;t need.
               </p>
               <p>
                 We like that. It keeps us honest.
@@ -119,7 +119,7 @@ export default function About() {
           <div className="border border-slate-800 bg-slate-900/20 rounded-2xl p-10 text-center">
             <h2 className="text-2xl font-bold mb-3">Want to talk to a real person?</h2>
             <p className="text-slate-400 mb-8 max-w-lg mx-auto">
-              Book a free call with Matthew. No sales script, no pitch deck — just a conversation about your business and whether we can help.
+              Book a free call with Matthew. No sales script, no pitch deck. Just a conversation about your business and whether we can help.
             </p>
             <a href="/intake" className="bg-sky-600 text-white px-8 py-4 rounded-full font-semibold text-lg inline-block hover:bg-sky-500 transition-colors">
               Book a Free Call
