@@ -1,19 +1,36 @@
-export async function POST(req) {
+export async function POST(request) {
   try {
-    const body = await req.json();
+    const body = await request.json();
 
-    const { name, email, company, automation } = body;
+    const webhookUrl = process.env.N8N_WEBHOOK_URL;
 
-    await fetch("https://hook.us2.make.com/8kec2dnxogj2pusai87ve7ecc5ba1d69", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify({ name, email, company, automation })
-    });
+    if (webhookUrl) {
+      const response = await fetch(webhookUrl, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          name: body.name,
+          email: body.email,
+          phone: body.phone,
+          business: body.business,
+          industry: body.industry,
+          message: body.message,
+          source: 'stlautomate.com intake form',
+          submitted_at: new Date().toISOString(),
+        }),
+      });
+
+      if (!response.ok) {
+        console.error('n8n webhook failed:', response.status);
+        return Response.json({ success: false }, { status: 500 });
+      }
+    } else {
+      console.log('LEAD SUBMISSION (no webhook configured):', JSON.stringify(body, null, 2));
+    }
 
     return Response.json({ success: true });
   } catch (err) {
+    console.error('Lead API error:', err);
     return Response.json({ success: false }, { status: 500 });
   }
 }

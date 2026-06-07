@@ -3,7 +3,14 @@
 import { useState } from 'react';
 
 export default function Intake() {
-  const [form, setForm] = useState({ name: '', email: '', company: '', automation: '' });
+  const [form, setForm] = useState({
+    name: '',
+    email: '',
+    phone: '',
+    business: '',
+    industry: '',
+    message: '',
+  });
   const [status, setStatus] = useState('idle');
 
   const handleChange = (e) => setForm({ ...form, [e.target.name]: e.target.value });
@@ -26,72 +33,46 @@ export default function Intake() {
 
   if (status === 'success') {
     return (
-      <main className="max-w-xl mx-auto px-6 py-20 text-center">
-        <div className="text-sky-400 text-4xl mb-4">✓</div>
-        <h1 className="text-3xl font-bold">You're on the list.</h1>
-        <p className="text-slate-400 mt-3">We'll review your operations and reach out within 1 business day.</p>
+      <main className="min-h-screen bg-[#030712] text-white flex items-center justify-center px-6">
+        <div className="text-center max-w-lg">
+          <div className="w-16 h-16 rounded-full bg-sky-400/10 border border-sky-400/30 flex items-center justify-center text-sky-400 text-2xl mx-auto mb-6">✓</div>
+          <h1 className="text-3xl font-bold mb-3">We got it.</h1>
+          <p className="text-slate-400 text-lg">Matthew will reach out within one business day to set up your free call. Check your email.</p>
+        </div>
       </main>
     );
   }
 
   return (
-    <main className="max-w-xl mx-auto px-6 py-20">
+    <main className="min-h-screen bg-[#030712] text-white relative overflow-hidden">
 
-      <h1 className="text-3xl font-bold">Get Automation Audit</h1>
+      <div className="absolute inset-0 opacity-[0.05] pointer-events-none">
+        <div className="w-full h-full" style={{
+          backgroundImage: "linear-gradient(rgba(56,189,248,0.12) 1px, transparent 1px), linear-gradient(90deg, rgba(56,189,248,0.12) 1px, transparent 1px)",
+          backgroundSize: "60px 60px"
+        }} />
+      </div>
+      <div className="absolute top-[-250px] left-1/2 w-[700px] h-[700px] bg-sky-500/10 blur-[160px] rounded-full -translate-x-1/2 pointer-events-none" />
 
-      <p className="text-slate-400 mt-3">
-        We review your operations and map automation opportunities.
-      </p>
+      <div className="relative z-10 pt-36 pb-24">
+        <div className="max-w-2xl mx-auto px-6">
 
-      <form className="mt-8 space-y-4" onSubmit={handleSubmit}>
+          <div className="text-[11px] tracking-[0.35em] text-sky-400 uppercase mb-4">Book a Free Call</div>
+          <h1 className="text-4xl md:text-5xl font-extrabold mb-4">
+            Tell us about your business
+          </h1>
+          <p className="text-slate-400 text-lg mb-10">
+            We will reach out within one business day to schedule a 30-minute call. No pitch, no pressure. Just a straight conversation about what we can build for you.
+          </p>
 
-        <input
-          name="name"
-          required
-          value={form.name}
-          onChange={handleChange}
-          className="w-full p-3 bg-black border border-slate-700 rounded-lg text-white placeholder-slate-500"
-          placeholder="Name"
-        />
-        <input
-          name="email"
-          type="email"
-          required
-          value={form.email}
-          onChange={handleChange}
-          className="w-full p-3 bg-black border border-slate-700 rounded-lg text-white placeholder-slate-500"
-          placeholder="Email"
-        />
-        <input
-          name="company"
-          value={form.company}
-          onChange={handleChange}
-          className="w-full p-3 bg-black border border-slate-700 rounded-lg text-white placeholder-slate-500"
-          placeholder="Company"
-        />
-        <textarea
-          name="automation"
-          value={form.automation}
-          onChange={handleChange}
-          rows={4}
-          className="w-full p-3 bg-black border border-slate-700 rounded-lg text-white placeholder-slate-500"
-          placeholder="What do you want to automate?"
-        />
+          <form className="space-y-4" onSubmit={handleSubmit}>
 
-        {status === 'error' && (
-          <p className="text-red-400 text-sm">Something went wrong. Please try again.</p>
-        )}
-
-        <button
-          type="submit"
-          disabled={status === 'loading'}
-          className="w-full bg-sky-500 text-black py-3 rounded-xl font-semibold disabled:opacity-50"
-        >
-          {status === 'loading' ? 'Submitting...' : 'Submit & Get Audit'}
-        </button>
-
-      </form>
-
-    </main>
-  );
-}
+            <div className="grid sm:grid-cols-2 gap-4">
+              <div>
+                <label className="block text-sm text-slate-400 mb-1">Your name</label>
+                <input
+                  name="name"
+                  required
+                  value={form.name}
+                  onChange={handleChange}
+                  className="w-full px-4 py-3 bg-slate-900/50 bord

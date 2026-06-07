@@ -59,7 +59,7 @@ export default function RootLayout({ children }) {
                 <div className="text-slate-400 text-xs tracking-widest uppercase mb-4">Contact</div>
                 <ul className="space-y-2 text-sm text-slate-500">
                   <li><a href="/intake" className="hover:text-white transition-colors">Book a Free Call</a></li>
-                  <li><a href="mailto:matt@stlautomate.com" className="hover:text-white transition-colors">matt@stlautomate.com</a></li>
+                  <li><a href="mailto:contact@stlautomate.com" className="hover:text-white transition-colors">contact@stlautomate.com</a></li>
                 </ul>
               </div>
             </div>

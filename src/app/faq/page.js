@@ -102,8 +102,8 @@ export default function FAQ() {
               <a href="/intake" className="bg-sky-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-sky-500 transition-colors">
                 Book a Free Call
               </a>
-              <a href="mailto:matt@stlautomate.com" className="border border-slate-700 px-6 py-3 rounded-full text-slate-300 hover:border-slate-500 transition-colors">
-                Email Matthew
+              <a href="mailto:contact@stlautomate.com" className="border border-slate-700 px-6 py-3 rounded-full text-slate-300 hover:border-slate-500 transition-colors">
+                Email Us
               </a>
             </div>
           </div>
