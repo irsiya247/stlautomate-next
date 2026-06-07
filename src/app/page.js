@@ -38,12 +38,26 @@ export default function Home() {
           </p>
 
           <div className="mt-10 flex flex-wrap gap-4">
-            <a href="/intake" className="bg-sky-400 text-black px-6 py-3 rounded-full font-semibold hover:bg-sky-300 transition-colors">
+            <a href="#video" className="bg-sky-400 text-black px-6 py-3 rounded-full font-semibold hover:bg-sky-300 transition-colors">
               See It In Action
             </a>
             <a href="/intake" className="border border-slate-700 px-6 py-3 rounded-full text-slate-300 hover:border-slate-500 transition-colors">
               Talk To Us
             </a>
+          </div>
+        </section>
+
+        {/* VIDEO */}
+        <section id="video" className="max-w-4xl mx-auto px-6 mt-20 scroll-mt-24">
+          <div className="text-[11px] tracking-[0.35em] text-sky-400 uppercase mb-4 text-center">See It In Action</div>
+          <h2 className="text-2xl font-bold text-center mb-8">Watch how it works in 2 minutes</h2>
+          <div className="relative w-full rounded-2xl overflow-hidden border border-slate-800 shadow-2xl" style={{ paddingTop: "56.25%" }}>
+            <iframe
+              src="https://www.loom.com/embed/79983c093ef6428abc9db2afe8effb68?hide_owner=true&hide_share=true&hide_title=true&hideEmbedTopBar=true"
+              className="absolute inset-0 w-full h-full"
+              allowFullScreen
+              frameBorder="0"
+            />
           </div>
         </section>
 
