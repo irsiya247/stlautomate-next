@@ -31,6 +31,8 @@ export default function Intake() {
     }
   };
 
+  const inputClass = "w-full px-4 py-3 bg-slate-900/50 border border-slate-700 rounded-xl text-white placeholder-slate-500 focus:outline-none focus:border-sky-400 transition-colors";
+
   if (status === 'success') {
     return (
       <main className="min-h-screen bg-[#030712] text-white flex items-center justify-center px-6">
@@ -75,4 +77,95 @@ export default function Intake() {
                   required
                   value={form.name}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 bg-slate-900/50 bord
+                  placeholder="Jane Smith"
+                  className={inputClass}
+                />
+              </div>
+              <div>
+                <label className="block text-sm text-slate-400 mb-1">Email</label>
+                <input
+                  name="email"
+                  type="email"
+                  required
+                  value={form.email}
+                  onChange={handleChange}
+                  placeholder="jane@yourcompany.com"
+                  className={inputClass}
+                />
+              </div>
+            </div>
+
+            <div className="grid sm:grid-cols-2 gap-4">
+              <div>
+                <label className="block text-sm text-slate-400 mb-1">Phone</label>
+                <input
+                  name="phone"
+                  type="tel"
+                  value={form.phone}
+                  onChange={handleChange}
+                  placeholder="314-555-0100"
+                  className={inputClass}
+                />
+              </div>
+              <div>
+                <label className="block text-sm text-slate-400 mb-1">Business name</label>
+                <input
+                  name="business"
+                  required
+                  value={form.business}
+                  onChange={handleChange}
+                  placeholder="Smith Plumbing LLC"
+                  className={inputClass}
+                />
+              </div>
+            </div>
+
+            <div>
+              <label className="block text-sm text-slate-400 mb-1">Industry</label>
+              <select
+                name="industry"
+                value={form.industry}
+                onChange={handleChange}
+                className={inputClass}
+              >
+                <option value="">Select your industry</option>
+                <option value="HVAC">HVAC</option>
+                <option value="Plumbing">Plumbing</option>
+                <option value="Dental/Medical">Dental / Medical</option>
+                <option value="Real Estate">Real Estate</option>
+                <option value="Law Firm">Law Firm</option>
+                <option value="Home Services">Home Services</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+
+            <div>
+              <label className="block text-sm text-slate-400 mb-1">What are you trying to fix or automate?</label>
+              <textarea
+                name="message"
+                rows={4}
+                value={form.message}
+                onChange={handleChange}
+                placeholder="We miss a lot of after-hours calls and our follow-up is inconsistent..."
+                className={inputClass}
+              />
+            </div>
+
+            {status === 'error' && (
+              <p className="text-red-400 text-sm">Something went wrong. Email us directly at contact@stlautomate.com</p>
+            )}
+
+            <button
+              type="submit"
+              disabled={status === 'loading'}
+              className="w-full bg-sky-600 text-white py-4 rounded-full font-semibold text-lg hover:bg-sky-500 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+            >
+              {status === 'loading' ? 'Sending...' : 'Request My Free Call'}
+            </button>
+
+          </form>
+        </div>
+      </div>
+    </main>
+  );
+}
