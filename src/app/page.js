@@ -34,7 +34,7 @@ export default function Home() {
           </h1>
 
           <p className="mt-6 text-slate-400 max-w-2xl text-lg">
-            We set up phone agents, appointment bookers, and dispute-handling tools so your team can focus on the work that actually pays.
+            We set up phone agents, email systems, and sales outreach tools so your team can focus on the work that actually pays.
           </p>
 
           <div className="mt-10 flex flex-wrap gap-4">
@@ -85,7 +85,7 @@ export default function Home() {
 
           <div className="grid md:grid-cols-3 gap-6">
 
-            {/* AI Receptionist Suite */}
+            {/* Automated Receptionist Suite */}
             <div className="border border-slate-800 bg-slate-900/30 rounded-2xl p-7 flex flex-col">
               <div className="text-sky-400 text-xs tracking-widest uppercase mb-3">Automated Receptionist Suite</div>
               <h3 className="font-bold text-xl mb-3">Never lose a lead to a slow reply</h3>
@@ -111,7 +111,7 @@ export default function Home() {
               </a>
             </div>
 
-            {/* AI SDR */}
+            {/* Automated Sales Outreach */}
             <div className="border border-slate-800 bg-slate-900/30 rounded-2xl p-7 flex flex-col">
               <div className="text-sky-400 text-xs tracking-widest uppercase mb-3">Automated Sales Outreach</div>
               <h3 className="font-bold text-xl mb-3">Find new customers on autopilot</h3>
@@ -137,7 +137,7 @@ export default function Home() {
               </a>
             </div>
 
-            {/* VAPI Receptionist */}
+            {/* Phone Receptionist */}
             <div className="border border-slate-800 bg-slate-900/30 rounded-2xl p-7 flex flex-col">
               <div className="text-sky-400 text-xs tracking-widest uppercase mb-3">Phone Receptionist</div>
               <h3 className="font-bold text-xl mb-3">A voice agent that sounds human</h3>
@@ -174,9 +174,9 @@ export default function Home() {
           <h2 className="text-3xl font-bold mb-10">Up and running in days, not months.</h2>
           <div className="grid md:grid-cols-3 gap-8">
             {[
-              { step: "01", title: "Tell us about your business", desc: "We do a quick call to learn how you handle calls, bookings, and disputes today." },
+              { step: "01", title: "Tell us about your business", desc: "We do a quick call to learn how you handle calls, bookings, and follow-ups today." },
               { step: "02", title: "We build it for you", desc: "No software to learn. We set everything up and test it before it ever touches a real customer." },
-              { step: "03", title: "It runs while you work", desc: "Your phone agent handles calls. Your team focuses on the job. You stop losing customers to voicemail." },
+              { step: "03", title: "It runs while you work", desc: "Your systems handle the volume. Your team focuses on the job. You stop losing customers to voicemail." },
             ].map(({ step, title, desc }) => (
               <div key={step} className="flex gap-5">
                 <div className="text-sky-400 font-extrabold text-2xl leading-none mt-1">{step}</div>
@@ -194,4 +194,24 @@ export default function Home() {
           <div className="border border-slate-800 bg-slate-900/20 rounded-2xl p-8">
             <div className="mb-6">
               <h2 className="text-xl font-bold">Live Automation Dashboard</h2>
-              <p className="t
+              <p className="text-slate-400 text-sm mt-1">Watching your systems run in real time</p>
+            </div>
+            <WorkflowEngine />
+          </div>
+        </section>
+
+        {/* BOTTOM CTA */}
+        <section className="max-w-4xl mx-auto px-6 mt-20 pb-24 text-center">
+          <h2 className="text-4xl font-extrabold mb-4">Ready to stop losing customers?</h2>
+          <p className="text-slate-400 text-lg mb-8 max-w-2xl mx-auto">
+            Book a free 15-minute call. We&apos;ll tell you exactly what we&apos;d build for your business and what it costs — no pitch, no pressure.
+          </p>
+          <a href="/intake" className="bg-sky-600 text-white px-8 py-4 rounded-full font-semibold text-lg inline-block hover:bg-sky-500 transition-colors">
+            Book a Free Call
+          </a>
+        </section>
+
+      </div>
+    </main>
+  );
+}
