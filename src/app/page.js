@@ -24,34 +24,36 @@ export default function Home() {
         {/* HERO */}
         <section className="max-w-6xl mx-auto px-6">
           <div className="text-[11px] tracking-[0.35em] text-sky-400 uppercase">
-            Lead Capture &amp; Revenue Operations
+            For small businesses that can&apos;t afford to miss a call or lose a customer
           </div>
 
           <h1 className="mt-6 text-5xl md:text-7xl font-extrabold leading-[1.05]">
-            We build <span className="text-sky-400">automated systems.</span>
+            Your business,{" "}
+            <span className="text-sky-400">running 24/7</span> —<br />
+            without hiring more staff.
           </h1>
 
           <p className="mt-6 text-slate-400 max-w-2xl text-lg">
-            We turn messy business processes into clean, production-ready workflows: zero operational drag, infinite scale.
+            We set up phone agents, appointment bookers, and dispute-handling tools so your team can focus on the work that actually pays.
           </p>
 
           <div className="mt-10 flex flex-wrap gap-4">
             <a href="/intake" className="bg-sky-400 text-black px-6 py-3 rounded-full font-semibold hover:bg-sky-300 transition-colors">
-              Start Implementation
+              See It In Action
             </a>
-            <a href="/infrastructure" className="border border-slate-700 px-6 py-3 rounded-full text-slate-300 hover:border-slate-500 transition-colors">
-              View Architecture
+            <a href="/intake" className="border border-slate-700 px-6 py-3 rounded-full text-slate-300 hover:border-slate-500 transition-colors">
+              Talk To Us
             </a>
           </div>
         </section>
 
-        {/* STATS */}
+        {/* TRUST STATS */}
         <section className="max-w-6xl mx-auto px-6 mt-20 grid grid-cols-2 md:grid-cols-4 gap-8 border-t border-slate-800 pt-12">
           {[
-            { value: "16%", label: "Margin Optimization" },
-            { value: "1.0k", label: "Hours Reclaimed" },
-            { value: "38.4%", label: "Execution Reliability" },
-            { value: "4x", label: "Frictionless Scale" },
+            { value: "24/7", label: "Phones answered — even at 2am" },
+            { value: "< 1 min", label: "Average response time" },
+            { value: "0", label: "Calls sent to voicemail" },
+            { value: "3 tools", label: "Built for your business" },
           ].map(({ value, label }) => (
             <div key={label}>
               <p className="text-4xl font-extrabold">{value}</p>
@@ -60,56 +62,143 @@ export default function Home() {
           ))}
         </section>
 
+        {/* PRODUCT CARDS */}
+        <section className="max-w-6xl mx-auto px-6 mt-20">
+          <div className="text-[11px] tracking-[0.35em] text-sky-400 uppercase mb-4">
+            What We Build For You
+          </div>
+          <h2 className="text-3xl font-bold mb-10">Three tools. One less thing to worry about.</h2>
+
+          <div className="grid md:grid-cols-3 gap-6">
+
+            {/* AI Receptionist */}
+            <div className="border border-slate-800 bg-slate-900/30 rounded-2xl p-7 flex flex-col">
+              <div className="text-sky-400 text-xs tracking-widest uppercase mb-3">AI Receptionist</div>
+              <h3 className="font-bold text-xl mb-3">Never miss a call again</h3>
+              <p className="text-slate-400 text-sm leading-relaxed flex-1">
+                Our phone agent picks up every call, answers common questions, and books appointments — automatically, around the clock.
+              </p>
+              <ul className="mt-4 space-y-2 text-sm text-slate-300">
+                <li className="flex items-start gap-2">
+                  <span className="text-sky-400 mt-0.5">✓</span>
+                  Answers calls when you&apos;re with a customer
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-sky-400 mt-0.5">✓</span>
+                  Books appointments directly into your calendar
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-sky-400 mt-0.5">✓</span>
+                  Handles FAQs so your team doesn&apos;t have to
+                </li>
+              </ul>
+              <a href="/intake" className="mt-6 bg-sky-400 text-black px-5 py-2.5 rounded-full font-semibold text-sm text-center hover:bg-sky-300 transition-colors">
+                Get Started
+              </a>
+            </div>
+
+            {/* AI ADR */}
+            <div className="border border-slate-800 bg-slate-900/30 rounded-2xl p-7 flex flex-col">
+              <div className="text-sky-400 text-xs tracking-widest uppercase mb-3">AI ADR</div>
+              <h3 className="font-bold text-xl mb-3">Stop losing money to disputes</h3>
+              <p className="text-slate-400 text-sm leading-relaxed flex-1">
+                Our automated dispute resolution tool handles billing complaints and chargebacks for you — faster than any back-and-forth email chain.
+              </p>
+              <ul className="mt-4 space-y-2 text-sm text-slate-300">
+                <li className="flex items-start gap-2">
+                  <span className="text-sky-400 mt-0.5">✓</span>
+                  Responds to disputes within minutes
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-sky-400 mt-0.5">✓</span>
+                  Keeps detailed records automatically
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-sky-400 mt-0.5">✓</span>
+                  Reduces chargebacks and billing headaches
+                </li>
+              </ul>
+              <a href="/intake" className="mt-6 bg-sky-400 text-black px-5 py-2.5 rounded-full font-semibold text-sm text-center hover:bg-sky-300 transition-colors">
+                Get Started
+              </a>
+            </div>
+
+            {/* VAPI Receptionist */}
+            <div className="border border-slate-800 bg-slate-900/30 rounded-2xl p-7 flex flex-col">
+              <div className="text-sky-400 text-xs tracking-widest uppercase mb-3">VAPI Receptionist</div>
+              <h3 className="font-bold text-xl mb-3">A voice agent that sounds human</h3>
+              <p className="text-slate-400 text-sm leading-relaxed flex-1">
+                A fully custom voice assistant for your phone line — built on enterprise-grade voice infrastructure so every caller gets a professional experience.
+              </p>
+              <ul className="mt-4 space-y-2 text-sm text-slate-300">
+                <li className="flex items-start gap-2">
+                  <span className="text-sky-400 mt-0.5">✓</span>
+                  Natural-sounding conversations
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-sky-400 mt-0.5">✓</span>
+                  Custom scripts tailored to your business
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-sky-400 mt-0.5">✓</span>
+                  Works with your existing phone number
+                </li>
+              </ul>
+              <a href="/intake" className="mt-6 bg-sky-400 text-black px-5 py-2.5 rounded-full font-semibold text-sm text-center hover:bg-sky-300 transition-colors">
+                Get Started
+              </a>
+            </div>
+
+          </div>
+        </section>
+
+        {/* HOW IT WORKS */}
+        <section className="max-w-6xl mx-auto px-6 mt-20 border-t border-slate-800 pt-16">
+          <div className="text-[11px] tracking-[0.35em] text-sky-400 uppercase mb-4">
+            How It Works
+          </div>
+          <h2 className="text-3xl font-bold mb-10">Up and running in days, not months.</h2>
+          <div className="grid md:grid-cols-3 gap-8">
+            {[
+              { step: "01", title: "Tell us about your business", desc: "We do a quick call to learn how you handle calls, bookings, and disputes today." },
+              { step: "02", title: "We build it for you", desc: "No software to learn. We set everything up and test it before it ever touches a real customer." },
+              { step: "03", title: "It runs while you work", desc: "Your phone agent handles calls. Your team focuses on the job. You stop losing customers to voicemail." },
+            ].map(({ step, title, desc }) => (
+              <div key={step} className="flex gap-5">
+                <div className="text-sky-400 font-extrabold text-2xl leading-none mt-1">{step}</div>
+                <div>
+                  <h3 className="font-semibold text-lg mb-2">{title}</h3>
+                  <p className="text-slate-400 text-sm leading-relaxed">{desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+
         {/* ENGINE */}
         <section className="max-w-6xl mx-auto px-6 mt-20">
-          <div className="text-[11px] tracking-[0.35em] text-sky-400 uppercase mb-6">
-            Core Capabilities // System Architecture
-          </div>
           <div className="border border-slate-800 bg-slate-900/20 rounded-2xl p-8">
             <div className="mb-6">
-              <h2 className="text-xl font-bold">Intelligent Workflow Engine</h2>
+              <h2 className="text-xl font-bold">Live Automation Dashboard</h2>
               <p className="text-slate-400 text-sm mt-1">
-                Live execution visualization of automation pipelines
+                See your workflows running in real time
               </p>
             </div>
             <WorkflowEngine />
           </div>
         </section>
 
-        {/* CAPABILITIES */}
-        <section className="max-w-6xl mx-auto px-6 mt-10 grid md:grid-cols-3 gap-6">
-          <div className="border border-slate-800 rounded-xl p-6">
-            <h3 className="font-semibold text-lg">Intelligent Workflows</h3>
-            <p className="text-slate-400 text-sm mt-3 leading-relaxed">
-              Eliminate the operational drag capping your daily capacity. We engineer self-sustaining pipelines that instantly capture, qualify, and route leads with zero human friction.
-            </p>
-            <p className="text-sky-400 text-xs tracking-widest uppercase mt-4">Engineered for immediate speed-to-lead</p>
-          </div>
-          <div className="border border-slate-800 rounded-xl p-6">
-            <h3 className="font-semibold text-lg">Institutional Reliability</h3>
-            <p className="text-slate-400 text-sm mt-3 leading-relaxed">
-              Mitigate execution risk with enterprise architecture. Automated pipelines run 24/7, ensuring absolute data integrity.
-            </p>
-          </div>
-          <div className="border border-slate-800 rounded-xl p-6">
-            <h3 className="font-semibold text-lg">Executive Oversight</h3>
-            <p className="text-slate-400 text-sm mt-3 leading-relaxed">
-              Command total visibility over operations. Track systemic efficiency and live webhook throughput to scale.
-            </p>
-          </div>
-        </section>
-
         {/* CTA */}
-        <section className="max-w-6xl mx-auto px-6 mt-20 text-center border-t border-slate-800 pt-16">
-          <h2 className="text-2xl font-semibold">
-            Build automation infrastructure for your business
+        <section className="max-w-6xl mx-auto px-6 mt-20 text-center border-t border-slate-800 pt-16 pb-24">
+          <h2 className="text-3xl font-bold">
+            Ready to stop losing customers to voicemail?
           </h2>
-          <p className="text-slate-400 mt-3 text-sm">
-            Replace manual operations with scalable execution systems.
+          <p className="text-slate-400 mt-3 text-base max-w-xl mx-auto">
+            Takes 15 minutes to get started. No contracts. No technical setup on your end.
           </p>
-          <div className="mt-6">
-            <a href="/intake" className="bg-sky-400 text-black px-6 py-3 rounded-full font-semibold inline-block hover:bg-sky-300 transition-colors">
-              Request Demo
+          <div className="mt-8 flex flex-wrap gap-4 justify-center">
+            <a href="/intake" className="bg-sky-400 text-black px-8 py-4 rounded-full font-semibold text-lg inline-block hover:bg-sky-300 transition-colors">
+              Book a Free Call
             </a>
           </div>
         </section>
