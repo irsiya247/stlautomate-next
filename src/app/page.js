@@ -51,7 +51,7 @@ export default function Home() {
           <h2 className="text-2xl font-bold text-center mb-8">Watch how it works in 2 minutes</h2>
           <div className="relative w-full rounded-2xl overflow-hidden border border-slate-800 shadow-2xl" style={{ paddingTop: "56.25%" }}>
             <iframe
-              src="https://www.loom.com/embed/79983c093ef6428abc9db2afe8effb68?hide_owner=true&hide_share=true&hide_title=true&hideEmbedTopBar=true"
+              src="https://www.loom.com/embed/79983c093ef6428abc9db2afe8effb68?hide_owner=true&hide_share=true&hide_title=true&hideEmbedTopBar=true&hide_speed=true&hide_emoji=true&hideReactions=true"
               className="absolute inset-0 w-full h-full"
               allowFullScreen
               frameBorder="0"
