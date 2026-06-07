@@ -50,7 +50,7 @@ export default function About() {
             <div className="grid md:grid-cols-2 gap-8">
 
               <div className="border border-slate-800 bg-slate-900/30 rounded-2xl p-8">
-                <div className="w-14 h-14 rounded-full bg-sky-400/10 border border-sky-400/20 flex items-center justify-center text-sky-400 font-bold text-xl mb-5">M</div>
+                <img src="/matthew.jpg" alt="Matthew" className="w-14 h-14 rounded-full object-cover mb-5" />
                 <h3 className="text-xl font-bold mb-1">Matthew</h3>
                 <div className="text-sky-400 text-xs tracking-widest uppercase mb-4">Founder</div>
                 <p className="text-slate-400 text-sm leading-relaxed">
