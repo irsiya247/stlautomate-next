@@ -177,9 +177,12 @@ export default function Services() {
 
           {/* BOTTOM CTA */}
           <div className="border-t border-slate-800 pt-20 text-center">
-            <h2 className="text-3xl font-bold mb-4">Not sure which one you need?</h2>
-            <p className="text-slate-400 text-lg mb-8 max-w-xl mx-auto">
-              Book a free 15-minute call. We&apos;ll listen to how your business works today and tell you exactly which tool fits, or whether you need more than one.
+            <h2 className="text-3xl font-bold mb-4">Don&apos;t see exactly what you need?</h2>
+            <p className="text-slate-400 text-lg mb-4 max-w-xl mx-auto">
+              These three are our most common builds. We also take on custom projects for businesses with specific workflows, integrations, or ideas that don&apos;t fit a standard product.
+            </p>
+            <p className="text-slate-500 text-base mb-8 max-w-xl mx-auto">
+              If you have something in mind, tell us about it on the call. We&apos;ll be straight with you about whether we can build it.
             </p>
             <a href="/intake" className="bg-sky-600 text-white px-8 py-4 rounded-full font-semibold text-lg inline-block hover:bg-sky-500 transition-colors">
               Book a Free Call

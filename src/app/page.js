@@ -65,7 +65,7 @@ export default function Home() {
             { value: "24/7", label: "Phones answered, even at 2am" },
             { value: "< 1 min", label: "Average response time" },
             { value: "0", label: "Calls sent to voicemail" },
-            { value: "3 tools", label: "Built for your business" },
+            { value: "Custom", label: "Builds available for any need" },
           ].map(({ value, label }) => (
             <div key={label}>
               <p className="text-4xl font-extrabold">{value}</p>
@@ -77,9 +77,9 @@ export default function Home() {
         {/* PRODUCT CARDS */}
         <section className="max-w-6xl mx-auto px-6 mt-20">
           <div className="text-[11px] tracking-[0.35em] text-sky-400 uppercase mb-4">
-            What We Build For You
+            Our Core Products
           </div>
-          <h2 className="text-3xl font-bold mb-10">Three tools. One less thing to worry about.</h2>
+          <h2 className="text-3xl font-bold mb-10">What we build most. Not all we can do.</h2>
 
           <div className="grid md:grid-cols-3 gap-6">
 
