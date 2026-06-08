@@ -28,7 +28,7 @@ export default function Services() {
             <div className="grid md:grid-cols-2 gap-12 items-start">
               <div>
                 <div className="text-sky-400 text-xs tracking-widest uppercase mb-3">Product 01</div>
-                <h2 className="text-4xl font-extrabold mb-4">Automated Receptionist Suite</h2>
+                <h2 className="text-4xl font-extrabold mb-4">Automated <span className="text-sky-400">Receptionist Suite</span></h2>
                 <p className="text-slate-400 text-lg leading-relaxed mb-6">
                   Your inbox becomes a 24/7 sales assistant. Every email gets answered instantly, every lead gets followed up automatically, and every booking gets detected the moment it happens. Your team never has to chase anyone.
                 </p>
@@ -86,7 +86,7 @@ export default function Services() {
             <div className="grid md:grid-cols-2 gap-12 items-start">
               <div>
                 <div className="text-sky-400 text-xs tracking-widest uppercase mb-3">Product 02</div>
-                <h2 className="text-4xl font-extrabold mb-4">Phone Receptionist</h2>
+                <h2 className="text-4xl font-extrabold mb-4">Phone <span className="text-sky-400">Receptionist</span></h2>
                 <p className="text-slate-400 text-lg leading-relaxed mb-6">
                   A voice agent that answers your phone line, has real conversations with callers, and scores every call. You will always know which calls are worth calling back first.
                 </p>
@@ -134,7 +134,7 @@ export default function Services() {
             <div className="grid md:grid-cols-2 gap-12 items-start">
               <div>
                 <div className="text-sky-400 text-xs tracking-widest uppercase mb-3">Product 03</div>
-                <h2 className="text-4xl font-extrabold mb-4">Automated Sales Outreach</h2>
+                <h2 className="text-4xl font-extrabold mb-4">Automated <span className="text-sky-400">Sales Outreach</span></h2>
                 <p className="text-slate-400 text-lg leading-relaxed mb-6">
                   Give us a list of businesses you want to reach. Our system sends personalized emails, follows up on its own, detects when someone is interested, and books the meeting, without you lifting a finger.
                 </p>
@@ -183,7 +183,7 @@ export default function Services() {
 
           {/* BOTTOM CTA */}
           <div id="custom" className="border-t border-slate-800 pt-20 text-center scroll-mt-24">
-            <h2 className="text-3xl font-bold mb-4">Don&apos;t see exactly what you need?</h2>
+            <h2 className="text-3xl font-bold mb-4">Don&apos;t see exactly <span className="text-sky-400">what you need?</span></h2>
             <p className="text-slate-400 text-lg mb-4 max-w-xl mx-auto">
               These three are our most common builds. We also take on custom projects for businesses with specific workflows, integrations, or ideas that don&apos;t fit a standard product.
             </p>

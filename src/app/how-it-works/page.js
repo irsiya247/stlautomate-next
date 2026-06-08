@@ -33,7 +33,7 @@ export default function HowItWorks() {
               </div>
               <div className="pb-8 border-b border-slate-800">
                 <div className="text-sky-400 text-xs tracking-widest uppercase mb-2">Week 1</div>
-                <h2 className="text-2xl font-bold mb-4">We learn your business</h2>
+                <h2 className="text-2xl font-bold mb-4">We learn <span className="text-sky-400">your business</span></h2>
                 <p className="text-slate-400 leading-relaxed mb-4">
                   We start with a 30-minute call. No slides, no demos, just questions. We want to understand how your business works today: how leads come in, how you follow up, what your team does manually every day, and where things fall through the cracks.
                 </p>
@@ -56,7 +56,7 @@ export default function HowItWorks() {
               </div>
               <div className="pb-8 border-b border-slate-800">
                 <div className="text-sky-400 text-xs tracking-widest uppercase mb-2">Week 1–2</div>
-                <h2 className="text-2xl font-bold mb-4">We build it. You don&apos;t touch a thing</h2>
+                <h2 className="text-2xl font-bold mb-4">We build it. <span className="text-sky-400">You don&apos;t touch a thing</span></h2>
                 <p className="text-slate-400 leading-relaxed mb-4">
                   We configure every workflow, write every script, and connect every integration. If it&apos;s an email system, we load your knowledge base and set the response logic. If it&apos;s a phone agent, we write the script, set the voice, and define how calls get handled.
                 </p>
@@ -79,7 +79,7 @@ export default function HowItWorks() {
               </div>
               <div className="pb-8 border-b border-slate-800">
                 <div className="text-sky-400 text-xs tracking-widest uppercase mb-2">Before Go-Live</div>
-                <h2 className="text-2xl font-bold mb-4">We test it against real scenarios</h2>
+                <h2 className="text-2xl font-bold mb-4">We test it <span className="text-sky-400">against real scenarios</span></h2>
                 <p className="text-slate-400 leading-relaxed mb-4">
                   Before anything touches a real customer, we run it through the situations your business actually faces. We simulate tricky emails, edge-case calls, and unusual requests to make sure the system handles them the way you would.
                 </p>
@@ -97,7 +97,7 @@ export default function HowItWorks() {
               </div>
               <div className="pb-8 border-b border-slate-800">
                 <div className="text-sky-400 text-xs tracking-widest uppercase mb-2">Go-Live</div>
-                <h2 className="text-2xl font-bold mb-4">It goes live and just runs</h2>
+                <h2 className="text-2xl font-bold mb-4">It goes live <span className="text-sky-400">and just runs</span></h2>
                 <p className="text-slate-400 leading-relaxed mb-4">
                   Your system is live. Emails get answered. Calls get handled. Leads get followed up with. Bookings get detected. You get WhatsApp or Slack alerts when something needs your attention. When everything is running smoothly, you get silence.
                 </p>
@@ -114,7 +114,7 @@ export default function HowItWorks() {
               </div>
               <div>
                 <div className="text-sky-400 text-xs tracking-widest uppercase mb-2">Ongoing</div>
-                <h2 className="text-2xl font-bold mb-4">We stay on as your automation partner</h2>
+                <h2 className="text-2xl font-bold mb-4">We stay on <span className="text-sky-400">as your automation partner</span></h2>
                 <p className="text-slate-400 leading-relaxed mb-4">
                   Your business changes. New services, new team members, new questions customers keep asking. We update the system as you grow so it stays accurate and useful, not something you set up once and slowly forget about.
                 </p>
@@ -128,7 +128,7 @@ export default function HowItWorks() {
 
           {/* WHAT YOU DON'T NEED */}
           <div className="mt-24 border border-slate-800 bg-slate-900/20 rounded-2xl p-10">
-            <h2 className="text-2xl font-bold mb-8 text-center">What you don&apos;t need to have</h2>
+            <h2 className="text-2xl font-bold mb-8 text-center">What you <span className="text-sky-400">don&apos;t need to have</span></h2>
             <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
               {[
                 "A technical team",
@@ -148,7 +148,7 @@ export default function HowItWorks() {
 
           {/* CTA */}
           <div className="mt-20 text-center">
-            <h2 className="text-3xl font-bold mb-4">Ready to get started?</h2>
+            <h2 className="text-3xl font-bold mb-4">Ready to <span className="text-sky-400">get started?</span></h2>
             <p className="text-slate-400 mb-8 max-w-lg mx-auto">
               The first call is free and takes 30 minutes. We&apos;ll tell you exactly what we&apos;d build and what it would cost. No pressure, no pitch deck.
             </p>

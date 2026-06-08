@@ -99,7 +99,7 @@ export default function Tech() {
           {/* LEAD INTELLIGENCE */}
           <section className="mb-20">
             <div className="text-sky-400 text-xs tracking-widest uppercase mb-3">Lead Intelligence</div>
-            <h2 className="text-3xl font-bold mb-6">Scoring & Routing</h2>
+            <h2 className="text-3xl font-bold mb-6">Scoring & <span className="text-sky-400">Routing</span></h2>
             <div className="grid md:grid-cols-2 gap-8 items-start">
               <div className="space-y-4 text-slate-400 leading-relaxed">
                 <p>
@@ -134,7 +134,7 @@ export default function Tech() {
           {/* INTEGRATIONS */}
           <section className="mb-20">
             <div className="text-sky-400 text-xs tracking-widest uppercase mb-3">Integrations</div>
-            <h2 className="text-3xl font-bold mb-8">What we connect to</h2>
+            <h2 className="text-3xl font-bold mb-8">What we <span className="text-sky-400">connect to</span></h2>
             <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
               {[
                 { name: "Gmail / IMAP", desc: "Inbound email parsing, outbound sending, reply detection" },
@@ -160,7 +160,7 @@ export default function Tech() {
           {/* SECURITY */}
           <section className="mb-20">
             <div className="text-sky-400 text-xs tracking-widest uppercase mb-3">Security & Data</div>
-            <h2 className="text-3xl font-bold mb-6">What happens to your data</h2>
+            <h2 className="text-3xl font-bold mb-6">What happens <span className="text-sky-400">to your data</span></h2>
             <div className="space-y-4 text-slate-400 leading-relaxed max-w-3xl">
               <p>
                 We come from a cybersecurity background. Data handling isn&apos;t an afterthought. It&apos;s part of the architecture.
@@ -179,7 +179,7 @@ export default function Tech() {
 
           {/* CTA */}
           <div className="border border-slate-800 bg-slate-900/20 rounded-2xl p-10 text-center">
-            <h2 className="text-2xl font-bold mb-3">Want to go deeper?</h2>
+            <h2 className="text-2xl font-bold mb-3">Want to <span className="text-sky-400">go deeper?</span></h2>
             <p className="text-slate-400 mb-8 max-w-lg mx-auto">
               If you have architecture questions, integration edge cases, or security requirements, book a technical call. We&apos;ll go into as much detail as you need.
             </p>

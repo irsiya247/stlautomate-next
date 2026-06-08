@@ -1,5 +1,3 @@
-import WorkflowEngine from "@/components/WorkflowEngine";
-
 export default function Home() {
   return (
     <main className="min-h-screen bg-[#030712] text-white relative overflow-hidden">
@@ -81,14 +79,14 @@ export default function Home() {
           <div className="text-[11px] tracking-[0.35em] text-sky-400 uppercase mb-4">
             Our Core Products
           </div>
-          <h2 className="text-3xl font-bold mb-10">What we build most. Not all we can do.</h2>
+          <h2 className="text-3xl font-bold mb-10">What we build most. Not all <span className="text-sky-400">we can do</span></h2>
 
           <div className="grid md:grid-cols-3 gap-6">
 
             {/* Automated Receptionist Suite */}
             <div className="border border-slate-800 bg-slate-900/30 rounded-2xl p-7 flex flex-col">
               <div className="text-sky-400 text-xs tracking-widest uppercase mb-3">Automated Receptionist Suite</div>
-              <h3 className="font-bold text-xl mb-3">Never lose a lead to a slow reply</h3>
+              <h3 className="font-bold text-lg mb-3">Never lose a lead to a slow reply</h3>
               <p className="text-slate-400 text-sm leading-relaxed flex-1">
                 Three workflows working together: answers emails instantly, follows up automatically, and stops the moment someone books. No lead ever falls through the cracks.
               </p>
@@ -114,7 +112,7 @@ export default function Home() {
             {/* Automated Sales Outreach */}
             <div className="border border-slate-800 bg-slate-900/30 rounded-2xl p-7 flex flex-col">
               <div className="text-sky-400 text-xs tracking-widest uppercase mb-3">Automated Sales Outreach</div>
-              <h3 className="font-bold text-xl mb-3">Find new customers on autopilot</h3>
+              <h3 className="font-bold text-lg mb-3">Find new customers on autopilot</h3>
               <p className="text-slate-400 text-sm leading-relaxed flex-1">
                 Give us a prospect list. Our system scores every lead, sends personalized outreach, follows up automatically, and books meetings when someone says yes.
               </p>
@@ -140,7 +138,7 @@ export default function Home() {
             {/* Phone Receptionist */}
             <div className="border border-slate-800 bg-slate-900/30 rounded-2xl p-7 flex flex-col">
               <div className="text-sky-400 text-xs tracking-widest uppercase mb-3">Phone Receptionist</div>
-              <h3 className="font-bold text-xl mb-3">A voice agent that sounds human</h3>
+              <h3 className="font-bold text-lg mb-3">A voice agent that sounds human</h3>
               <p className="text-slate-400 text-sm leading-relaxed flex-1">
                 A fully custom voice assistant for your phone line, built on enterprise-grade voice infrastructure so every caller gets a professional experience.
               </p>
@@ -171,7 +169,7 @@ export default function Home() {
           <div className="text-[11px] tracking-[0.35em] text-sky-400 uppercase mb-4">
             How It Works
           </div>
-          <h2 className="text-3xl font-bold mb-10">Up and running in days, not months.</h2>
+          <h2 className="text-3xl font-bold mb-10">Up and running in days, <span className="text-sky-400">not months</span></h2>
           <div className="grid md:grid-cols-3 gap-8">
             {[
               { step: "01", title: "Tell us about your business", desc: "We do a quick call to learn how you handle calls, bookings, and follow-ups today." },
@@ -186,17 +184,6 @@ export default function Home() {
                 </div>
               </div>
             ))}
-          </div>
-        </section>
-
-        {/* ENGINE */}
-        <section className="max-w-6xl mx-auto px-6 mt-20">
-          <div className="border border-slate-800 bg-slate-900/20 rounded-2xl p-8">
-            <div className="mb-6">
-              <h2 className="text-xl font-bold">Live Automation Dashboard</h2>
-              <p className="text-slate-400 text-sm mt-1">Watching your systems run in real time</p>
-            </div>
-            <WorkflowEngine />
           </div>
         </section>
 
@@ -218,7 +205,7 @@ export default function Home() {
 
         {/* BOTTOM CTA */}
         <section className="max-w-4xl mx-auto px-6 mt-20 pb-24 text-center">
-          <h2 className="text-4xl font-extrabold mb-4">Ready to stop losing customers?</h2>
+          <h2 className="text-4xl font-extrabold mb-4">Ready to stop <span className="text-sky-400">losing customers?</span></h2>
           <p className="text-slate-400 text-lg mb-8 max-w-2xl mx-auto">
             Book a free 15-minute call. We&apos;ll tell you exactly what we&apos;d build for your business and what it costs. No pitch, no pressure.
           </p>
