@@ -8,8 +8,8 @@ export default function Header() {
     { href: '/services', label: 'Services' },
     { href: '/how-it-works', label: 'How It Works' },
     { href: '/about', label: 'About' },
-    { href: '/faq', label: 'FAQ' },
     { href: '/tech', label: 'Tech' },
+    { href: '/faq', label: 'FAQ' },
   ];
 
   return (
