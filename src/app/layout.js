@@ -41,6 +41,7 @@ export default function RootLayout({ children }) {
                     <li><a href="/services#vapi" className="hover:text-white transition-colors">Phone Receptionist</a></li>
                     <li><a href="/services#sdr" className="hover:text-white transition-colors">Sales Outreach</a></li>
                   </ul>
+                  <p className="text-slate-600 text-xs leading-relaxed mt-4">Not seeing what you need? We build custom automations too.</p>
                 </div>
                 <div>
                   <div className="text-slate-400 text-xs tracking-widest uppercase mb-4">Company</div>
