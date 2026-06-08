@@ -39,6 +39,10 @@ const faqs = [
     a: "When a contact reaches out by email or phone, our system evaluates signals like their job title, company size, what they're asking about, and how they found you. Based on that, it labels them Hot, Warm, or Cold. Hot leads get faster follow-up and an immediate alert to you. Cold leads get a polite response and get logged. You always know who to prioritize."
   },
   {
+    q: "Is there a monthly fee?",
+    a: "Yes. After setup, there's a monthly retainer that covers hosting, API costs, monitoring, and ongoing support. We don't set it and forget it. Your system stays maintained, updated, and running. The retainer is what keeps that true."
+  },
+  {
     q: "Is there a contract or minimum commitment?",
     a: "No long-term contracts. We earn your continued business by being useful. After the initial setup, we work on a month-to-month basis. If you want to pause or cancel, you can. We'd rather build something that works so well you don't want to."
   },

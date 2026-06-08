@@ -165,7 +165,13 @@ export default function Services() {
                     When someone replies with interest, the system detects it, sends a booking email with your calendar link, and alerts you on Slack. Not-interested replies get archived automatically.
                   </p>
                 </div>
-                <div className="border border-slate-700bg-slate-900/40 rounded-xl p-5 border border-slate-700">
+                <div className="border border-slate-700 bg-slate-900/40 rounded-xl p-5">
+                  <h3 className="font-semibold text-white mb-2">Every email is written for that recipient</h3>
+                  <p className="text-slate-400 text-sm leading-relaxed">
+                    Not a template with a name swapped in. The system reads each prospect's company, industry, and likely pain points and writes a message specific to them.
+                  </p>
+                </div>
+                <div className="border border-slate-700 bg-slate-900/40 rounded-xl p-5">
                   <h3 className="font-semibold text-white mb-2">Logs everything to your CRM</h3>
                   <p className="text-slate-400 text-sm leading-relaxed">
                     Every lead, every email, every reply is logged to HubSpot and Google Sheets automatically. You always have a clean record of what happened with every prospect.
