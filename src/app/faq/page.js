@@ -81,10 +81,10 @@ export default function FAQ() {
 
           <div className="text-[11px] tracking-[0.35em] text-sky-400 uppercase mb-4">FAQ</div>
           <h1 className="text-5xl md:text-6xl font-extrabold leading-tight mb-6">
-            Questions we <span className="text-sky-400">actually get asked.</span>
+            Questions we <span className="text-sky-400">actually get asked</span>
           </h1>
           <p className="text-slate-400 text-lg mb-16">
-            No fluff, no corporate answers. If you have one we didn&apos;t cover, just ask.
+            Straight answers. If you have one we didn&apos;t cover, ask it on the call.
           </p>
 
           <div className="space-y-3 mb-20">
