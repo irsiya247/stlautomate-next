@@ -28,8 +28,7 @@ export default function Home() {
           </div>
 
           <h1 className="mt-6 text-5xl md:text-7xl font-extrabold leading-[1.05]">
-            Your business runs <span className="text-sky-400">24/7</span><br />
-            No extra staff required
+            Your business runs <span className="text-sky-400">24/7,</span> no extra staff required
           </h1>
 
           <p className="mt-6 text-slate-400 max-w-2xl text-lg">

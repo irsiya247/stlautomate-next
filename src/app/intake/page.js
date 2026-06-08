@@ -38,7 +38,7 @@ export default function Intake() {
       <main className="min-h-screen bg-[#030712] text-white flex items-center justify-center px-6">
         <div className="text-center max-w-lg">
           <div className="w-16 h-16 rounded-full bg-sky-400/10 border border-sky-400/30 flex items-center justify-center text-sky-400 text-2xl mx-auto mb-6">✓</div>
-          <h1 className="text-3xl font-bold mb-3">We got it.</h1>
+          <h1 className="text-3xl font-bold mb-3">We got it</h1>
           <p className="text-slate-400 text-lg">Matthew will reach out within one business day to set up your free call. Check your email.</p>
         </div>
       </main>

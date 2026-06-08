@@ -16,7 +16,7 @@ export default function HowItWorks() {
           {/* HEADER */}
           <div className="text-[11px] tracking-[0.35em] text-sky-400 uppercase mb-4">The Process</div>
           <h1 className="text-5xl md:text-6xl font-extrabold leading-tight mb-6">
-            Simple for you. <span className="text-sky-400">Powerful under the hood.</span>
+            Simple for you, <span className="text-sky-400">powerful under the hood</span>
           </h1>
           <p className="text-slate-400 text-lg max-w-2xl mb-20">
             You don&apos;t need to understand how it works. You just need to know it does. But if you&apos;re curious, here&apos;s exactly what happens from the moment you reach out to the moment your system goes live.

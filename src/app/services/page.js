@@ -17,7 +17,7 @@ export default function Services() {
           {/* PAGE HEADER */}
           <div className="text-[11px] tracking-[0.35em] text-sky-400 uppercase mb-4">What We Build</div>
           <h1 className="text-5xl md:text-6xl font-extrabold leading-tight mb-6">
-            Three tools. <span className="text-sky-400">Zero guesswork.</span>
+            Three tools, <span className="text-sky-400">zero guesswork</span>
           </h1>
           <p className="text-slate-400 text-lg max-w-2xl mb-20">
             Every product is built, configured, and tested by us. You don&apos;t touch any software. You just start getting more customers.
