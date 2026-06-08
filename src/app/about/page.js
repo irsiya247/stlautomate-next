@@ -15,8 +15,7 @@ export default function About() {
 
           <div className="text-[11px] tracking-[0.35em] text-sky-400 uppercase mb-4">About Us</div>
           <h1 className="text-5xl md:text-6xl font-extrabold leading-tight mb-16">
-            Built in St. Louis,
-            <span className="text-sky-400">built for the long run</span>
+            Built in St. Louis <span className="text-sky-400">for the long run</span>
           </h1>
 
           <div className="prose prose-invert max-w-none mb-16 space-y-6 text-slate-300 text-lg leading-relaxed">

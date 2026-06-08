@@ -16,7 +16,7 @@ export default function Tech() {
           {/* HEADER */}
           <div className="text-[11px] tracking-[0.35em] text-sky-400 uppercase mb-4">Under the Hood</div>
           <h1 className="text-5xl md:text-6xl font-extrabold leading-tight mb-6">
-            The stack, <span className="text-sky-400">if you want to know</span>
+            The stack <span className="text-sky-400">if you want to know</span>
           </h1>
           <p className="text-slate-400 text-lg max-w-2xl mb-6">
             Most of our clients don&apos;t care about this page, and that&apos;s fine. But if you&apos;re evaluating us technically, or you&apos;re the person who has to sign off on what goes into your infrastructure, here&apos;s exactly what we use and why.
