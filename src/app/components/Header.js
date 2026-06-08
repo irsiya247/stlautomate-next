@@ -1,8 +1,10 @@
 'use client';
 import { useState } from 'react';
+import { usePathname } from 'next/navigation';
 
 export default function Header() {
   const [open, setOpen] = useState(false);
+  const pathname = usePathname();
 
   const links = [
     { href: '/services', label: 'Services' },
@@ -22,7 +24,7 @@ export default function Header() {
         {/* Desktop nav */}
         <nav className="hidden md:flex items-center gap-6 text-sm">
           {links.map(({ href, label }) => (
-            <a key={href} href={href} className="text-slate-400 hover:text-white transition-colors">
+            <a key={href} href={href} className={`transition-colors hover:text-white ${pathname === href ? 'text-white' : 'text-slate-400'}`}>
               {label}
             </a>
           ))}
@@ -54,7 +56,7 @@ export default function Header() {
                 key={href}
                 href={href}
                 onClick={() => setOpen(false)}
-                className="text-slate-300 hover:text-white py-3 text-sm border-b border-slate-800/50 last:border-0 transition-colors"
+                className={`py-3 text-sm border-b border-slate-800/50 last:border-0 transition-colors hover:text-white ${pathname === href ? 'text-white' : 'text-slate-400'}`}
               >
                 {label}
               </a>
