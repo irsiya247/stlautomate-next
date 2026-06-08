@@ -202,16 +202,15 @@ export default function Home() {
 
         {/* TESTIMONIAL */}
         <section className="max-w-3xl mx-auto px-6 mt-20">
-          <div className="border border-slate-800 bg-slate-900/30 rounded-2xl p-10">
-            <div className="text-sky-400 text-3xl font-serif leading-none mb-6">&ldquo;</div>
-            <blockquote className="text-white text-lg leading-relaxed mb-8">
-              Splitting costs on a group trip used to mean spreadsheets, back-and-forth texts, and someone always getting it wrong. STL Automate built something custom for me and it changed all of that. Clean, fast, it just works.
-            </blockquote>
-            <div className="flex items-center gap-4">
-              <div className="w-10 h-0.5 bg-sky-400/50" />
+          <div className="border border-slate-800 bg-slate-900/30 rounded-2xl p-10 flex gap-8">
+            <div className="w-1 flex-shrink-0 bg-sky-500 rounded-full" />
+            <div>
+              <blockquote className="text-slate-200 text-lg leading-relaxed mb-8">
+                Splitting costs on a group trip used to mean spreadsheets, back-and-forth texts, and someone always getting it wrong. STL Automate built a custom split-billing app for me and it changed all of that. Clean, fast, it just works.
+              </blockquote>
               <div>
                 <p className="text-white font-semibold text-sm">Michael A.</p>
-                <p className="text-slate-500 text-xs tracking-widest uppercase mt-0.5">St. Louis, MO</p>
+                <p className="text-slate-500 text-xs tracking-widest uppercase mt-1">St. Louis, MO</p>
               </div>
             </div>
           </div>
