@@ -17,7 +17,7 @@ export default function RootLayout({ children }) {
         {children}
         <footer className="border-t border-slate-800 mt-20 py-12">
           <div className="max-w-6xl mx-auto px-6">
-            <div className="grid md:grid-cols-5 gap-10 mb-10">
+            <div className="grid md:grid-cols-4 gap-10 mb-10">
               <div>
                 <a href="/" className="text-white font-bold text-lg mb-3 inline-block">
                   STL <span className="text-sky-400">Automate</span>
@@ -36,16 +36,11 @@ export default function RootLayout({ children }) {
               </div>
               <div>
                 <div className="text-slate-400 text-xs tracking-widest uppercase mb-4">Company</div>
-                <ul className="space-y-2 text-sm text-slate-500">
+                <ul className="grid grid-cols-2 gap-x-4 gap-y-2 text-sm text-slate-500">
                   <li><a href="/how-it-works" className="hover:text-white transition-colors">How It Works</a></li>
-                  <li><a href="/about" className="hover:text-white transition-colors">About</a></li>
                   <li><a href="/tech" className="hover:text-white transition-colors">Tech</a></li>
-                </ul>
-              </div>
-              <div>
-                <div className="text-slate-400 text-xs tracking-widest uppercase mb-4">FAQ</div>
-                <ul className="space-y-2 text-sm text-slate-500">
-                  <li><a href="/faq" className="hover:text-white transition-colors">Frequently Asked Questions</a></li>
+                  <li><a href="/about" className="hover:text-white transition-colors">About</a></li>
+                  <li><a href="/faq" className="hover:text-white transition-colors">FAQ</a></li>
                 </ul>
               </div>
               <div>
