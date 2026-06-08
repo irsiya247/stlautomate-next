@@ -176,7 +176,7 @@ export default function Services() {
           </div>
 
           {/* BOTTOM CTA */}
-          <div className="border-t border-slate-800 pt-20 text-center">
+          <div id="custom" className="border-t border-slate-800 pt-20 text-center scroll-mt-24">
             <h2 className="text-3xl font-bold mb-4">Don&apos;t see exactly what you need?</h2>
             <p className="text-slate-400 text-lg mb-4 max-w-xl mx-auto">
               These three are our most common builds. We also take on custom projects for businesses with specific workflows, integrations, or ideas that don&apos;t fit a standard product.
