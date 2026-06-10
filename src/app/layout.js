@@ -5,7 +5,9 @@ export const metadata = {
   title: "STL Automate | Automation Tools for Small Businesses in St. Louis",
   description: "STL Automate builds automated phone receptionists, email systems, and sales outreach tools for small businesses. Never miss a call. Never lose a customer. St. Louis, MO.",
   icons: {
-    icon: '/favicon.png',
+    icon: '/favicon.ico',
+    shortcut: '/favicon.ico',
+    apple: '/apple-icon.png',
   },
 };
 
