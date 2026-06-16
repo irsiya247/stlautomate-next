@@ -84,7 +84,7 @@ export default function HVACFounderPilot() {
                 </a>
               </div>
               <p className="mt-4 text-slate-500 text-sm leading-relaxed max-w-2xl">
-                Or dial {phoneReceptionistDisplay}. Listen for how it answers, asks questions, captures the caller&apos;s need, and routes the next step.
+                Tap to call on mobile, or dial {phoneReceptionistDisplay} directly from any phone. On desktop, your browser may only open the call if a phone app is connected.
               </p>
             </div>
 
@@ -182,7 +182,9 @@ export default function HVACFounderPilot() {
               Request HVAC Pilot Spot
             </a>
           </div>
-          <p className="mt-4 text-slate-500 text-sm">Or dial {phoneReceptionistDisplay}</p>
+          <p className="mt-4 text-slate-500 text-sm leading-relaxed">
+            Tap to call on mobile, or dial {phoneReceptionistDisplay} directly from any phone. On desktop, your browser may only open the call if a phone app is connected.
+          </p>
         </section>
       </div>
     </main>
