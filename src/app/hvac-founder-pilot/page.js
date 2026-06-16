@@ -6,7 +6,7 @@ const standardPricing = [
     name: "Phone Receptionist Starter",
     price: "$1,500+ setup + $399/month",
     description:
-      "A Phone Receptionist that answers calls, captures job details, and helps route urgent leads."
+      "A 24/7 Phone Receptionist that answers calls year-round, captures job details, and routes urgent leads."
   },
   {
     name: "AI Lead Response System",
@@ -29,16 +29,16 @@ const standardPricing = [
 ];
 
 const pilotIncludes = [
-  "Phone Receptionist configured around your HVAC call flow",
-  "Missed-call and after-hours lead capture",
-  "Lead notes and booking details sent to your team",
-  "Pilot feedback loop so the system improves around real calls"
+  "24/7 call answering, year-round",
+  "Missed-call, after-hours, weekend, and holiday coverage",
+  "Service details, urgency, and contact info captured for your team",
+  "Simple callback routing so hot HVAC leads do not disappear into voicemail"
 ];
 
 export const metadata = {
-  title: "HVAC Founder Pilot | STL Automate",
+  title: "24/7 HVAC Phone Receptionist | STL Automate",
   description:
-    "STL Automate is onboarding 3 HVAC companies for a focused Phone Receptionist pilot."
+    "A 24/7 Phone Receptionist founder pilot for HVAC companies that cannot afford missed calls after hours, weekends, or holidays."
 };
 
 export default function HVACFounderPilot() {
@@ -68,16 +68,16 @@ export default function HVACFounderPilot() {
           <div className="grid lg:grid-cols-[1.08fr_0.92fr] gap-10 items-start">
             <div>
               <h1 className="text-5xl md:text-7xl font-extrabold leading-[1.05]">
-                Stop losing HVAC jobs from <span className="text-sky-400">missed calls</span>
+                A <span className="text-sky-400">24/7 Phone Receptionist</span> for HVAC companies
               </h1>
 
               <p className="mt-6 text-slate-400 max-w-2xl text-lg leading-relaxed">
-                STL Automate is onboarding 3 HVAC companies for a focused Phone Receptionist pilot. Want to hear the system first? Call our Phone Receptionist and listen to how it handles a real inbound service-business conversation.
+                Your phone should be answered nights, weekends, holidays, and busy season. Call STL Automate&apos;s Phone Receptionist and hear how a service-business call gets captured before the customer calls someone else.
               </p>
 
               <div className="mt-10 flex flex-wrap gap-4">
                 <a href={`tel:${phoneReceptionistTel}`} className="bg-sky-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-sky-500 transition-colors">
-                  Call Our Phone Receptionist
+                  Call Our 24/7 Phone Receptionist
                 </a>
                 <a href="/intake" className="border border-slate-700 px-6 py-3 rounded-full text-slate-300 hover:border-slate-500 transition-colors">
                   Request HVAC Pilot Spot
@@ -93,7 +93,7 @@ export default function HVACFounderPilot() {
               <div className="text-4xl md:text-5xl font-extrabold leading-none">$500</div>
               <p className="text-slate-300 mt-2 font-semibold">setup + $250/month</p>
               <p className="text-slate-400 text-sm leading-relaxed mt-5">
-                Built for HVAC owners who want every caller answered, every lead captured, and every after-hours opportunity handled before the customer calls someone else.
+                Built for HVAC owners who want 24/7, year-round call coverage without losing after-hours, weekend, or emergency leads to voicemail.
               </p>
               <div className="mt-6 border-t border-sky-400/20 pt-5">
                 <p className="text-slate-500 text-xs tracking-widest uppercase mb-1">Standard Phone Receptionist Pricing</p>
@@ -105,8 +105,8 @@ export default function HVACFounderPilot() {
 
         <section className="max-w-6xl mx-auto px-6 mt-20 grid grid-cols-1 md:grid-cols-3 gap-6">
           {[
-            { value: "3", label: "HVAC companies accepted into this pilot" },
-            { value: "24/7", label: "Coverage for calls after hours and weekends" },
+            { value: "24/7", label: "Year-round answering for nights, weekends, holidays, and busy season" },
+            { value: "3", label: "HVAC companies accepted into this founder pilot" },
             { value: "$1,000+", label: "Setup savings compared with standard Phone Receptionist pricing" }
           ].map(({ value, label }) => (
             <div key={label} className="border border-slate-800 bg-slate-900/30 rounded-2xl p-7">
@@ -123,10 +123,10 @@ export default function HVACFounderPilot() {
                 Why This Exists
               </div>
               <h2 className="text-3xl md:text-4xl font-extrabold mb-5">
-                HVAC leads are urgent. Your phone system should treat them that way.
+                HVAC leads are urgent. Your phone should be answered every hour of the day.
               </h2>
               <p className="text-slate-400 text-lg leading-relaxed">
-                When a furnace is out, an AC unit fails, or a homeowner needs a quote, speed matters. The founder pilot gives a small group of HVAC companies early access to a Phone Receptionist system at a reduced rate while we tune the workflow around real HVAC calls.
+                When a furnace is out, an AC unit fails, or a homeowner needs a quote, speed matters. The founder pilot gives HVAC companies a reduced-rate path to 24/7 call answering, missed-call capture, and after-hours coverage.
               </p>
             </div>
 
@@ -169,14 +169,14 @@ export default function HVACFounderPilot() {
 
         <section className="max-w-4xl mx-auto px-6 mt-20 text-center">
           <h2 className="text-4xl font-extrabold mb-4">
-            Want to hear the Phone Receptionist before claiming a pilot spot?
+            Want to hear the 24/7 Phone Receptionist before claiming a pilot spot?
           </h2>
           <p className="text-slate-400 text-lg mb-8 max-w-2xl mx-auto">
-            Call STL Automate&apos;s Phone Receptionist first. If the experience makes sense for your HVAC business, request one of the 3 founder pilot spots.
+            Call STL Automate&apos;s Phone Receptionist first. Hear how an HVAC call gets answered, captured, and routed when your team is busy or off the clock.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <a href={`tel:${phoneReceptionistTel}`} className="bg-sky-600 text-white px-8 py-4 rounded-full font-semibold text-lg inline-block hover:bg-sky-500 transition-colors">
-              Call Our Phone Receptionist
+              Call Our 24/7 Phone Receptionist
             </a>
             <a href="/intake" className="border border-slate-700 px-8 py-4 rounded-full text-slate-300 font-semibold text-lg inline-block hover:border-slate-500 transition-colors">
               Request HVAC Pilot Spot
