@@ -9,7 +9,7 @@ export default function Privacy() {
       <div className="max-w-3xl mx-auto px-6 pt-36 pb-24">
         <div className="text-[11px] tracking-[0.35em] text-sky-400 uppercase mb-4">Legal</div>
         <h1 className="text-4xl font-extrabold mb-2">Privacy Policy</h1>
-        <p className="text-slate-500 text-sm mb-12">Last updated: June 2025</p>
+        <p className="text-slate-500 text-sm mb-12">Last updated: June 2026</p>
 
         <div className="space-y-10 text-slate-300 leading-relaxed">
 
@@ -48,32 +48,37 @@ export default function Privacy() {
           </section>
 
           <section>
-            <h2 className="text-xl font-bold text-white mb-3">5. Data Retention</h2>
+            <h2 className="text-xl font-bold text-white mb-3">5. SMS and Mobile Messaging</h2>
+            <p>We do not share, sell, or rent mobile phone numbers or SMS opt-in information to third parties or affiliates for marketing or promotional purposes. Phone numbers collected for text messaging are used only to deliver messages you have requested or that relate to services you have engaged us for, such as replies to calls you place to us, appointment reminders, and booking confirmations. Message and data rates may apply. Reply <strong className="text-white">STOP</strong> to opt out at any time, or <strong className="text-white">HELP</strong> for help.</p>
+          </section>
+
+          <section>
+            <h2 className="text-xl font-bold text-white mb-3">6. Data Retention</h2>
             <p>We retain your information for as long as necessary to provide our services and comply with legal obligations. If you would like your information deleted, contact us and we will honor that request within 30 days.</p>
           </section>
 
           <section>
-            <h2 className="text-xl font-bold text-white mb-3">6. Security</h2>
+            <h2 className="text-xl font-bold text-white mb-3">7. Security</h2>
             <p>We take reasonable technical and organizational measures to protect your information. No method of transmission over the internet is 100% secure, and we cannot guarantee absolute security.</p>
           </section>
 
           <section>
-            <h2 className="text-xl font-bold text-white mb-3">7. Your Rights</h2>
+            <h2 className="text-xl font-bold text-white mb-3">8. Your Rights</h2>
             <p>You have the right to access, correct, or delete the personal information we hold about you. To exercise these rights, contact us at <a href="mailto:contact@stlautomate.com" className="text-sky-400 hover:text-sky-300 transition-colors">contact@stlautomate.com</a>.</p>
           </section>
 
           <section>
-            <h2 className="text-xl font-bold text-white mb-3">8. Cookies</h2>
+            <h2 className="text-xl font-bold text-white mb-3">9. Cookies</h2>
             <p>Our website may use cookies for basic functionality and analytics. You can disable cookies in your browser settings, though some features of the site may not function properly as a result.</p>
           </section>
 
           <section>
-            <h2 className="text-xl font-bold text-white mb-3">9. Changes to This Policy</h2>
+            <h2 className="text-xl font-bold text-white mb-3">10. Changes to This Policy</h2>
             <p>We may update this policy from time to time. Changes will be posted on this page with an updated date. Continued use of our site or services after changes constitutes acceptance of the updated policy.</p>
           </section>
 
           <section>
-            <h2 className="text-xl font-bold text-white mb-3">10. Contact</h2>
+            <h2 className="text-xl font-bold text-white mb-3">11. Contact</h2>
             <p>Questions about this privacy policy can be directed to <a href="mailto:contact@stlautomate.com" className="text-sky-400 hover:text-sky-300 transition-colors">contact@stlautomate.com</a>.</p>
           </section>
 

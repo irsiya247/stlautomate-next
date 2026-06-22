@@ -9,7 +9,7 @@ export default function Terms() {
       <div className="max-w-3xl mx-auto px-6 pt-36 pb-24">
         <div className="text-[11px] tracking-[0.35em] text-sky-400 uppercase mb-4">Legal</div>
         <h1 className="text-4xl font-extrabold mb-2">Terms of Service</h1>
-        <p className="text-slate-500 text-sm mb-12">Last updated: June 2025</p>
+        <p className="text-slate-500 text-sm mb-12">Last updated: June 2026</p>
 
         <div className="space-y-10 text-slate-300 leading-relaxed">
 
@@ -49,17 +49,26 @@ export default function Terms() {
           </section>
 
           <section>
-            <h2 className="text-xl font-bold text-white mb-3">8. Termination</h2>
+            <h2 className="text-xl font-bold text-white mb-3">8. SMS / Text Messaging</h2>
+            <p className="mb-3">STL Automate LLC sends transactional text messages, including replies to missed calls, appointment reminders and confirmations, and booking-related scheduling messages. By providing your mobile number, or by calling a number that uses our service, you agree to receive these messages.</p>
+            <p className="mb-3">Message frequency varies based on your interactions with us. Message and data rates may apply.</p>
+            <p className="mb-3">You can cancel at any time by replying <strong className="text-white">STOP</strong>. After you reply STOP we will send one confirmation message and no further messages. For help, reply <strong className="text-white">HELP</strong> or email <a href="mailto:contact@stlautomate.com" className="text-sky-400 hover:text-sky-300 transition-colors">contact@stlautomate.com</a>.</p>
+            <p className="mb-3">Carriers are not liable for delayed or undelivered messages.</p>
+            <p>See our <a href="/privacy" className="text-sky-400 hover:text-sky-300 transition-colors">Privacy Policy</a> for how we handle your information.</p>
+          </section>
+
+          <section>
+            <h2 className="text-xl font-bold text-white mb-3">9. Termination</h2>
             <p>Either party may terminate a service agreement with 30 days written notice. STL Automate LLC may terminate immediately for non-payment or violation of these terms.</p>
           </section>
 
           <section>
-            <h2 className="text-xl font-bold text-white mb-3">9. Governing Law</h2>
+            <h2 className="text-xl font-bold text-white mb-3">10. Governing Law</h2>
             <p>These terms are governed by the laws of the State of Missouri. Any disputes shall be resolved in the courts of St. Louis County, Missouri.</p>
           </section>
 
           <section>
-            <h2 className="text-xl font-bold text-white mb-3">10. Contact</h2>
+            <h2 className="text-xl font-bold text-white mb-3">11. Contact</h2>
             <p>Questions about these terms can be directed to <a href="mailto:contact@stlautomate.com" className="text-sky-400 hover:text-sky-300 transition-colors">contact@stlautomate.com</a>.</p>
           </section>
 
