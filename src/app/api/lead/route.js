@@ -10,6 +10,16 @@ function isValidEmail(value) {
   return /^\S+@\S+\.\S+$/.test(value);
 }
 
+function normalizeWebsite(value) {
+  const website = clean(value, 500);
+
+  if (!website || /^https?:\/\//i.test(website)) {
+    return website;
+  }
+
+  return `https://${website}`;
+}
+
 export async function POST(request) {
   try {
     const body = await request.json().catch(() => null);
@@ -34,7 +44,7 @@ export async function POST(request) {
       body.business || body.business_name || body.company || body.company_name,
       160
     );
-    const website = clean(body.website, 500);
+    const website = normalizeWebsite(body.website);
     const message = clean(body.message, 3000);
 
     const lead = {

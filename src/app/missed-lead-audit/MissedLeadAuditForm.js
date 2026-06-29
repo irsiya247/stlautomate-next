@@ -133,12 +133,12 @@ export default function MissedLeadAuditForm() {
         <input
           id="audit-website"
           name="website"
-          type="url"
+          type="text"
           inputMode="url"
           autoComplete="url"
           value={form.website}
           onChange={handleChange}
-          placeholder="https://yourbusiness.com"
+          placeholder="yourbusiness.com"
           className={inputClass}
         />
       </div>
