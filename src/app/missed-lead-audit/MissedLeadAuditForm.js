@@ -16,6 +16,15 @@ const initialForm = {
 const inputClass =
   "w-full px-4 py-3 bg-slate-950/60 border border-slate-700 rounded-xl text-white placeholder-slate-600 focus:outline-none focus:border-sky-400 focus:ring-2 focus:ring-sky-400/15 transition-colors";
 
+function RequiredMark() {
+  return (
+    <>
+      <span className="text-sky-400" aria-hidden="true">*</span>
+      <span className="sr-only"> required</span>
+    </>
+  );
+}
+
 export default function MissedLeadAuditForm() {
   const [form, setForm] = useState(initialForm);
   const [status, setStatus] = useState("idle");
@@ -38,6 +47,26 @@ export default function MissedLeadAuditForm() {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
+
+    const missingFields = [
+      !form.name.trim() && "name",
+      !form.business.trim() && "business",
+      !form.email.trim() && !form.phone.trim() && "email",
+      !form.message.trim() && "message"
+    ].filter(Boolean);
+
+    if (missingFields.length > 0) {
+      setStatus("validation-error");
+      event.currentTarget.elements.namedItem(missingFields[0])?.focus();
+      return;
+    }
+
+    if (!event.currentTarget.checkValidity()) {
+      setStatus("idle");
+      event.currentTarget.reportValidity();
+      return;
+    }
+
     setStatus("loading");
 
     try {
@@ -81,6 +110,7 @@ export default function MissedLeadAuditForm() {
     <form
       className="border border-slate-800 bg-slate-900/40 rounded-2xl p-6 sm:p-8 space-y-5"
       onSubmit={handleSubmit}
+      noValidate
     >
       <input type="hidden" name="formType" value="missed-lead-audit" />
       <div className="absolute -left-[9999px]" aria-hidden="true">
@@ -98,7 +128,7 @@ export default function MissedLeadAuditForm() {
       <div className="grid sm:grid-cols-2 gap-5">
         <div>
           <label htmlFor="audit-name" className="block text-sm text-slate-300 mb-2">
-            Full name <span className="text-sky-400">*</span>
+            Full name <RequiredMark />
           </label>
           <input
             id="audit-name"
@@ -107,13 +137,14 @@ export default function MissedLeadAuditForm() {
             autoComplete="name"
             value={form.name}
             onChange={handleChange}
+            aria-invalid={status === "validation-error" && !form.name.trim()}
             placeholder="Jane Smith"
             className={inputClass}
           />
         </div>
         <div>
           <label htmlFor="audit-business" className="block text-sm text-slate-300 mb-2">
-            Business name <span className="text-sky-400">*</span>
+            Business name <RequiredMark />
           </label>
           <input
             id="audit-business"
@@ -122,6 +153,7 @@ export default function MissedLeadAuditForm() {
             autoComplete="organization"
             value={form.business}
             onChange={handleChange}
+            aria-invalid={status === "validation-error" && !form.business.trim()}
             placeholder="Smith Plumbing LLC"
             className={inputClass}
           />
@@ -129,7 +161,9 @@ export default function MissedLeadAuditForm() {
       </div>
 
       <div>
-        <label htmlFor="audit-website" className="block text-sm text-slate-300 mb-2">Website</label>
+        <label htmlFor="audit-website" className="block text-sm text-slate-300 mb-2">
+          Website <span className="text-slate-500">(optional)</span>
+        </label>
         <input
           id="audit-website"
           name="website"
@@ -143,40 +177,45 @@ export default function MissedLeadAuditForm() {
         />
       </div>
 
-      <div className="grid sm:grid-cols-2 gap-5">
-        <div>
-          <label htmlFor="audit-email" className="block text-sm text-slate-300 mb-2">
-            Email <span className="text-sky-400">*</span>
-          </label>
-          <input
-            id="audit-email"
-            name="email"
-            type="email"
-            required
-            autoComplete="email"
-            value={form.email}
-            onChange={handleChange}
-            placeholder="jane@yourbusiness.com"
-            className={inputClass}
-          />
+      <fieldset>
+        <legend className="block text-sm text-slate-300 mb-2">
+          Contact method <RequiredMark /> <span className="text-slate-500">(email or phone)</span>
+        </legend>
+        <div className="grid sm:grid-cols-2 gap-5">
+          <div>
+            <label htmlFor="audit-email" className="block text-sm text-slate-300 mb-2">
+              Email
+            </label>
+            <input
+              id="audit-email"
+              name="email"
+              type="email"
+              autoComplete="email"
+              value={form.email}
+              onChange={handleChange}
+              aria-invalid={status === "validation-error" && !form.email.trim() && !form.phone.trim()}
+              placeholder="jane@yourbusiness.com"
+              className={inputClass}
+            />
+          </div>
+          <div>
+            <label htmlFor="audit-phone" className="block text-sm text-slate-300 mb-2">
+              Phone
+            </label>
+            <input
+              id="audit-phone"
+              name="phone"
+              type="tel"
+              autoComplete="tel"
+              value={form.phone}
+              onChange={handleChange}
+              aria-invalid={status === "validation-error" && !form.email.trim() && !form.phone.trim()}
+              placeholder="314-555-0100"
+              className={inputClass}
+            />
+          </div>
         </div>
-        <div>
-          <label htmlFor="audit-phone" className="block text-sm text-slate-300 mb-2">
-            Phone <span className="text-sky-400">*</span>
-          </label>
-          <input
-            id="audit-phone"
-            name="phone"
-            type="tel"
-            required
-            autoComplete="tel"
-            value={form.phone}
-            onChange={handleChange}
-            placeholder="314-555-0100"
-            className={inputClass}
-          />
-        </div>
-      </div>
+      </fieldset>
 
       <div>
         <label htmlFor="audit-best-time" className="block text-sm text-slate-300 mb-2">Best time to call</label>
@@ -191,19 +230,28 @@ export default function MissedLeadAuditForm() {
       </div>
 
       <div>
-        <label htmlFor="audit-notes" className="block text-sm text-slate-300 mb-2">Notes</label>
+        <label htmlFor="audit-notes" className="block text-sm text-slate-300 mb-2">
+          Notes <RequiredMark />
+        </label>
         <textarea
           id="audit-notes"
           name="message"
           rows={5}
           value={form.message}
           onChange={handleChange}
+          required
+          aria-invalid={status === "validation-error" && !form.message.trim()}
           placeholder="Tell us how calls, website forms, or follow-up are handled today."
           className={`${inputClass} resize-y`}
         />
       </div>
 
       <div aria-live="polite">
+        {status === "validation-error" && (
+          <p className="text-red-300 text-sm mb-4" role="alert">
+            Please complete: name, business name, email or phone, and notes.
+          </p>
+        )}
         {status === "error" && (
           <p className="text-red-300 text-sm mb-4">
             We could not send your request. Please try again or email contact@stlautomate.com.
