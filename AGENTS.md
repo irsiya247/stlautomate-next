@@ -47,6 +47,17 @@ The system may draft, score, recommend, log, and route for approval. It must not
 - Do not show n8n workflow canvases publicly or client-facing. Use branded graphics, outcome screenshots, or architecture diagrams.
 - No em dashes.
 
+## Work style and continuity
+
+- For multi-step or setup work, show step one only and wait for Matthew's response before continuing.
+- If an approach fails, try at least one real workaround or alternative before suggesting a rollback or reverting to the original concept.
+- If genuinely stuck, say so explicitly and explain why.
+- For multi-step or project work, keep a living `HANDOFF.md` or `STATUS.md` file in the working folder.
+- Update the handoff file at each milestone, not only at the end.
+- On wrap-up requests, update and save the handoff file before doing anything else.
+- The handoff must capture the current goal, what is done, exact next steps ready to run, open questions, and file paths.
+- Persist state to disk instead of relying on chat context.
+
 ## n8n and workflow changes
 
 For n8n changes:
@@ -71,13 +82,13 @@ Do not equate Save with Activate.
 For code changes:
 - Provide the full replacement file.
 - No snippets or diffs unless Matthew explicitly asks for a small example.
-- Do not put credentials, API keys, tokens, passwords, or secrets in code, docs, or chat.
+- Do not place secrets in code, docs, or chat.
 - Reference where secrets live instead.
 
 After repository changes, suggest this PowerShell command:
 
 ```powershell
-git status; git add .; git commit -m "Update STL Automate source files"; git push
+git status; git pull; git status
 ```
 
 ## UI navigation
