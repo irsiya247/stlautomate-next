@@ -1,7 +1,3 @@
-const N8N_WEBHOOK_URL =
-  process.env.N8N_WEBHOOK_URL ||
-  "https://n8n.stlautomate.com/webhook/missed-lead-audit-hardening-v1";
-
 function clean(value, maxLength = 500) {
   return typeof value === "string" ? value.trim().slice(0, maxLength) : "";
 }
@@ -18,6 +14,28 @@ function normalizeWebsite(value) {
   }
 
   return `https://${website}`;
+}
+
+function getWebhookUrl() {
+  const value = process.env.N8N_WEBHOOK_URL?.trim();
+
+  if (!value) {
+    return null;
+  }
+
+  try {
+    const url = new URL(value);
+    return url.protocol === "https:" ? url.toString() : null;
+  } catch {
+    return null;
+  }
+}
+
+function logOperationalFailure(reason, status) {
+  console.error("Lead API operational failure", {
+    reason,
+    status
+  });
 }
 
 export async function POST(request) {
@@ -86,20 +104,37 @@ export async function POST(request) {
       );
     }
 
-    const response = await fetch(N8N_WEBHOOK_URL, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(lead),
-      cache: "no-store"
-    });
+    const webhookUrl = getWebhookUrl();
+
+    if (!webhookUrl) {
+      logOperationalFailure("webhook_configuration_unavailable", 503);
+
+      return Response.json(
+        { success: false, message: "Submission service unavailable." },
+        { status: 503 }
+      );
+    }
+
+    let response;
+
+    try {
+      response = await fetch(webhookUrl, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(lead),
+        cache: "no-store"
+      });
+    } catch {
+      logOperationalFailure("webhook_request_failed", 502);
+
+      return Response.json(
+        { success: false, message: "Submission failed." },
+        { status: 502 }
+      );
+    }
 
     if (!response.ok) {
-      const errorText = await response.text().catch(() => "");
-      console.error(
-        "n8n webhook failed:",
-        response.status,
-        errorText.slice(0, 1000)
-      );
+      logOperationalFailure("webhook_rejected_request", response.status);
 
       return Response.json(
         { success: false, message: "Submission failed." },
@@ -111,8 +146,8 @@ export async function POST(request) {
       success: true,
       message: "Audit request received."
     });
-  } catch (err) {
-    console.error("Lead API error:", err);
+  } catch {
+    logOperationalFailure("unexpected_route_failure", 500);
 
     return Response.json(
       { success: false, message: "Submission failed." },
