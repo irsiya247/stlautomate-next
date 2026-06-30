@@ -214,7 +214,7 @@ export default function AutomationFixSprintPage() {
           </div>
         </section>
 
-        <section className="mx-auto max-w-6xl px-6 pb-20 md:pb-28">
+        <section id="upwork-review" className="mx-auto max-w-6xl px-6 pb-20 md:pb-28 scroll-mt-28">
           <div className="rounded-3xl border border-slate-700/80 bg-slate-900/70 p-7 shadow-2xl shadow-sky-950/40 backdrop-blur sm:p-10 md:p-12">
             <p className="text-[11px] font-semibold tracking-[0.35em] text-sky-400 uppercase">
               Client Review From Upwork

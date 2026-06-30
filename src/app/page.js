@@ -203,6 +203,34 @@ export default function Home() {
           </div>
         </section>
 
+        {/* UPWORK TESTIMONIAL */}
+        <section className="max-w-3xl mx-auto px-6 mt-8">
+          <div className="border border-slate-800 bg-slate-900/30 rounded-2xl p-10 flex gap-8">
+            <div className="w-1 flex-shrink-0 bg-sky-500 rounded-full" />
+            <div>
+              <p className="text-[11px] tracking-[0.35em] text-sky-400 uppercase mb-4">Upwork Client Review</p>
+              <blockquote className="text-slate-200 text-lg leading-relaxed mb-8">
+                &ldquo;Matthew is an absolute professional and an exceptional senior-level engineer.&rdquo;
+              </blockquote>
+              <p className="text-slate-400 text-sm leading-relaxed mb-6">
+                A verified Upwork client review for a Retell AI, n8n, and GoHighLevel voice receptionist backend hardening project.
+              </p>
+              <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+                <div>
+                  <p className="text-white font-semibold text-sm">Taiquann D.</p>
+                  <p className="text-slate-500 text-xs tracking-widest uppercase mt-1">TDorsey Solutions</p>
+                </div>
+                <a
+                  href="/automation-fix-sprint#upwork-review"
+                  className="text-sky-400 text-sm font-semibold hover:text-sky-300 transition-colors"
+                >
+                  Read the full review →
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* BOTTOM CTA */}
         <section className="max-w-4xl mx-auto px-6 mt-20 pb-24 text-center">
           <h2 className="text-4xl font-extrabold mb-4">Ready to stop <span className="text-sky-400">losing customers?</span></h2>
