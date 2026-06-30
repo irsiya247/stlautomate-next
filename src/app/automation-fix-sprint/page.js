@@ -214,6 +214,35 @@ export default function AutomationFixSprintPage() {
           </div>
         </section>
 
+        <section className="mx-auto max-w-6xl px-6 pb-20 md:pb-28">
+          <div className="rounded-3xl border border-slate-700/80 bg-slate-900/70 p-7 shadow-2xl shadow-sky-950/40 backdrop-blur sm:p-10 md:p-12">
+            <p className="text-[11px] font-semibold tracking-[0.35em] text-sky-400 uppercase">
+              Client Review From Upwork
+            </p>
+            <blockquote className="mt-6">
+              <p className="text-sm font-semibold leading-relaxed text-white sm:text-base">
+                &ldquo;Matthew is an absolute professional and an exceptional senior-level engineer.&rdquo;
+              </p>
+              <p className="mt-4 text-sm leading-relaxed text-slate-300">
+                I brought him on to audit and optimize an AI voice receptionist system integrated across Retell AI, n8n, and GoHighLevel, and he went completely above and beyond. Not only did he successfully stabilize, harden, and secure our entire multi-tenant backend architecture, but he also pulled forward advanced features—like post-call logging for call duration, sentiment analysis, AI summaries, and recording URLs—directly into our CRM. When the project required deeper troubleshooting around payload structures and token permissions, he carried the rollout through to production as a goodwill gesture to ensure everything was left in a pristine, working state.
+              </p>
+              <p className="mt-4 text-sm leading-relaxed text-slate-300">
+                His communication is flawless, his technical documentation is sharp, and his work ethic is rare. I will absolutely be hiring Matthew again for future development phases. If you need a high-caliber developer who delivers masterclass results, hire him!
+              </p>
+              <footer className="mt-6 flex flex-col gap-1">
+                <cite className="not-italic">
+                  <span className="text-sm font-bold text-white">Taiquann D.</span>
+                  <span className="mx-2 text-slate-600">&middot;</span>
+                  <span className="text-sm text-slate-400">TDorsey Solutions</span>
+                </cite>
+                <p className="text-xs text-slate-500">
+                  Upwork Client Review | Retell AI, n8n, and GoHighLevel voice receptionist backend hardening
+                </p>
+              </footer>
+            </blockquote>
+          </div>
+        </section>
+
         <section className="mx-auto max-w-6xl px-6 pb-24 md:pb-32">
           <div className="grid items-center gap-8 border-t border-slate-800 pt-16 md:grid-cols-[1fr_auto] md:gap-12">
             <div>
