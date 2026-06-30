@@ -16,7 +16,11 @@ function normalizeWebsite(value) {
   return `https://${website}`;
 }
 
-function getWebhookUrl() {
+function getWebhookUrl(formType) {
+  if (formType === "missed-lead-audit") {
+    return "https://n8n.stlautomate.com/webhook/missed-lead-audit-hardening-v2-5";
+  }
+
   const value = process.env.N8N_WEBHOOK_URL?.trim();
 
   if (!value) {
@@ -104,7 +108,7 @@ export async function POST(request) {
       );
     }
 
-    const webhookUrl = getWebhookUrl();
+    const webhookUrl = getWebhookUrl(formType);
 
     if (!webhookUrl) {
       logOperationalFailure("webhook_configuration_unavailable", 503);
