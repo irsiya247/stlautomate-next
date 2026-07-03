@@ -2,31 +2,41 @@
 
 ## Current goal
 
-Recover the Automation Fix Sprint page into the active outer Next.js app and remove the stale nested scaffold without losing the work from commit `d649216`.
+Add privacy-safe Sentry error monitoring and PostHog site analytics to the active Next.js App Router website.
 
 ## Done
 
-- Confirmed the live website repository path and active outer App Router structure.
-- Preserved remote commit `d649216` by rebasing the unpushed cleanup commit onto `origin/main`.
-- Recovered the dedicated `/automation-fix-sprint` page with its positioning, CTA, pricing frame, target problems, and included deliverables.
-- Moved the page into the active outer app at `src/app/automation-fix-sprint/page.js`.
-- Moved this status file to the active outer repository root.
-- Removed the stale nested `stlautomate-next/` scaffold.
-- Preserved the existing missed-lead-audit and API files.
+- Confirmed the active repository root and `src/` App Router structure.
+- Reviewed the installed Next.js 16.2.6 instrumentation and global error guidance.
+- Reviewed the current official Sentry Next.js and PostHog Next.js setup guidance.
+- Installed `@sentry/nextjs` 10.63.0 and `posthog-js` 1.396.6.
+- Confirmed `package.json` and `package-lock.json` were updated.
+- Added browser, server, and edge Sentry initialization using environment variables only.
+- Added server request error capture, router transition capture, and a global App Router error boundary.
+- Added PostHog browser analytics with session recording disabled and no user identification.
+- Wrapped the existing Next.js configuration with `withSentryConfig` for source map uploads.
+- Ran targeted ESLint against every monitoring file successfully.
+- Ran the production build successfully with all 21 routes generated.
+- Ran the repository-wide lint command. It remains blocked by pre-existing source errors and generated files under the untracked nested `stlautomate-next/` directory; no monitoring files reported errors.
 
 ## Next steps
 
-1. Run the outer Next.js production build.
-2. Run lint and confirm any failures are limited to known pre-existing outer-app issues.
-3. Verify the complete diff contains only the recovered page, this status file, and removal of the stale nested scaffold.
-4. Commit the validated recovery without pushing.
+1. Add the six required environment variables to Vercel for Production, Preview, and Development as appropriate.
+2. Deploy and verify a controlled Sentry error and PostHog pageview in their dashboards.
+3. Separately clean up the pre-existing lint failures and stale nested scaffold.
 
 ## Open questions
 
-- No approved scheduling URL exists in the repository. The CTA opens a pre-addressed email to `contact@stlautomate.com`.
+- Production verification requires valid Sentry and PostHog project values in Vercel.
 
 ## Relevant files
 
-- `src/app/automation-fix-sprint/page.js`
+- `next.config.mjs`
+- `package.json`
+- `package-lock.json`
+- `src/instrumentation-client.js`
+- `src/instrumentation.js`
+- `src/sentry.server.config.js`
+- `src/sentry.edge.config.js`
+- `src/app/global-error.js`
 - `STATUS.md`
-- Deleted: `stlautomate-next/`
