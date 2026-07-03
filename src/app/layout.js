@@ -1,5 +1,7 @@
 import "./globals.css";
+import { Suspense } from "react";
 import Header from "./components/Header";
+import PostHogPageView from "./components/PostHogPageView";
 
 export const metadata = {
   title: "STL Automate | Automation Tools for Small Businesses in St. Louis",
@@ -15,6 +17,9 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className="bg-[#030712] text-white antialiased">
+        <Suspense fallback={null}>
+          <PostHogPageView />
+        </Suspense>
         <Header />
         {children}
         <footer className="border-t border-slate-800 mt-20 py-16">

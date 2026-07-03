@@ -17,6 +17,7 @@ if (posthogProjectToken && posthogHost) {
   posthog.init(posthogProjectToken, {
     api_host: posthogHost,
     defaults: "2026-05-30",
+    capture_pageview: false,
     disable_session_recording: true,
     person_profiles: "identified_only",
   });
