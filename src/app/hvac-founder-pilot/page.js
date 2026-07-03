@@ -90,10 +90,13 @@ export default function HVACFounderPilot() {
 
             <div className="border border-sky-400/30 bg-sky-400/10 rounded-2xl p-7">
               <div className="text-sky-300 text-xs tracking-widest uppercase mb-3">Founder Pilot Rate</div>
-              <div className="text-4xl md:text-5xl font-extrabold leading-none">$500</div>
-              <p className="text-slate-300 mt-2 font-semibold">setup + $250/month</p>
+              <div className="text-4xl md:text-5xl font-extrabold leading-none">$250</div>
+              <p className="text-slate-300 mt-2 font-semibold">/month, setup waived</p>
               <p className="text-slate-400 text-sm leading-relaxed mt-5">
-                Built for HVAC owners who want 24/7, year-round call coverage without losing after-hours, weekend, or emergency leads to voicemail.
+                Built for HVAC owners who want 24/7, year-round call coverage without losing after-hours, weekend, or emergency leads to voicemail. Setup is waived for the first few St. Louis HVAC clients in exchange for a short testimonial once it is booking you jobs. Rate locked for 12 months.
+              </p>
+              <p className="text-slate-400 text-sm leading-relaxed mt-3">
+                30-day guarantee: if it does not book you at least one job you would have otherwise missed, your monthly fee is refunded and you can cancel on the spot. No contract.
               </p>
               <div className="mt-6 border-t border-sky-400/20 pt-5">
                 <p className="text-slate-500 text-xs tracking-widest uppercase mb-1">Standard Phone Receptionist Pricing</p>
@@ -106,8 +109,8 @@ export default function HVACFounderPilot() {
         <section className="max-w-6xl mx-auto px-6 mt-20 grid grid-cols-1 md:grid-cols-3 gap-6">
           {[
             { value: "24/7", label: "Year-round answering for nights, weekends, holidays, and busy season" },
-            { value: "3", label: "HVAC companies accepted into this founder pilot" },
-            { value: "$1,000+", label: "Setup savings compared with standard Phone Receptionist pricing" }
+            { value: "30-day", label: "Money-back guarantee if we do not book you a job" },
+            { value: "$1,500+", label: "Setup savings compared with standard Phone Receptionist pricing" }
           ].map(({ value, label }) => (
             <div key={label} className="border border-slate-800 bg-slate-900/30 rounded-2xl p-7">
               <p className="text-4xl font-extrabold">{value}</p>
