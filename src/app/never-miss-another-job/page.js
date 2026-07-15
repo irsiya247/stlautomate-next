@@ -301,7 +301,7 @@ const PAGE_BODY = `
  <div>
  <h2>Built for HVAC. By someone who knows the trade.</h2>
  <p>I'm Matthew, co-founder of STL Automate. I spent years around the HVAC industry and watched owner after owner lose jobs to missed calls. Not bad service, not bad pricing, just missed calls.</p>
- <p>So Akshay and I built a system specifically for HVAC shops. Not a generic call center. Not a chatbot. A purpose-built system that understands HVAC urgency and books jobs the way your business actually runs.</p>
+ <p>STL Automate built a system specifically for HVAC shops. Not a generic call center. Not a chatbot. A purpose-built system that understands HVAC urgency and books jobs the way your business actually runs.</p>
  <p>We're local to St. Louis. You can call me directly. If it doesn't work, you don't pay. That's the whole deal.</p>
  <div style="margin-top:24px;display:flex;flex-wrap:wrap;gap:12px;">
  <a class="btn-primary" href="https://calendly.com/stlautomate/hvac-missed-call-demo">Book a Demo</a>
@@ -334,8 +334,8 @@ const PAGE_BODY = `
 
 <footer>
  <div class="wrap">
- <h2>Stop letting summer calls go to your competitor's voicemail.</h2>
- <p>It's June. Peak season is right now. Every day you wait is more jobs walking out the door. The demo is 10 minutes. See your number above, then book.</p>
+ <h2>Stop letting peak-season calls go to your competitor's voicemail.</h2>
+ <p>Peak cooling season is here. Every day you wait can mean more jobs walking out the door. The demo is 10 minutes. See your number above, then book.</p>
  <div class="footer-cta-row">
  <a class="btn-primary" href="https://calendly.com/stlautomate/hvac-missed-call-demo">&#128197; Book a Demo</a>
  <a class="btn-ghost" href="tel:+13143298230">&#128222; Call Matthew: (314) 329-8230</a>
