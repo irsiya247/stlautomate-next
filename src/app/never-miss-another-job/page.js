@@ -27,6 +27,7 @@ h1 em{color:var(--accent);font-style:normal;}
 .btn-ghost:hover{border-color:#fff;}
 .hero-call-link{display:inline-block;margin-top:14px;font-size:14px;opacity:.8;text-decoration:underline;}
 .hero-call-link:hover{opacity:1;}
+.hero-demo-note{font-size:13px;opacity:.7;max-width:600px;margin-top:8px;}
 .trust-pills{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px;}
 .pill{display:flex;align-items:center;gap:6px;font-size:13px;opacity:.85;}
 .pill svg{flex-shrink:0;}
@@ -149,7 +150,8 @@ const PAGE_BODY = `
  <a class="btn-primary" href="#calculator">See What Missed Calls Cost You</a>
  <a class="btn-ghost" href="https://calendly.com/stlautomate/hvac-missed-call-demo">Skip Ahead, Book a Demo</a>
  </div>
- <a class="hero-call-link" href="tel:+13143298230">Or just call Matthew directly: (314) 329-8230</a>
+ <a class="hero-call-link" href="tel:+13148649065">Call the live Phone Receptionist: (314) 864-9065</a>
+ <p class="hero-demo-note">This is STL Automate's live demonstration line. Your Phone Receptionist is configured for your business and connected to your number.</p>
  <div class="trust-pills">
  <span class="pill"><svg width="16" height="16" viewBox="0 0 20 20" fill="none"><path d="M10 2l2.4 4.9 5.4.8-3.9 3.8.9 5.4L10 14.5l-4.8 2.4.9-5.4L2.2 7.7l5.4-.8L10 2z" fill="#ff6b35"/></svg>3 booked jobs in 30 days or full refund</span>
  <span class="pill">&#10003; Founding rate, first 5 St. Louis shops only</span>
@@ -189,7 +191,7 @@ const PAGE_BODY = `
  <div class="calc-result-num" id="resultNum">$87,750<span>/year</span></div>
  <p class="calc-result-sub" id="resultSub">Assumes a conservative 25% close rate on the calls that go unanswered. Most shops close higher than that.</p>
  <a class="btn-primary" href="https://calendly.com/stlautomate/hvac-missed-call-demo" id="calcCta">See exactly how we'd stop this &rarr;</a>
- <a class="btn-ghost-dark" href="tel:+13143298230">Or just call Matthew: (314) 329-8230</a>
+ <a class="btn-ghost-dark" href="tel:+13148649065">Try the live Phone Receptionist: (314) 864-9065</a>
  </div>
  </div>
  </div>
@@ -302,10 +304,10 @@ const PAGE_BODY = `
  <h2>Built for HVAC. By someone who knows the trade.</h2>
  <p>I'm Matthew, co-founder of STL Automate. I spent years around the HVAC industry and watched owner after owner lose jobs to missed calls. Not bad service, not bad pricing, just missed calls.</p>
  <p>STL Automate built a system specifically for HVAC shops. Not a generic call center. Not a chatbot. A purpose-built system that understands HVAC urgency and books jobs the way your business actually runs.</p>
- <p>We're local to St. Louis. You can call me directly. If it doesn't work, you don't pay. That's the whole deal.</p>
+ <p>We're local to St. Louis. Call the live Phone Receptionist to hear the experience for yourself, then book a setup conversation when you're ready.</p>
  <div style="margin-top:24px;display:flex;flex-wrap:wrap;gap:12px;">
  <a class="btn-primary" href="https://calendly.com/stlautomate/hvac-missed-call-demo">Book a Demo</a>
- <a class="btn-ghost" style="color:var(--navy);border-color:var(--navy);" href="tel:+13143298230">Call (314) 329-8230</a>
+ <a class="btn-ghost" style="color:var(--navy);border-color:var(--navy);" href="tel:+13148649065">Call the Live Receptionist</a>
  </div>
  </div>
  <div class="about-stat">
@@ -326,7 +328,7 @@ const PAGE_BODY = `
  <div class="faq-item"><h3>Do I have to change my phone number?</h3><p>No. We set up a tracking line that forwards through your existing number. Your number stays the same. Your customers call the same number. We just make sure every call gets answered.</p></div>
  <div class="faq-item"><h3>How fast can it be live?</h3><p>2 business days from the time you sign up. We handle the entire setup. You don't touch anything technical.</p></div>
  <div class="faq-item"><h3>What if it doesn't work?</h3><p>You get a full refund, setup included, if we don't book you at least 3 new jobs in 30 days. You keep the jobs we booked. We absorb the loss. We only make money if the system actually works for you.</p></div>
- <div class="faq-item"><h3>What does the demo look like?</h3><p>10 minutes on a call with Matthew. He'll show you exactly how the system works on a live example. You can see a test call come in, the instant text-back fire, and the booking complete. No slides, no pitch decks. You just watch it work.</p></div>
+ <div class="faq-item"><h3>What does the demo look like?</h3><p>Call (314) 864-9065 to speak with STL Automate's live Phone Receptionist and hear how it handles an HVAC-style inquiry and captures caller details. The number on this page is the demonstration line; your system is configured for your business and connected to your number. Use the booking link when you want to choose a setup-call time.</p></div>
  <div class="faq-item"><h3>We're not in St. Louis. Do you work with shops elsewhere?</h3><p>Right now we're focused on St. Louis for the founding cohort. Reach out anyway. If we have capacity and your market makes sense, we'll talk.</p></div>
  </div>
  </div>
@@ -335,10 +337,10 @@ const PAGE_BODY = `
 <footer>
  <div class="wrap">
  <h2>Stop letting peak-season calls go to your competitor's voicemail.</h2>
- <p>Peak cooling season is here. Every day you wait can mean more jobs walking out the door. The demo is 10 minutes. See your number above, then book.</p>
+ <p>Peak cooling season is here. Every day you wait can mean more jobs walking out the door. Call the live Phone Receptionist to hear the experience, then book a setup conversation when you're ready.</p>
  <div class="footer-cta-row">
  <a class="btn-primary" href="https://calendly.com/stlautomate/hvac-missed-call-demo">&#128197; Book a Demo</a>
- <a class="btn-ghost" href="tel:+13143298230">&#128222; Call Matthew: (314) 329-8230</a>
+ <a class="btn-ghost" href="tel:+13148649065">&#128222; Call the Live Receptionist: (314) 864-9065</a>
  </div>
  <div class="footer-bottom">
  <span>STL Automate &middot; 1123 Locust St, Ste 422, St Louis, MO 63101 &middot; <a href="mailto:contact@stlautomate.com" style="opacity:.8">contact@stlautomate.com</a></span>
