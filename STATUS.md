@@ -2,41 +2,37 @@
 
 ## Current goal
 
-Add privacy-safe Sentry error monitoring and PostHog site analytics to the active Next.js App Router website.
+Repair the missing `robots.txt` and `sitemap.xml` endpoints on a non-production branch without merging or deploying.
 
 ## Done
 
-- Confirmed the active repository root and `src/` App Router structure.
-- Reviewed the installed Next.js 16.2.6 instrumentation and global error guidance.
-- Reviewed the current official Sentry Next.js and PostHog Next.js setup guidance.
-- Installed `@sentry/nextjs` 10.63.0 and `posthog-js` 1.396.6.
-- Confirmed `package.json` and `package-lock.json` were updated.
-- Added browser, server, and edge Sentry initialization using environment variables only.
-- Added server request error capture, router transition capture, and a global App Router error boundary.
-- Added PostHog browser analytics with session recording disabled and no user identification.
-- Wrapped the existing Next.js configuration with `withSentryConfig` for source map uploads.
-- Ran targeted ESLint against every monitoring file successfully.
-- Ran the production build successfully with all 21 routes generated.
-- Ran the repository-wide lint command. It remains blocked by pre-existing source errors and generated files under the untracked nested `stlautomate-next/` directory; no monitoring files reported errors.
+- Created the non-production branch `agent/repair-robots-sitemap` from `main`.
+- Confirmed the repository uses the Next.js 16.2.6 App Router under `src/app`.
+- Read the bundled Next.js 16.2.6 documentation for `robots.js` and `sitemap.js` metadata routes.
+- Confirmed neither metadata route previously existed.
+- Enumerated the current public page routes in the repository.
+- Verified that `https://stlautomate.com` redirects permanently to the live canonical host at `https://www.stlautomate.com`.
+- Added `src/app/robots.js` to allow public crawling, exclude `/api/`, and declare the sitemap URL.
+- Added `src/app/sitemap.js` with every current public page route on the canonical host.
+- Ran targeted ESLint against both metadata route files successfully.
+- Ran the Next.js production build successfully; `/robots.txt` and `/sitemap.xml` were generated as static routes.
+- Started the production build on a local-only port and verified both endpoints return HTTP 200.
+- Confirmed `robots.txt` returns `text/plain` with the crawler policy and sitemap declaration.
+- Confirmed `sitemap.xml` returns `application/xml` with all 16 public page URLs.
 
 ## Next steps
 
-1. Add the six required environment variables to Vercel for Production, Preview, and Development as appropriate.
-2. Deploy and verify a controlled Sentry error and PostHog pageview in their dashboards.
-3. Separately clean up the pre-existing lint failures and stale nested scaffold.
+1. Review the local commit on `agent/repair-robots-sitemap`.
+2. Push the branch only after separate approval.
+3. Open and merge a pull request only after separate approval.
+4. Deploy only after separate approval.
 
 ## Open questions
 
-- Production verification requires valid Sentry and PostHog project values in Vercel.
+- None for the scoped repair.
 
 ## Relevant files
 
-- `next.config.mjs`
-- `package.json`
-- `package-lock.json`
-- `src/instrumentation-client.js`
-- `src/instrumentation.js`
-- `src/sentry.server.config.js`
-- `src/sentry.edge.config.js`
-- `src/app/global-error.js`
+- `src/app/robots.js`
+- `src/app/sitemap.js`
 - `STATUS.md`
