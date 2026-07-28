@@ -29,6 +29,7 @@ export default function MissedLeadAuditForm() {
   const [form, setForm] = useState(initialForm);
   const [status, setStatus] = useState("idle");
   const successRef = useRef(null);
+  const submissionIdRef = useRef("");
 
   useEffect(() => {
     if (status !== "success") return;
@@ -42,6 +43,7 @@ export default function MissedLeadAuditForm() {
 
   const handleChange = (event) => {
     const { name, value } = event.target;
+    submissionIdRef.current = "";
     setForm((current) => ({ ...current, [name]: value }));
   };
 
@@ -69,11 +71,19 @@ export default function MissedLeadAuditForm() {
 
     setStatus("loading");
 
+    if (!submissionIdRef.current) {
+      submissionIdRef.current = window.crypto.randomUUID();
+    }
+
     try {
       const response = await fetch("/api/lead", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ ...form, formType: "missed-lead-audit" })
+        body: JSON.stringify({
+          ...form,
+          formType: "missed-lead-audit",
+          submission_id: submissionIdRef.current
+        })
       });
       const result = await response.json().catch(() => ({ success: false }));
 
@@ -82,6 +92,7 @@ export default function MissedLeadAuditForm() {
       }
 
       setStatus("success");
+      submissionIdRef.current = "";
       setForm(initialForm);
     } catch {
       setStatus("error");

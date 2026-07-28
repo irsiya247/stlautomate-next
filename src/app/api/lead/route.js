@@ -1,5 +1,15 @@
+import { randomUUID } from "node:crypto";
+
 function clean(value, maxLength = 500) {
   return typeof value === "string" ? value.trim().slice(0, maxLength) : "";
+}
+
+function normalizeSubmissionId(value) {
+  const submissionId = clean(value, 100);
+
+  return /^[A-Za-z0-9][A-Za-z0-9._:-]{7,99}$/.test(submissionId)
+    ? submissionId
+    : randomUUID();
 }
 
 function isValidEmail(value) {
@@ -59,6 +69,9 @@ export async function POST(request) {
     }
 
     const formType = clean(body.formType, 50) || "missed-lead-audit";
+    const submissionId = normalizeSubmissionId(
+      body.submission_id || body.submissionId
+    );
     const name = clean(body.name, 120);
     const email = clean(body.email, 254).toLowerCase();
     const phone = clean(body.phone, 40);
@@ -70,6 +83,7 @@ export async function POST(request) {
     const message = clean(body.message, 3000);
 
     const lead = {
+      submission_id: submissionId,
       form_type: formType,
       name,
       email,
