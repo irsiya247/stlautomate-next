@@ -20,7 +20,7 @@ export default function Services() {
             Three tools <span className="text-sky-400">zero guesswork</span>
           </h1>
           <p className="text-slate-400 text-lg max-w-2xl mb-20">
-            Every product is built, configured, and tested by us. You don&apos;t touch any software. You just start getting more customers.
+            Every product is built, configured, and tested by STL Automate. Our team handles the technical setup and shows you how the workflow operates before it goes live.
           </p>
 
           {/* ── PRODUCT 1: AI RECEPTIONIST SUITE ── */}
@@ -30,10 +30,10 @@ export default function Services() {
                 <div className="text-sky-400 text-xs tracking-widest uppercase mb-3">Product 01</div>
                 <h2 className="text-4xl font-extrabold mb-4">Automated <span className="text-sky-400">Receptionist Suite</span></h2>
                 <p className="text-slate-400 text-lg leading-relaxed mb-6">
-                  Your inbox becomes a 24/7 sales assistant. Every email gets answered instantly, every lead gets followed up automatically, and every booking gets detected the moment it happens. Your team never has to chase anyone.
+                  Your inbox becomes a structured lead-response queue. The system can classify inquiries, prepare response drafts, flag follow-up, and detect bookings so your team knows what needs attention.
                 </p>
                 <p className="text-slate-300 text-base leading-relaxed mb-8">
-                  Most businesses lose customers because they respond too slowly or forget to follow up. This system eliminates both problems entirely.
+                  The goal is to reduce slow responses and missed follow-up while keeping your team in control of external messages.
                 </p>
                 <a href="/intake" className="bg-sky-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-sky-500 transition-colors inline-block">
                   Get This For My Business
@@ -48,17 +48,17 @@ export default function Services() {
                     <h3 className="font-semibold text-white">Email Receptionist</h3>
                   </div>
                   <p className="text-slate-400 text-sm leading-relaxed">
-                    Reads every inbound email, pulls the right answer from your business knowledge base, and replies within seconds, day or night. Scores each lead as Hot, Warm, or Cold so you always know who matters most.
+                    Reviews configured inbound emails, uses your approved business information to prepare a response draft, and scores each lead as Hot, Warm, or Cold for your team.
                   </p>
                 </div>
 
                 <div className="border border-slate-700 bg-slate-900/40 rounded-xl p-5">
                   <div className="flex items-center gap-3 mb-3">
                     <div className="w-8 h-8 rounded-full bg-sky-400/10 border border-sky-400/30 flex items-center justify-center text-sky-400 text-xs font-bold">2</div>
-                    <h3 className="font-semibold text-white">Automatic Follow-Up</h3>
+                    <h3 className="font-semibold text-white">Follow-Up Draft Queue</h3>
                   </div>
                   <p className="text-slate-400 text-sm leading-relaxed">
-                    Hot leads get two follow-up emails over 4 days. Warm leads get one at 72 hours. No one falls through the cracks. It all stops automatically the moment they book.
+                    Follow-up drafts can be scheduled by lead status and routed for human approval. When a booking is detected, pending follow-up is removed from the approval queue.
                   </p>
                 </div>
 
@@ -68,12 +68,12 @@ export default function Services() {
                     <h3 className="font-semibold text-white">Booking Detector</h3>
                   </div>
                   <p className="text-slate-400 text-sm leading-relaxed">
-                    Checks your calendar every 15 minutes. The moment a lead books an appointment, the follow-up stops and the lead is marked as Booked. You will never accidentally email someone who already said yes.
+                    Checks the connected calendar on a defined interval. When a lead books, the CRM status is updated and pending follow-up is flagged to stop before another message is approved.
                   </p>
                 </div>
 
                 <div className="border border-sky-400/20 bg-sky-400/5 rounded-xl p-4">
-                  <p className="text-sky-300 text-sm font-medium">🔔 You also get a WhatsApp alert the moment a hot lead lands in your inbox.</p>
+                  <p className="text-sky-300 text-sm font-medium">🔔 Hot-lead and workflow alerts can be routed to your team in Slack.</p>
                 </div>
               </div>
             </div>
@@ -88,10 +88,10 @@ export default function Services() {
                 <div className="text-sky-400 text-xs tracking-widest uppercase mb-3">Product 02</div>
                 <h2 className="text-4xl font-extrabold mb-4">Phone <span className="text-sky-400">Receptionist</span></h2>
                 <p className="text-slate-400 text-lg leading-relaxed mb-6">
-                  A voice agent that answers your phone line, has real conversations with callers, and scores every call. You will always know which calls are worth calling back first.
+                  A Phone Receptionist that answers your phone line, talks with callers, captures their needs, and helps your team prioritize callbacks.
                 </p>
                 <p className="text-slate-300 text-base leading-relaxed mb-8">
-                  Every missed call is a potential customer that called your competitor instead. This stops that from happening.
+                  Missed calls can become lost opportunities. The Phone Receptionist is designed to reduce voicemail drop-off and give each caller a clear next step.
                 </p>
                 <a href="/intake" className="bg-sky-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-sky-500 transition-colors inline-block">
                   Get This For My Business
@@ -100,21 +100,21 @@ export default function Services() {
 
               <div className="space-y-4">
                 <div className="border border-slate-700 bg-slate-900/40 rounded-xl p-5">
-                  <h3 className="font-semibold text-white mb-2">Answers every call, 24/7</h3>
+                  <h3 className="font-semibold text-white mb-2">Provides 24/7 call coverage</h3>
                   <p className="text-slate-400 text-sm leading-relaxed">
-                    A natural-sounding voice agent picks up every call: during business hours, after hours, and on weekends. Callers get real answers, not a voicemail.
+                    The Phone Receptionist can be configured to answer during business hours, after hours, and on weekends so callers receive a guided response instead of a generic voicemail.
                   </p>
                 </div>
                 <div className="border border-slate-700 bg-slate-900/40 rounded-xl p-5">
                   <h3 className="font-semibold text-white mb-2">Scores the call after it ends</h3>
                   <p className="text-slate-400 text-sm leading-relaxed">
-                    When the call is over, the system reviews the transcript, scores the lead as Hot, Warm, or Cold, and logs it to your spreadsheet automatically.
+                    When the call is over, the system can review the transcript, score the lead as Hot, Warm, or Cold, and log the result to HubSpot.
                   </p>
                 </div>
                 <div className="border border-slate-700 bg-slate-900/40 rounded-xl p-5">
                   <h3 className="font-semibold text-white mb-2">Alerts you on the right calls</h3>
                   <p className="text-slate-400 text-sm leading-relaxed">
-                    Hot and Warm callers trigger an instant WhatsApp alert to you. Call back the people who actually want to buy, not tire-kickers.
+                    Hot and Warm callers can trigger a Slack alert with the captured details so your team can prioritize the callback.
                   </p>
                 </div>
                 <div className="border border-slate-700 bg-slate-900/40 rounded-xl p-5">
@@ -136,10 +136,10 @@ export default function Services() {
                 <div className="text-sky-400 text-xs tracking-widest uppercase mb-3">Product 03</div>
                 <h2 className="text-4xl font-extrabold mb-4">Automated <span className="text-sky-400">Sales Outreach</span></h2>
                 <p className="text-slate-400 text-lg leading-relaxed mb-6">
-                  Give us a list of businesses you want to reach. Our system sends personalized emails, follows up on its own, detects when someone is interested, and books the meeting, without you lifting a finger.
+                  Give STL Automate an approved list of businesses you want to reach. The system prepares personalized drafts, routes them for human approval, detects replies, and keeps the next action visible.
                 </p>
                 <p className="text-slate-300 text-base leading-relaxed mb-8">
-                  This is what a full-time sales rep does: prospecting, emailing, following up, booking calls. All of it automated and running around the clock.
+                  Research, drafting, follow-up planning, and CRM logging can be automated. External outreach remains under your team&apos;s approval.
                 </p>
                 <a href="/intake" className="bg-sky-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-sky-500 transition-colors inline-block">
                   Get This For My Business
@@ -148,33 +148,33 @@ export default function Services() {
 
               <div className="space-y-4">
                 <div className="border border-slate-700 bg-slate-900/40 rounded-xl p-5">
-                  <h3 className="font-semibold text-white mb-2">Scores every prospect before sending</h3>
+                  <h3 className="font-semibold text-white mb-2">Scores prospects before approval</h3>
                   <p className="text-slate-400 text-sm leading-relaxed">
-                    Before a single email goes out, the system scores each prospect by job title, company size, and industry. Hot leads get a different message than warm or cold ones.
+                    Before a draft enters the approval queue, the system scores each prospect using approved fit criteria. Higher-fit prospects can receive a more specific draft.
                   </p>
                 </div>
                 <div className="border border-slate-700 bg-slate-900/40 rounded-xl p-5">
-                  <h3 className="font-semibold text-white mb-2">Sends and follows up automatically</h3>
+                  <h3 className="font-semibold text-white mb-2">Prepares follow-up for approval</h3>
                   <p className="text-slate-400 text-sm leading-relaxed">
-                    The system sends the first email, waits, follows up, and sends a second touch, all on its own. If someone doesn&apos;t respond, it moves on. No manual work.
+                    The system prepares the first message and later follow-up drafts. A person reviews and approves each external send.
                   </p>
                 </div>
                 <div className="border border-slate-700 bg-slate-900/40 rounded-xl p-5">
                   <h3 className="font-semibold text-white mb-2">Detects interest and books the meeting</h3>
                   <p className="text-slate-400 text-sm leading-relaxed">
-                    When someone replies with interest, the system detects it, sends a booking email with your calendar link, and alerts you on Slack. Not-interested replies get archived automatically.
+                    When someone replies with interest, the system alerts your team in Slack and prepares a booking response with your calendar link for approval.
                   </p>
                 </div>
                 <div className="border border-slate-700 bg-slate-900/40 rounded-xl p-5">
                   <h3 className="font-semibold text-white mb-2">Every email is written for that recipient</h3>
                   <p className="text-slate-400 text-sm leading-relaxed">
-                    Not a template with a name swapped in. The system reads each prospect's company, industry, and likely pain points and writes a message specific to them.
+                    Not a template with a name swapped in. The system reads each prospect&apos;s company, industry, and likely pain points and writes a message specific to them.
                   </p>
                 </div>
                 <div className="border border-slate-700 bg-slate-900/40 rounded-xl p-5">
                   <h3 className="font-semibold text-white mb-2">Logs everything to your CRM</h3>
                   <p className="text-slate-400 text-sm leading-relaxed">
-                    Every lead, every email, every reply is logged to HubSpot and Google Sheets automatically. You always have a clean record of what happened with every prospect.
+                    Configured lead, email, approval, and reply events are logged to HubSpot so your team has one CRM record of what happened.
                   </p>
                 </div>
               </div>

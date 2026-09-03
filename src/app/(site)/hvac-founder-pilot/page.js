@@ -9,7 +9,7 @@ const standardPricing = [
       "A 24/7 Phone Receptionist that answers calls year-round, captures job details, and routes urgent leads."
   },
   {
-    name: "AI Lead Response System",
+    name: "Automated Lead Response System",
     price: "$1,000+ setup + $299/month",
     description:
       "Fast email and form follow-up so new leads hear back while they are still ready to book."
@@ -72,7 +72,7 @@ export default function HVACFounderPilot() {
               </h1>
 
               <p className="mt-6 text-slate-400 max-w-2xl text-lg leading-relaxed">
-                Your phone should be answered nights, weekends, holidays, and busy season. Call STL Automate&apos;s Phone Receptionist and hear how a service-business call gets captured before the customer calls someone else.
+                Your phone should be answered nights, weekends, holidays, and during the busiest weeks of the year. Use the demonstration number to learn more about STL Automate&apos;s Phone Receptionist before a customer calls someone else.
               </p>
 
               <div className="mt-10 flex flex-wrap gap-4">
@@ -84,7 +84,7 @@ export default function HVACFounderPilot() {
                 </a>
               </div>
               <p className="mt-4 text-slate-500 text-sm leading-relaxed max-w-2xl">
-                Tap to call on mobile, or dial {phoneReceptionistDisplay} directly from any phone. On desktop, your browser may only open the call if a phone app is connected.
+                The number above is provided as a demonstration contact. Tap to call on mobile, or dial {phoneReceptionistDisplay} directly from any phone.
               </p>
             </div>
 
@@ -186,7 +186,7 @@ export default function HVACFounderPilot() {
             </a>
           </div>
           <p className="mt-4 text-slate-500 text-sm leading-relaxed">
-            Tap to call on mobile, or dial {phoneReceptionistDisplay} directly from any phone. On desktop, your browser may only open the call if a phone app is connected.
+            This is the demonstration number. Tap to call on mobile, or dial {phoneReceptionistDisplay} directly from any phone.
           </p>
         </section>
       </div>
