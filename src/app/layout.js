@@ -3,8 +3,8 @@ import { Suspense } from "react";
 import PostHogPageView from "./components/PostHogPageView";
 
 export const metadata = {
-  title: "STL Automate | Automation Tools for Small Businesses in St. Louis",
-  description: "STL Automate builds automated phone receptionists, email systems, and sales outreach tools for small businesses. Never miss a call. Never lose a customer. St. Louis, MO.",
+  title: "STL Automate | Automation Services and Proprietary AI Products",
+  description: "STL Automate provides automation implementation services and develops proprietary AI infrastructure products, including Agent Floor, AI GRC, and STL AI Ops.",
   icons: {
     icon: '/favicon.ico',
     shortcut: '/favicon.ico',

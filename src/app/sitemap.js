@@ -13,6 +13,7 @@ const routes = [
   "/never-miss-another-job",
   "/portfolio",
   "/privacy",
+  "/products",
   "/proof",
   "/services",
   "/tech",

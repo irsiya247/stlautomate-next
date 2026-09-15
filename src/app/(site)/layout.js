@@ -36,6 +36,7 @@ export default function SiteLayout({ children }) {
               <div>
                 <div className="text-slate-400 text-xs tracking-widest uppercase mb-4">Company</div>
                 <ul className="space-y-3 text-sm text-slate-500">
+                  <li><a href="/products" className="hover:text-white transition-colors">Products / R&amp;D</a></li>
                   <li><a href="/how-it-works" className="hover:text-white transition-colors">How It Works</a></li>
                   <li><a href="/about" className="hover:text-white transition-colors">About</a></li>
                   <li><a href="/tech" className="hover:text-white transition-colors">Tech</a></li>

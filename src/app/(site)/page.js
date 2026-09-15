@@ -164,6 +164,27 @@ export default function Home() {
           </div>
         </section>
 
+        {/* SERVICES + PROPRIETARY PRODUCTS */}
+        <section className="max-w-6xl mx-auto px-6 mt-24">
+          <div className="border border-sky-400/20 bg-sky-400/5 rounded-2xl p-8 md:p-10">
+            <div className="text-[11px] tracking-[0.35em] text-sky-400 uppercase mb-4">Services and R&amp;D</div>
+            <div className="grid md:grid-cols-[1.1fr_0.9fr] gap-10 items-start">
+              <div>
+                <h2 className="text-3xl font-bold mb-4">STL Automate builds for today and develops for what&apos;s next.</h2>
+                <p className="text-slate-300 text-base leading-relaxed">
+                  STL Automate provides automation implementation services for small businesses while also developing proprietary AI infrastructure and governance products. Services work keeps us close to real operational problems. Product R&amp;D turns those lessons into reusable systems with controlled actions, approvals, and durable evidence.
+                </p>
+                <a href="/products" className="inline-block mt-6 text-sky-400 font-semibold hover:text-sky-300 transition-colors">Explore Products / R&amp;D →</a>
+              </div>
+              <div className="space-y-3 text-sm">
+                <div className="border border-slate-700 bg-slate-950/40 rounded-xl p-4"><div className="text-white font-semibold">Agent Floor</div><div className="text-slate-400 mt-1">Working prototype, Customer Zero validated</div></div>
+                <div className="border border-slate-700 bg-slate-950/40 rounded-xl p-4"><div className="text-white font-semibold">AI GRC</div><div className="text-slate-400 mt-1">Validation stage</div></div>
+                <div className="border border-slate-700 bg-slate-950/40 rounded-xl p-4"><div className="text-white font-semibold">STL AI Ops</div><div className="text-slate-400 mt-1">Internal product</div></div>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* HOW IT WORKS */}
         <section className="max-w-6xl mx-auto px-6 mt-20 border-t border-slate-800 pt-16">
           <div className="text-[11px] tracking-[0.35em] text-sky-400 uppercase mb-4">
