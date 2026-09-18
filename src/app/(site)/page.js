@@ -30,7 +30,7 @@ export default function Home() {
           </h1>
 
           <p className="mt-6 text-slate-400 max-w-2xl text-lg">
-            We set up phone agents, email systems, and sales outreach tools so your team can focus on the work that actually pays.
+            We set up Phone Receptionist, email, and sales-outreach systems so your team can focus on the work that actually pays.
           </p>
 
           <div className="mt-10 flex flex-wrap gap-4">
@@ -62,10 +62,10 @@ export default function Home() {
         {/* TRUST STATS */}
         <section className="max-w-6xl mx-auto px-6 mt-20 grid grid-cols-2 md:grid-cols-4 gap-8 border-t border-slate-800 pt-12">
           {[
-            { value: "24/7", label: "Phones answered, even at 2am" },
-            { value: "< 1 min", label: "Average response time" },
-            { value: "0", label: "Calls sent to voicemail" },
-            { value: "Custom", label: "Builds available for any need" },
+            { value: "24/7", label: "Coverage can include nights and weekends" },
+            { value: "Human", label: "Approval before external outreach" },
+            { value: "CRM", label: "Connected to your business systems" },
+            { value: "Custom", label: "Built around your actual workflow" },
           ].map(({ value, label }) => (
             <div key={label}>
               <p className="text-4xl font-extrabold">{value}</p>
@@ -86,22 +86,22 @@ export default function Home() {
             {/* Automated Receptionist Suite */}
             <div className="border border-slate-800 bg-slate-900/30 rounded-2xl p-7 flex flex-col">
               <div className="text-sky-400 text-xs tracking-widest uppercase mb-3">Automated Receptionist Suite</div>
-              <h3 className="font-bold text-lg mb-3">Never lose a lead to a slow reply</h3>
+              <h3 className="font-bold text-lg mb-3">Turn inquiries into a structured response queue</h3>
               <p className="text-slate-400 text-sm leading-relaxed flex-1">
-                Three workflows working together: answers emails instantly, follows up automatically, and stops the moment someone books. No lead ever falls through the cracks.
+                The suite can classify inquiries, prepare response drafts, flag follow-up, detect bookings, and prioritize the work your team should review next.
               </p>
               <ul className="mt-4 space-y-2 text-sm text-slate-300">
                 <li className="flex items-start gap-2">
                   <span className="text-sky-400 mt-0.5">✓</span>
-                  Replies to every email from your knowledge base
+                  Classifies inquiries using configured business rules
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-sky-400 mt-0.5">✓</span>
-                  Follows up with hot leads over 4 days automatically
+                  Prepares response and follow-up drafts for review
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-sky-400 mt-0.5">✓</span>
-                  Detects bookings and stops follow-up instantly
+                  Detects bookings so unnecessary follow-up can stop
                 </li>
               </ul>
               <a href="/services#receptionist" className="mt-6 bg-sky-600 text-white px-5 py-2.5 rounded-full font-semibold text-sm text-center hover:bg-sky-500 transition-colors">
@@ -112,22 +112,22 @@ export default function Home() {
             {/* Automated Sales Outreach */}
             <div className="border border-slate-800 bg-slate-900/30 rounded-2xl p-7 flex flex-col">
               <div className="text-sky-400 text-xs tracking-widest uppercase mb-3">Automated Sales Outreach</div>
-              <h3 className="font-bold text-lg mb-3">Find new customers on autopilot</h3>
+              <h3 className="font-bold text-lg mb-3">Automate the work behind outbound sales</h3>
               <p className="text-slate-400 text-sm leading-relaxed flex-1">
-                Give us a prospect list. Our system scores every lead, sends personalized outreach, follows up automatically, and books meetings when someone says yes.
+                The system can research and score prospects, prepare personalized outreach, track replies, and surface the next action. Humans approve external messages before sending.
               </p>
               <ul className="mt-4 space-y-2 text-sm text-slate-300">
                 <li className="flex items-start gap-2">
                   <span className="text-sky-400 mt-0.5">✓</span>
-                  Scores prospects by title, industry, and size
+                  Scores prospects using approved fit criteria
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-sky-400 mt-0.5">✓</span>
-                  Sends and follows up without any manual work
+                  Prepares personalized outreach and follow-up drafts
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-sky-400 mt-0.5">✓</span>
-                  Books the meeting when someone is interested
+                  Detects interested replies and prepares the next step
                 </li>
               </ul>
               <a href="/services#sdr" className="mt-6 bg-sky-600 text-white px-5 py-2.5 rounded-full font-semibold text-sm text-center hover:bg-sky-500 transition-colors">
@@ -138,22 +138,22 @@ export default function Home() {
             {/* Phone Receptionist */}
             <div className="border border-slate-800 bg-slate-900/30 rounded-2xl p-7 flex flex-col">
               <div className="text-sky-400 text-xs tracking-widest uppercase mb-3">Phone Receptionist</div>
-              <h3 className="font-bold text-lg mb-3">A voice agent that sounds human</h3>
+              <h3 className="font-bold text-lg mb-3">A useful next step when your team cannot answer</h3>
               <p className="text-slate-400 text-sm leading-relaxed flex-1">
-                A fully custom voice assistant for your phone line, built on enterprise-grade voice infrastructure so every caller gets a professional experience.
+                A configurable Phone Receptionist for calls your team cannot answer. It can capture caller details, identify what they need, and route the next step into your approved business systems.
               </p>
               <ul className="mt-4 space-y-2 text-sm text-slate-300">
                 <li className="flex items-start gap-2">
                   <span className="text-sky-400 mt-0.5">✓</span>
-                  Natural-sounding conversations
+                  Natural conversational call handling
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-sky-400 mt-0.5">✓</span>
-                  Custom scripts tailored to your business
+                  Scripts and escalation rules tailored to your business
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-sky-400 mt-0.5">✓</span>
-                  Works with your existing phone number
+                  CRM, calendar, and notification integrations where configured
                 </li>
               </ul>
               <a href="/services#vapi" className="mt-6 bg-sky-600 text-white px-5 py-2.5 rounded-full font-semibold text-sm text-center hover:bg-sky-500 transition-colors">
@@ -190,12 +190,12 @@ export default function Home() {
           <div className="text-[11px] tracking-[0.35em] text-sky-400 uppercase mb-4">
             How It Works
           </div>
-          <h2 className="text-3xl font-bold mb-10">Up and running in days, <span className="text-sky-400">not months</span></h2>
+          <h2 className="text-3xl font-bold mb-10">Configured, tested, and approved <span className="text-sky-400">before go-live</span></h2>
           <div className="grid md:grid-cols-3 gap-8">
             {[
-              { step: "01", title: "Tell us about your business", desc: "We do a quick call to learn how you handle calls, bookings, and follow-ups today." },
-              { step: "02", title: "We build it for you", desc: "No software to learn. We set everything up and test it before it ever touches a real customer." },
-              { step: "03", title: "It runs while you work", desc: "Your systems handle the volume. Your team focuses on the job. You stop losing customers to voicemail." },
+              { step: "01", title: "Tell us how your business works", desc: "Map calls, inquiries, bookings, follow-up, and exceptions." },
+              { step: "02", title: "We build and test the workflow", desc: "Configure integrations and run controlled tests before production use." },
+              { step: "03", title: "You approve the production behavior", desc: "Move live only after the agreed acceptance checks pass." },
             ].map(({ step, title, desc }) => (
               <div key={step} className="flex gap-5">
                 <div className="text-sky-400 font-extrabold text-2xl leading-none mt-1">{step}</div>
@@ -208,24 +208,8 @@ export default function Home() {
           </div>
         </section>
 
-        {/* TESTIMONIAL */}
-        <section className="max-w-3xl mx-auto px-6 mt-20">
-          <div className="border border-slate-800 bg-slate-900/30 rounded-2xl p-10 flex gap-8">
-            <div className="w-1 flex-shrink-0 bg-sky-500 rounded-full" />
-            <div>
-              <blockquote className="text-slate-200 text-lg leading-relaxed mb-8">
-                Splitting costs on a group trip used to mean spreadsheets, back-and-forth texts, and someone always getting it wrong. STL Automate built a custom split-billing app for me and it changed all of that. Clean, fast, it just works.
-              </blockquote>
-              <div>
-                <p className="text-white font-semibold text-sm">Michael A.</p>
-                <p className="text-slate-500 text-xs tracking-widest uppercase mt-1">St. Louis, MO</p>
-              </div>
-            </div>
-          </div>
-        </section>
-
         {/* UPWORK TESTIMONIAL */}
-        <section className="max-w-3xl mx-auto px-6 mt-8">
+        <section className="max-w-3xl mx-auto px-6 mt-20">
           <div className="border border-slate-800 bg-slate-900/30 rounded-2xl p-10 flex gap-8">
             <div className="w-1 flex-shrink-0 bg-sky-500 rounded-full" />
             <div>
