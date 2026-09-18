@@ -43,27 +43,8 @@ export default function ProofPage() {
             Client Reviews
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8">
-
-            {/* Card 1 — Michael A. */}
-            <div className="border border-slate-800 bg-slate-900/30 rounded-2xl p-8 flex flex-col">
-              <div className="text-sky-400 text-xs tracking-widest uppercase mb-2">Local App Build</div>
-              <h2 className="font-bold text-lg mb-6">Split-billing app review</h2>
-              <div className="flex gap-6 flex-1">
-                <div className="w-1 flex-shrink-0 bg-sky-500 rounded-full" />
-                <div>
-                  <blockquote className="text-slate-200 text-base leading-relaxed mb-6">
-                    Splitting costs on a group trip used to mean spreadsheets, back-and-forth texts, and someone always getting it wrong. STL Automate built a custom split-billing app for me and it changed all of that. Clean, fast, it just works.
-                  </blockquote>
-                  <div>
-                    <p className="text-white font-semibold text-sm">Michael A.</p>
-                    <p className="text-slate-500 text-xs tracking-widest uppercase mt-1">St. Louis, MO</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Card 2 — Taiquann D. */}
+          <div className="max-w-3xl">
+            {/* Taiquann D. */}
             <div className="border border-slate-800 bg-slate-900/30 rounded-2xl p-8 flex flex-col">
               <div className="text-sky-400 text-xs tracking-widest uppercase mb-2">Upwork Client Review</div>
               <h2 className="font-bold text-lg mb-6">Retell AI, n8n, and GoHighLevel backend hardening</h2>

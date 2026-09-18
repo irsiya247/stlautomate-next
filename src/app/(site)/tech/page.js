@@ -19,10 +19,10 @@ export default function Tech() {
             The stack <span className="text-sky-400">if you want to know</span>
           </h1>
           <p className="text-slate-400 text-lg max-w-2xl mb-6">
-            Most of our clients don&apos;t care about this page, and that&apos;s fine. But if you&apos;re evaluating us technically, or you&apos;re the person who has to sign off on what goes into your infrastructure, here&apos;s exactly what we use and why.
+            Most clients do not need every implementation detail. If you are evaluating us technically or approving what connects to your infrastructure, this page explains how we choose and validate the architecture for each deployment.
           </p>
           <p className="text-slate-500 text-sm mb-20">
-            No black boxes. No vendor lock-in pitch. Just the actual tools and architecture.
+            The exact providers, models, and integrations depend on the approved scope.
           </p>
 
           {/* WORKFLOW ORCHESTRATION */}
@@ -32,13 +32,13 @@ export default function Tech() {
             <div className="grid md:grid-cols-2 gap-8 items-start">
               <div className="space-y-4 text-slate-400 leading-relaxed">
                 <p>
-                  Every automation we build runs on <span className="text-white font-medium">n8n</span>, an open-source workflow automation platform that handles triggers, logic branching, API calls, and integrations in a single visual pipeline.
+                  STL Automate&apos;s internal production automation runs on self-hosted <span className="text-white font-medium">n8n</span>, an open-source workflow automation platform that handles triggers, logic branching, API calls, and integrations.
                 </p>
                 <p>
                   We chose n8n because it gives us fine-grained control over every node in the workflow without abstracting away the logic. When something goes wrong, we can see exactly where and why, not just that something failed.
                 </p>
                 <p>
-                  Each client&apos;s workflows are isolated. Your data doesn&apos;t touch another client&apos;s workflow under any circumstance.
+                  Client deployments may be customer-owned or STL-managed depending on scope. Credentials and workflows are separated according to the approved deployment architecture.
                 </p>
               </div>
               <div className="space-y-3">
@@ -46,8 +46,8 @@ export default function Tech() {
                   { label: "Trigger types", value: "Webhooks, schedules, email (IMAP), HTTP" },
                   { label: "Execution model", value: "Event-driven, stateful with wait nodes" },
                   { label: "Error handling", value: "Per-node routing with fallback logging" },
-                  { label: "Hosting", value: "n8n Cloud (SOC 2 compliant)" },
-                  { label: "Client isolation", value: "Separate workflow namespaces per client" },
+                  { label: "Deployment", value: "STL-managed or customer-owned, depending on scope" },
+                  { label: "Separation", value: "Defined by the approved deployment architecture" },
                 ].map(({ label, value }) => (
                   <div key={label} className="flex justify-between gap-4 border-b border-slate-800 pb-3 text-sm">
                     <span className="text-slate-500">{label}</span>
@@ -63,27 +63,26 @@ export default function Tech() {
           {/* VOICE */}
           <section className="mb-20">
             <div className="text-sky-400 text-xs tracking-widest uppercase mb-3">Voice Infrastructure</div>
-            <h2 className="text-3xl font-bold mb-6">VAPI</h2>
+            <h2 className="text-3xl font-bold mb-6">Programmable Voice</h2>
             <div className="grid md:grid-cols-2 gap-8 items-start">
               <div className="space-y-4 text-slate-400 leading-relaxed">
                 <p>
-                  Our Phone Receptionist is built on <span className="text-white font-medium">VAPI</span>, a voice AI platform designed specifically for building production phone agents. It handles call routing, speech-to-text, LLM inference, and text-to-speech in a single low-latency pipeline.
+                  The Phone Receptionist uses programmable voice infrastructure selected for the needs of each deployment. Provider, conversation model, speech services, and routing are configured for the approved call flow.
                 </p>
                 <p>
-                  VAPI&apos;s end-of-call webhook fires a structured JSON payload (caller ID, transcript, call duration, and metadata) into our n8n workflow, which then scores the lead, logs it, and fires alerts.
+                  Where supported, call events and metadata can route into n8n for approved classification, logging, notifications, and follow-up preparation.
                 </p>
                 <p>
-                  Average latency from speech to response is under 800ms in production. Callers experience a natural conversation, not a robotic pause.
+                  Provider, model, and phone-routing choices are tested and validated for each implementation before production use.
                 </p>
               </div>
               <div className="space-y-3">
                 {[
-                  { label: "STT provider", value: "Deepgram (Nova-2)" },
-                  { label: "LLM", value: "GPT-4o / configurable per client" },
-                  { label: "TTS provider", value: "ElevenLabs / PlayHT" },
-                  { label: "Avg. response latency", value: "< 800ms" },
-                  { label: "Call data", value: "Full transcript + metadata via webhook" },
-                  { label: "Phone number", value: "Works with existing numbers via SIP" },
+                  { label: "Voice provider", value: "Selected per deployment" },
+                  { label: "Conversation model", value: "Configurable" },
+                  { label: "Speech services", value: "Configurable" },
+                  { label: "Call metadata", value: "Available where supported" },
+                  { label: "Phone routing", value: "Existing number, forwarding, SIP, or provisioned number where supported" },
                 ].map(({ label, value }) => (
                   <div key={label} className="flex justify-between gap-4 border-b border-slate-800 pb-3 text-sm">
                     <span className="text-slate-500">{label}</span>
@@ -103,22 +102,22 @@ export default function Tech() {
             <div className="grid md:grid-cols-2 gap-8 items-start">
               <div className="space-y-4 text-slate-400 leading-relaxed">
                 <p>
-                  Lead scoring runs through a custom JavaScript scoring engine inside n8n, backed by <span className="text-white font-medium">Groq</span> for fast LLM inference on unstructured inputs like email bodies and call transcripts.
+                  Scoring and routing begin with explicit business rules. Where useful, AI-assisted classification can help interpret unstructured inputs such as email bodies and call transcripts.
                 </p>
                 <p>
-                  Scoring factors include job title seniority, company size, industry vertical, inbound source, and intent signals extracted from message content. Scores map to three tiers: Hot, Warm, and Cold. These determine routing, follow-up cadence, and alert priority.
+                  Criteria, thresholds, models, labels, and routing rules are defined per implementation. They are tested against the customer&apos;s actual use cases before they affect production behavior.
                 </p>
                 <p>
-                  For the Automated Receptionist Suite, RAG (retrieval-augmented generation) is used to pull answers from a client-specific knowledge base stored in Google Sheets, ensuring responses are always grounded in your actual business information.
+                  Knowledge sources are selected according to the workflow. Customer-approved systems remain authoritative where applicable, and generated drafts can be grounded in the business information approved for that use.
                 </p>
               </div>
               <div className="space-y-3">
                 {[
-                  { label: "Scoring engine", value: "Custom JS + Groq LLM" },
-                  { label: "Groq model", value: "Llama 3.1 70B (low latency)" },
-                  { label: "Knowledge base", value: "Google Sheets (RAG lookup)" },
-                  { label: "Tier thresholds", value: "Hot ≥ 10pts, Warm ≥ 6pts, Cold < 6pts" },
-                  { label: "Scoring factors", value: "Title, industry, size, source, intent" },
+                  { label: "Scoring approach", value: "Explicit rules with optional AI-assisted classification" },
+                  { label: "Criteria", value: "Defined and approved per implementation" },
+                  { label: "Knowledge sources", value: "Selected from approved business systems" },
+                  { label: "Thresholds", value: "Configured and tested for the use case" },
+                  { label: "Routing", value: "Based on approved outcomes and exceptions" },
                 ].map(({ label, value }) => (
                   <div key={label} className="flex justify-between gap-4 border-b border-slate-800 pb-3 text-sm">
                     <span className="text-slate-500">{label}</span>
@@ -134,7 +133,7 @@ export default function Tech() {
           {/* INTEGRATIONS */}
           <section className="mb-20">
             <div className="text-sky-400 text-xs tracking-widest uppercase mb-3">Integrations</div>
-            <h2 className="text-3xl font-bold mb-8">What we <span className="text-sky-400">connect to</span></h2>
+            <h2 className="text-3xl font-bold mb-8">Common integrations <span className="text-sky-400">include</span></h2>
             <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
               {[
                 { name: "Gmail / IMAP", desc: "Inbound email parsing, outbound sending, reply detection" },
@@ -166,13 +165,13 @@ export default function Tech() {
                 We come from a cybersecurity background. Data handling isn&apos;t an afterthought. It&apos;s part of the architecture.
               </p>
               <p>
-                Customer data processed by your workflows stays in your own Google Sheets and CRM. We don&apos;t aggregate client data, we don&apos;t train models on your leads, and we don&apos;t store sensitive contact information in our own databases.
+                We minimize access to what each workflow needs. Customer systems remain authoritative systems of record where applicable, while other approved components may process the minimum data required for the configured workflow.
               </p>
               <p>
-                Credentials are stored in n8n&apos;s encrypted credential store, never in workflow code, never in plain text. API keys are scoped to the minimum permissions required for each integration.
+                We use managed credential mechanisms where supported and scope access to the minimum permissions required for each integration.
               </p>
               <p>
-                If you have specific compliance requirements such as HIPAA, PCI, or SOC 2, tell us on the intake call. Some configurations require additional setup; we&apos;ll be straight with you about what&apos;s possible.
+                Regulated-data and compliance requirements require a separate review. STL Automate does not represent an implementation as HIPAA, PCI, SOC 2, or otherwise compliant merely because particular software vendors are used.
               </p>
             </div>
           </section>
