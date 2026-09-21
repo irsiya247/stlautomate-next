@@ -57,8 +57,8 @@ export default function SiteLayout({ children }) {
           <div className="border-t border-slate-800 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
             <p className="text-slate-600 text-sm">&copy; {new Date().getFullYear()} STL Automate LLC. All rights reserved.</p>
             <div className="flex items-center gap-6">
-              <a href="/terms" className="text-slate-600 text-sm hover:text-slate-400 transition-colors">Terms</a>
-              <a href="/privacy" className="text-slate-600 text-sm hover:text-slate-400 transition-colors">Privacy</a>
+              <a href="/terms" className="text-slate-600 text-sm hover:text-slate-400 transition-colors">Terms of Service</a>
+              <a href="/privacy" className="text-slate-600 text-sm hover:text-slate-400 transition-colors">Privacy Policy</a>
             </div>
           </div>
         </div>

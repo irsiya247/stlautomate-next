@@ -9,69 +9,73 @@ export default function Terms() {
       <div className="max-w-3xl mx-auto px-6 pt-36 pb-24">
         <div className="text-[11px] tracking-[0.35em] text-sky-400 uppercase mb-4">Legal</div>
         <h1 className="text-4xl font-extrabold mb-2">Terms of Service</h1>
-        <p className="text-slate-500 text-sm mb-12">Last updated: June 2026</p>
+        <p className="text-slate-500 text-sm mb-12">Last updated: September 21, 2026</p>
 
         <div className="space-y-10 text-slate-300 leading-relaxed">
-
           <section>
             <h2 className="text-xl font-bold text-white mb-3">1. Agreement</h2>
-            <p>By accessing stlautomate.com or engaging STL Automate LLC for services, you agree to these Terms of Service. If you do not agree, do not use our website or services.</p>
+            <p>These Terms of Service govern your use of stlautomate.com and any STL Automate LLC service that refers to these terms. By using the website or a covered service, you agree to these terms. A separate written service agreement controls if it conflicts with these terms.</p>
           </section>
 
           <section>
             <h2 className="text-xl font-bold text-white mb-3">2. Services</h2>
-            <p>STL Automate LLC provides automation consulting and implementation services including, but not limited to, automated phone receptionist systems, email automation, and sales outreach tools. Specific deliverables, timelines, and pricing are defined in individual service agreements with each client.</p>
+            <p>STL Automate provides automation consulting, implementation, and related tools. Depending on the engagement, a service may connect third-party platforms, process information according to configured rules, prepare drafts or notifications, and support business or internal workflows. The scope of a client engagement is defined in the applicable written agreement or statement of work.</p>
           </section>
 
           <section>
-            <h2 className="text-xl font-bold text-white mb-3">3. Payment</h2>
-            <p>Payment terms are specified in your service agreement. All fees are non-refundable unless otherwise stated in writing. STL Automate LLC reserves the right to suspend services for accounts with outstanding balances.</p>
+            <h2 className="text-xl font-bold text-white mb-3">3. Permitted Use</h2>
+            <p>You may use the website and services only for lawful purposes and in accordance with any documentation, authorization, usage limits, and third-party terms that apply. You are responsible for the information, accounts, and permissions you provide for a connected service.</p>
           </section>
 
           <section>
-            <h2 className="text-xl font-bold text-white mb-3">4. Intellectual Property</h2>
-            <p>Upon full payment, clients own the deliverables created specifically for them. STL Automate LLC retains ownership of any proprietary tools, templates, or frameworks used in delivering services. We reserve the right to use general knowledge and experience gained from client projects to improve our services.</p>
+            <h2 className="text-xl font-bold text-white mb-3">4. Prohibited Misuse</h2>
+            <p>You may not use the website or services to violate law, infringe another person&apos;s rights, access data or accounts without authorization, distribute harmful code, interfere with system operation, evade safeguards, or send unlawful, deceptive, abusive, or unsolicited communications.</p>
           </section>
 
           <section>
-            <h2 className="text-xl font-bold text-white mb-3">5. Confidentiality</h2>
-            <p>We treat all client information as confidential. We do not sell, share, or disclose client business information to third parties except as required to deliver services or comply with applicable law.</p>
+            <h2 className="text-xl font-bold text-white mb-3">5. Availability and Changes</h2>
+            <p>We may maintain, update, suspend, or change website or service features when reasonably necessary. Automation results can depend on third-party systems, configuration, and the quality or availability of source data. We do not promise uninterrupted or error-free availability.</p>
           </section>
 
           <section>
-            <h2 className="text-xl font-bold text-white mb-3">6. Limitation of Liability</h2>
-            <p>STL Automate LLC is not liable for indirect, incidental, or consequential damages arising from use of our services. Our total liability for any claim is limited to the amount paid by the client in the 30 days prior to the event giving rise to the claim.</p>
+            <h2 className="text-xl font-bold text-white mb-3">6. Intellectual Property</h2>
+            <p>STL Automate and its licensors retain rights in the website, branding, software, templates, and other materials they own. Client-specific ownership and licenses, if any, are governed by the applicable written service agreement. These terms do not grant either party rights to the other party&apos;s trademarks or confidential materials beyond what is needed to use or provide the service.</p>
           </section>
 
           <section>
             <h2 className="text-xl font-bold text-white mb-3">7. Third-Party Services</h2>
-            <p>Our automation systems may integrate with third-party platforms (such as Twilio, n8n, Vapi, and others). We are not responsible for the availability, performance, or terms of those third-party services. Clients are responsible for maintaining any required accounts or subscriptions with third-party providers.</p>
+            <p>Our services may connect with third-party platforms, including Google services and n8n. Those platforms are governed by their own terms, privacy policies, permissions, and availability. You are responsible for maintaining any third-party account and authorization required for your use of a connected feature.</p>
           </section>
 
           <section>
-            <h2 className="text-xl font-bold text-white mb-3">8. SMS / Text Messaging</h2>
-            <p className="mb-3">STL Automate LLC sends transactional text messages, including replies to missed calls, appointment reminders and confirmations, and booking-related scheduling messages. By providing your mobile number, or by calling a number that uses our service, you agree to receive these messages.</p>
-            <p className="mb-3">Message frequency varies based on your interactions with us. Message and data rates may apply.</p>
-            <p className="mb-3">You can cancel at any time by replying <strong className="text-white">STOP</strong>. After you reply STOP we will send one confirmation message and no further messages. For help, reply <strong className="text-white">HELP</strong> or email <a href="mailto:contact@stlautomate.com" className="text-sky-400 hover:text-sky-300 transition-colors">contact@stlautomate.com</a>.</p>
-            <p className="mb-3">Carriers are not liable for delayed or undelivered messages.</p>
-            <p>See our <a href="/privacy" className="text-sky-400 hover:text-sky-300 transition-colors">Privacy Policy</a> for how we handle your information.</p>
+            <h2 className="text-xl font-bold text-white mb-3">8. Privacy</h2>
+            <p>Our <a href="/privacy" className="text-sky-400 hover:text-sky-300 transition-colors">Privacy Policy</a> explains how we handle information, including Google user data used by connected automations.</p>
           </section>
 
           <section>
-            <h2 className="text-xl font-bold text-white mb-3">9. Termination</h2>
-            <p>Either party may terminate a service agreement with 30 days written notice. STL Automate LLC may terminate immediately for non-payment or violation of these terms.</p>
+            <h2 className="text-xl font-bold text-white mb-3">9. Disclaimers</h2>
+            <p>Except for commitments expressly made in a written service agreement, the website and services are provided on an &quot;as available&quot; basis. To the extent permitted by law, we disclaim implied warranties, including warranties of merchantability, fitness for a particular purpose, and non-infringement.</p>
           </section>
 
           <section>
-            <h2 className="text-xl font-bold text-white mb-3">10. Governing Law</h2>
-            <p>These terms are governed by the laws of the State of Missouri. Any disputes shall be resolved in the courts of St. Louis County, Missouri.</p>
+            <h2 className="text-xl font-bold text-white mb-3">10. Limitation of Liability</h2>
+            <p>To the extent permitted by law, STL Automate will not be liable for indirect, incidental, special, consequential, or punitive damages arising from the website or services. Nothing in these terms limits liability that cannot lawfully be limited.</p>
           </section>
 
           <section>
-            <h2 className="text-xl font-bold text-white mb-3">11. Contact</h2>
-            <p>Questions about these terms can be directed to <a href="mailto:contact@stlautomate.com" className="text-sky-400 hover:text-sky-300 transition-colors">contact@stlautomate.com</a>.</p>
+            <h2 className="text-xl font-bold text-white mb-3">11. Suspension or Termination</h2>
+            <p>We may suspend or end access to a service if continued use creates a security or legal risk, materially violates these terms, or is no longer covered by an active service arrangement. A separate written agreement may provide additional termination rights and obligations.</p>
           </section>
 
+          <section>
+            <h2 className="text-xl font-bold text-white mb-3">12. Governing Law</h2>
+            <p>These terms are governed by the laws of the State of Missouri, without regard to its conflict-of-law rules, except where applicable law requires otherwise.</p>
+          </section>
+
+          <section>
+            <h2 className="text-xl font-bold text-white mb-3">13. Changes and Contact</h2>
+            <p>We may update these terms by posting a revised version on this page with a new last-updated date. Questions about these terms can be sent to <a href="mailto:contact@stlautomate.com" className="text-sky-400 hover:text-sky-300 transition-colors">contact@stlautomate.com</a>.</p>
+          </section>
         </div>
       </div>
     </main>
