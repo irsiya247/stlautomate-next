@@ -49,7 +49,7 @@ export default function AutomationRepairPage() {
               <h1 className="mt-5 max-w-4xl text-4xl font-extrabold leading-tight tracking-tight sm:text-5xl md:text-6xl">Broken workflow? Find the failure and get one core automation repaired.</h1>
               <p className="mt-6 max-w-2xl text-lg leading-relaxed text-slate-300">When a workflow stops, drops data, repeats an action, or loses its connection, manual work piles up. The Automation Fix Sprint is a focused repair for one clearly defined workflow.</p>
               <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:items-center">
-                <TrackedLink href={bookingHref} placement="automation_repair_hero" className="rounded-full bg-sky-500 px-7 py-4 text-center font-bold text-slate-950 transition-colors hover:bg-sky-300 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-sky-300">Describe the broken workflow</TrackedLink>
+                <TrackedLink href={bookingHref} placement="automation_repair_hero" cta="Automation Fix Sprint" className="rounded-full bg-sky-500 px-7 py-4 text-center font-bold text-slate-950 transition-colors hover:bg-sky-300 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-sky-300">Describe the broken workflow</TrackedLink>
                 <p className="text-sm text-slate-400">One focused 72-hour sprint starts at <strong className="text-white">$750</strong>.</p>
               </div>
             </div>
@@ -120,7 +120,7 @@ export default function AutomationRepairPage() {
         <section className="mx-auto max-w-6xl px-6 pb-20 md:pb-28">
           <div className="grid items-center gap-8 rounded-3xl border border-sky-400/20 bg-sky-400/[0.06] p-7 sm:p-10 md:grid-cols-[1fr_auto]">
             <div><p className="text-xs font-semibold tracking-[0.25em] text-sky-300 uppercase">Start with the failure</p><h2 className="mt-4 text-3xl font-bold">Tell us what stopped working.</h2><p className="mt-3 max-w-2xl leading-relaxed text-slate-300">Share the failure, intended result, and systems involved. We will review whether it fits the $750 Automation Fix Sprint.</p></div>
-            <TrackedLink href={bookingHref} placement="automation_repair_footer" className="rounded-full bg-sky-500 px-7 py-4 text-center font-bold text-slate-950 transition-colors hover:bg-sky-300 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-sky-300">Start an Automation Fix Sprint</TrackedLink>
+            <TrackedLink href={bookingHref} placement="automation_repair_footer" cta="Automation Fix Sprint" className="rounded-full bg-sky-500 px-7 py-4 text-center font-bold text-slate-950 transition-colors hover:bg-sky-300 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-sky-300">Start an Automation Fix Sprint</TrackedLink>
           </div>
           <p className="mt-5 text-center text-sm text-slate-500">Looking for a new workflow build? <a href="/start-project" className="text-sky-300 underline underline-offset-4">Describe a custom project</a>.</p>
         </section>

@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import posthog from "posthog-js";
+import { buildIntakeAnalyticsProperties, getCtaContext } from "./attribution.mjs";
 
 const initialForm = {
   name: "",
@@ -84,10 +85,12 @@ export default function ProjectIntakeForm({ formType = "custom-project" }) {
       const result = await response.json().catch(() => ({ success: false }));
       if (!response.ok || !result.success) throw new Error("Lead submission failed");
 
-      posthog.capture("lead_intake_submitted", {
-        form_type: formType,
-        source_path: window.location.pathname
-      });
+      posthog.capture("lead_intake_submitted", buildIntakeAnalyticsProperties({
+        formType,
+        location: window.location,
+        attribution: getAttribution(),
+        ctaContext: getCtaContext()
+      }));
       setStatus("success");
       setForm(initialForm);
     } catch {
