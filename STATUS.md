@@ -1,5 +1,13 @@
 # STL Automate Website Status
 
+## Credibility association rule
+
+- Added the canonical machine-readable credibility ledger at `docs/marketing/credibility-ledger.json` and the content review checklist at `docs/marketing/content-review-checklist.md`.
+- Added a global marketing and publishing rule to `AGENTS.md` covering all requested public and sales content surfaces.
+- Approved claims include internal self-hosted n8n use, HubSpot source-of-truth/one-write Customer Zero validation, Vercel website hosting, and STL Automate's user-confirmed approval for AWS Activate. Do not imply AWS Partner/Amazon Partner status, AWS backing, endorsement, sponsorship, an AWS customer/investor/client relationship, or any specific credits-awarded amount without separate evidence. AWS logo/mark rights remain unverified; OpenAI and Twilio remain pending for public association claims, and logo/mark rights remain unverified for all entries.
+- Audited current site copy. The technology page already gives the scoped internal n8n claim, and the product page already states the exact HubSpot Customer Zero milestone. Left site copy unchanged because these claims are already visible in context and no additional verified association offered a material low-risk improvement.
+- No external publication or account changes made.
+
 ## Current goal
 
 Complete the public website prerequisites for the existing STL Automate Google OAuth application without changing scopes, credentials, DNS, or workflow code.

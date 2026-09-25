@@ -19,7 +19,7 @@ export default function Privacy() {
 
           <section>
             <h2 className="text-xl font-bold text-white mb-3">2. Information You Provide</h2>
-            <p>We may collect information that you submit through our website or provide while working with us, such as your name, email address, phone number, business information, and descriptions of your automation needs. We use that information to respond to inquiries, provide requested services, and communicate about those services.</p>
+            <p className="mb-3">We may collect information that you submit through our website or provide while working with us, including your name, work email, optional phone number, company, and descriptions of your automation needs. For project requests, this may include the problem, current and desired workflow, systems and tools involved, repair status, target timing, and budget range. We use that information to respond to inquiries, assess project fit, provide requested services, and communicate about those services.</p>
           </section>
 
           <section>
@@ -43,6 +43,7 @@ export default function Privacy() {
             <h2 className="text-xl font-bold text-white mb-3">5. Storage, Sharing, and Retention</h2>
             <p className="mb-3">Relevant parsed job and application information may be stored in the user&apos;s Google Sheets tracker and in limited n8n workflow or data-table state used to operate the automation. We retain information only while it is reasonably needed to provide and maintain the requested features, resolve operational issues, or meet applicable legal obligations.</p>
             <p className="mb-3">We do not sell Google user data or other personal information. We do not use Google user data for advertising. We do not transfer Google user data except as necessary to provide the user-authorized automation, maintain its security, comply with applicable law, or with the user&apos;s consent.</p>
+            <p className="mb-3">Project intake submissions are sent to our server-side lead endpoint and forwarded through our n8n integration so we can review and respond. We may record project inquiries in our customer relationship management system. Information is shared with service providers only as needed to operate this process.</p>
             <p>To request deletion of stored information, contact us at <a href="mailto:contact@stlautomate.com" className="text-sky-400 hover:text-sky-300 transition-colors">contact@stlautomate.com</a>. We will evaluate and handle the request based on the information held and any applicable obligations.</p>
           </section>
 

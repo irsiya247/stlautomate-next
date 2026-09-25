@@ -1,0 +1,84 @@
+{
+  "schema_version": 1,
+  "purpose": "Canonical register of verified public credibility associations and pending claims for STL Automate.",
+  "publishing_rule": "Use only active entries, preserve approved phrasing and scope, and verify logo or mark rights before use.",
+  "entries": [
+    {
+      "entity_name": "n8n",
+      "exact_relationship": "STL Automate's internal production automation runs on self-hosted n8n. This documents internal technology use, not an n8n partnership or customer deployment.",
+      "evidence/reference": ["src/app/(site)/tech/page.js: Workflow Orchestration section states internal production automation runs on self-hosted n8n.", "AGENTS.md: n8n is identified as STL Automate's automation engine."],
+      "allowed_phrasing": ["STL Automate's internal production automation runs on self-hosted n8n.", "STL Automate uses self-hosted n8n for its internal production automation."],
+      "prohibited_implications": ["n8n endorses, sponsors, invests in, or partners with STL Automate.", "All customer deployments use n8n or are hosted by STL Automate."],
+      "logo_usage_status": "Not verified; do not use n8n logo or marks until rights are checked.",
+      "eligible_surfaces": ["website technology page", "LinkedIn/social", "proposals", "pitch decks", "outreach assets", "case studies"],
+      "status_active_or_historical": "active",
+      "notes": "Keep the statement scoped to internal production automation."
+    },
+    {
+      "entity_name": "HubSpot",
+      "exact_relationship": "HubSpot is STL Automate's CRM source of truth and was used for one governed HubSpot write in Agent Floor Customer Zero V2 validation. This does not establish a HubSpot partnership or external customer deployment.",
+      "evidence/reference": ["AGENTS.md: Source of truth identifies HubSpot as the CRM source of truth.", "src/app/(site)/products/page.js: Agent Floor note states Customer Zero V2 completed one governed HubSpot write with durable evidence.", "src/app/(site)/tech/page.js: HubSpot CRM appears among common integration capabilities."],
+      "allowed_phrasing": ["HubSpot is STL Automate's CRM source of truth.", "Agent Floor Customer Zero V2 completed one governed HubSpot write with durable evidence.", "STL Automate has validated a governed HubSpot write in Agent Floor Customer Zero V2."],
+      "prohibited_implications": ["HubSpot endorses, sponsors, invests in, or partners with STL Automate.", "An external customer deployment or broad production integration is established by the Customer Zero validation."],
+      "logo_usage_status": "Not verified; do not use HubSpot logo or marks until rights are checked.",
+      "eligible_surfaces": ["website technology page", "website product page", "LinkedIn/social", "proposals", "pitch decks", "case studies"],
+      "status_active_or_historical": "active",
+      "notes": "Describe the Customer Zero milestone as one governed write, not general customer traction."
+    },
+    {
+      "entity_name": "Vercel",
+      "exact_relationship": "The production STL Automate website is deployed on Vercel, according to the project's recorded status. This is a hosting-provider relationship only.",
+      "evidence/reference": ["STATUS.md: identifies Vercel as the production deployment provider."],
+      "allowed_phrasing": ["The STL Automate website is deployed on Vercel."],
+      "prohibited_implications": ["Vercel endorses, sponsors, invests in, or partners with STL Automate.", "Vercel hosts or supports every STL Automate customer system."],
+      "logo_usage_status": "Not verified; do not use Vercel logo or marks until rights are checked.",
+      "eligible_surfaces": ["technical proposals", "technical pitch decks", "website technology page", "technical outreach assets"],
+      "status_active_or_historical": "active",
+      "notes": "Hosting-provider detail is technical and should be used only when relevant."
+    },
+    {
+      "entity_name": "AWS Activate",
+      "exact_relationship": "STL Automate has been approved for AWS Activate.",
+      "evidence/reference": ["User confirmation in the current task: 'we've been approved'. The August 24, 2026 AWS for Startups welcome email documents access to AWS for Startups offerings; separate evidence of an AWS Activate Credits award was not provided."],
+      "evidence_metadata": {
+        "source": "Gmail",
+        "date": "2026-08-24",
+        "subject": "Welcome to AWS for Startups!",
+        "quoted_evidence": [
+          "Welcome to AWS for Startups! You now have access to programs and offerings designed to help you build, grow, and scale on AWS.",
+          "AWS Activate Credits",
+          "Apply to receive up to $200,000 in Activate Credits..."
+        ],
+        "qualification": "Approval for AWS Activate is confirmed by the user. The welcome email's offer to apply for up to $200,000 in credits is not evidence that any specific credits were awarded."
+      },
+      "allowed_phrasing": ["Approved for AWS Activate.", "STL Automate participates in AWS Activate.", "Building with support/resources available through AWS Activate."],
+      "prohibited_implications": ["AWS Partner", "Amazon Partner", "AWS-backed", "endorsed by AWS", "sponsored by AWS", "AWS as a customer, investor, or client", "any specific AWS Activate Credits awarded amount unless separately evidenced"],
+      "logo_usage_status": "Not verified; no logo or mark use.",
+      "eligible_surfaces": ["website", "LinkedIn/social", "proposals", "pitch decks", "outreach assets"],
+      "status_active_or_historical": "active",
+      "notes": "Approval supports stating that STL Automate is approved for/participates in AWS Activate. Do not imply an AWS partnership, backing, endorsement, sponsorship, customer/investor/client relationship, or a specific credits award. Keep logo/mark rights separate and unverified."
+    },
+    {
+      "entity_name": "OpenAI",
+      "exact_relationship": "OpenAI/Codex is identified in repository guidance as a logic, drafting, code, and script layer; no specific public-facing vendor relationship or endorsement is documented.",
+      "evidence/reference": ["AGENTS.md: Source of truth identifies OpenAI / Codex as the logic, drafting, code, and script layer."],
+      "allowed_phrasing": [],
+      "prohibited_implications": ["OpenAI endorses, sponsors, invests in, partners with, or is a customer of STL Automate."],
+      "logo_usage_status": "Not verified; do not use OpenAI logo or marks.",
+      "eligible_surfaces": [],
+      "status_active_or_historical": "pending_verification",
+      "notes": "Internal workflow guidance alone does not approve a public association claim."
+    },
+    {
+      "entity_name": "Twilio",
+      "exact_relationship": "Twilio appears in the site's general integration examples, but repository evidence does not establish a current STL Automate deployment or internal production use.",
+      "evidence/reference": ["src/app/(site)/tech/page.js: lists Twilio SMS and WhatsApp (Twilio) as common integration examples."],
+      "allowed_phrasing": [],
+      "prohibited_implications": ["Twilio customer, partner, endorsement, or active production use by STL Automate without further evidence."],
+      "logo_usage_status": "Not verified; do not use Twilio logo or marks.",
+      "eligible_surfaces": [],
+      "status_active_or_historical": "pending_verification",
+      "notes": "A general capability example is not evidence of a live relationship."
+    }
+  ]
+}

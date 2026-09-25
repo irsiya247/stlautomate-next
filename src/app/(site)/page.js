@@ -1,3 +1,5 @@
+import TrackedLink from "../components/TrackedLink";
+
 export default function Home() {
   return (
     <main className="min-h-screen bg-[#030712] text-white relative overflow-hidden">
@@ -34,11 +36,14 @@ export default function Home() {
           </p>
 
           <div className="mt-10 flex flex-wrap gap-4">
-            <a href="#video" className="bg-sky-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-sky-500 transition-colors">
-              See It In Action
+            <TrackedLink href="/start-project" placement="homepage_hero" className="bg-sky-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-sky-500 transition-colors">
+              Start a Custom Project
+            </TrackedLink>
+            <a href="/automation-fix-sprint" className="border border-slate-700 px-6 py-3 rounded-full text-slate-300 hover:border-slate-500 transition-colors">
+              Fix a Broken Workflow
             </a>
-            <a href="/intake" className="border border-slate-700 px-6 py-3 rounded-full text-slate-300 hover:border-slate-500 transition-colors">
-              Talk To Us
+            <a href="#video" className="border border-slate-700 px-6 py-3 rounded-full text-slate-300 hover:border-slate-500 transition-colors">
+              See It In Action
             </a>
           </div>
         </section>
@@ -72,6 +77,17 @@ export default function Home() {
               <p className="text-slate-500 text-xs tracking-widest uppercase mt-1">{label}</p>
             </div>
           ))}
+        </section>
+
+        <section className="max-w-6xl mx-auto px-6 mt-20">
+          <div className="grid gap-8 rounded-3xl border border-sky-400/25 bg-sky-400/[0.06] p-7 md:grid-cols-[1fr_auto] md:items-center md:p-10">
+            <div>
+              <p className="text-[11px] tracking-[0.35em] text-sky-300 uppercase mb-3">Custom Automation Projects</p>
+              <h2 className="text-3xl font-extrabold">Your workflow does not need to fit a preset.</h2>
+              <p className="mt-4 max-w-2xl leading-relaxed text-slate-300">Tell us what is happening today, what should happen instead, and which systems are involved. We build custom projects around the process your business needs.</p>
+            </div>
+            <TrackedLink href="/start-project" placement="homepage_custom_project" className="rounded-full bg-sky-600 px-7 py-4 text-center font-semibold text-white transition-colors hover:bg-sky-500">Start a Custom Project</TrackedLink>
+          </div>
         </section>
 
         {/* PRODUCT CARDS */}
@@ -242,9 +258,9 @@ export default function Home() {
           <p className="text-slate-400 text-lg mb-8 max-w-2xl mx-auto">
             Book a free 15-minute call. We&apos;ll tell you exactly what we&apos;d build for your business and what it costs. No pitch, no pressure.
           </p>
-          <a href="/intake" className="bg-sky-600 text-white px-8 py-4 rounded-full font-semibold text-lg inline-block hover:bg-sky-500 transition-colors">
-            Book a Free Call
-          </a>
+          <TrackedLink href="/start-project" placement="homepage_footer" className="bg-sky-600 text-white px-8 py-4 rounded-full font-semibold text-lg inline-block hover:bg-sky-500 transition-colors">
+            Start a Custom Project
+          </TrackedLink>
         </section>
 
       </div>

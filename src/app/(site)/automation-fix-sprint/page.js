@@ -1,4 +1,5 @@
 import Link from "next/link";
+import TrackedLink from "../../components/TrackedLink";
 
 export const metadata = {
   title: "Automation Fix Sprint | STL Automate",
@@ -35,8 +36,7 @@ const sprintSteps = [
   ["03", "Hand off", "Deliver the Loom walkthrough, simple documentation, and seven-day bug-fix window."]
 ];
 
-const bookingHref =
-  "mailto:contact@stlautomate.com?subject=Automation%20Fix%20Sprint%20Call";
+const bookingHref = "/start-project?type=automation-fix-sprint";
 
 export default function AutomationFixSprintPage() {
   return (
@@ -90,14 +90,15 @@ export default function AutomationFixSprintPage() {
                 into manual work.
               </p>
               <div className="mt-9 flex flex-col gap-4 sm:flex-row sm:items-center">
-                <a
+                <TrackedLink
                   href={bookingHref}
+                  placement="fix_sprint_hero"
                   className="rounded-full bg-sky-500 px-7 py-4 text-center font-bold text-slate-950 transition-colors hover:bg-sky-300 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-sky-300"
                 >
-                  Book a 15-minute automation fix call
-                </a>
+                  Tell us about the broken workflow
+                </TrackedLink>
                 <p className="text-sm leading-relaxed text-slate-400">
-                  Fixed-scope repair projects typically start at $750.
+                  One focused repair starts at $750.
                 </p>
               </div>
             </div>
@@ -253,19 +254,20 @@ export default function AutomationFixSprintPage() {
                 Tell us what stopped working.
               </h2>
               <p className="mt-5 max-w-2xl leading-relaxed text-slate-400">
-                We will use the 15-minute call to understand the failure,
-                confirm whether it fits one sprint, and define the repair scope.
+                Share what failed. We will review whether it fits one sprint, then follow up to confirm the repair scope.
+
               </p>
             </div>
             <div className="md:text-right">
-              <a
+              <TrackedLink
                 href={bookingHref}
+                placement="fix_sprint_footer"
                 className="inline-flex rounded-full bg-sky-500 px-7 py-4 text-center font-bold text-slate-950 transition-colors hover:bg-sky-300 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-sky-300"
               >
-                Book a 15-minute automation fix call
-              </a>
+                Start an Automation Fix Sprint
+              </TrackedLink>
               <p className="mt-3 text-sm text-slate-500">
-                Projects typically start at $750.
+                Fixed-scope projects start at $750.
               </p>
             </div>
           </div>

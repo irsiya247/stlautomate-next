@@ -47,6 +47,22 @@ The system may draft, score, recommend, log, and route for approval. It must not
 - Do not show n8n workflow canvases publicly or client-facing. Use branded graphics, outcome screenshots, or architecture diagrams.
 - No em dashes.
 
+## Credibility association and publishing rule
+
+Before creating or publishing any website page, LinkedIn or social post, proposal, case study, pitch deck, outreach asset, service page, or product page, check `docs/marketing/credibility-ledger.json`.
+
+- Use a verified association when it is materially useful to the audience and the asset.
+- Preserve the exact relationship and approved phrasing in the ledger. A technology use, program participation, customer relationship, partnership, endorsement, and investment are different claims; never imply one from another.
+- Do not use an entity whose ledger status is `pending_verification` in public copy. Gather evidence and update the ledger first.
+- Verify current logo and mark permissions before using any logo. A name appearing in approved copy does not grant logo rights.
+- Keep claims scoped to their documented use, deployment, and time period. Do not imply that every client deployment uses the same provider.
+
+Required content review checklist:
+
+- Credibility check completed? Which verified associations are relevant?
+- Is exact relationship phrasing preserved?
+- Are logo/mark rights verified?
+
 ## Work style and continuity
 
 - For multi-step or setup work, show step one only and wait for Matthew's response before continuing.

@@ -1,67 +1,54 @@
-'use client';
-import { useState } from 'react';
-import { usePathname } from 'next/navigation';
+"use client";
+
+import Link from "next/link";
+import { useState } from "react";
+import { usePathname } from "next/navigation";
+import TrackedLink from "./TrackedLink";
 
 export default function Header() {
   const [open, setOpen] = useState(false);
   const pathname = usePathname();
-
   const links = [
-    { href: '/services', label: 'Services' },
-    { href: '/products', label: 'Products' },
-    { href: '/how-it-works', label: 'How It Works' },
-    { href: '/proof', label: 'Proof' },
-    { href: '/about', label: 'About' },
-    { href: '/tech', label: 'Tech' },
-    { href: '/faq', label: 'FAQ' },
+    { href: "/services", label: "Services" },
+    { href: "/products", label: "Products" },
+    { href: "/start-project", label: "Custom Projects" },
+    { href: "/automation-fix-sprint", label: "Fix Sprint" },
+    { href: "/how-it-works", label: "How It Works" },
+    { href: "/proof", label: "Proof" },
+    { href: "/about", label: "About" },
+    { href: "/tech", label: "Tech" },
+    { href: "/faq", label: "FAQ" }
   ];
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-[#030712]/90 backdrop-blur-sm">
-      <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
-        <a href="/" className="text-white font-bold text-lg tracking-tight">
-          STL <span className="text-sky-400">Automate</span>
-        </a>
-
-        {/* Desktop nav */}
-        <nav className="hidden md:flex items-center gap-6 text-sm">
+    <header className="fixed left-0 right-0 top-0 z-50 bg-[#030712]/90 backdrop-blur-sm">
+      <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-6">
+        <Link href="/" className="text-lg font-bold tracking-tight text-white">STL <span className="text-sky-400">Automate</span></Link>
+        <nav className="hidden items-center gap-5 text-sm lg:flex" aria-label="Main navigation">
           {links.map(({ href, label }) => (
-            <a key={href} href={href} className={`transition-colors hover:text-white ${pathname === href ? 'text-white' : 'text-slate-400'}`}>
+            <Link key={href} href={href} className={pathname === href ? "text-white transition-colors hover:text-white" : "text-slate-400 transition-colors hover:text-white"}>
               {label}
-            </a>
+            </Link>
           ))}
         </nav>
-
         <div className="flex items-center gap-3">
-          <a href="/intake" className="bg-sky-600 text-white px-4 py-2 rounded-full text-sm font-semibold hover:bg-sky-500 transition-colors">
-            Book a Free Call
-          </a>
-          {/* Hamburger — mobile only */}
-          <button
-            className="md:hidden flex flex-col justify-center items-center w-8 h-8 gap-1.5"
-            onClick={() => setOpen(!open)}
-            aria-label="Toggle menu"
-          >
-            <span className={`block w-5 h-0.5 bg-white transition-all duration-200 ${open ? 'rotate-45 translate-y-2' : ''}`} />
-            <span className={`block w-5 h-0.5 bg-white transition-all duration-200 ${open ? 'opacity-0' : ''}`} />
-            <span className={`block w-5 h-0.5 bg-white transition-all duration-200 ${open ? '-rotate-45 -translate-y-2' : ''}`} />
+          <TrackedLink href="/start-project" placement="header" className="rounded-full bg-sky-600 px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-sky-500">
+            Start a Custom Project
+          </TrackedLink>
+          <button className="flex h-8 w-8 flex-col items-center justify-center gap-1.5 lg:hidden" onClick={() => setOpen(!open)} aria-label="Toggle menu" aria-expanded={open}>
+            <span className={open ? "block h-0.5 w-5 translate-y-2 rotate-45 bg-white transition-all duration-200" : "block h-0.5 w-5 bg-white transition-all duration-200"} />
+            <span className={open ? "block h-0.5 w-5 opacity-0 bg-white transition-all duration-200" : "block h-0.5 w-5 bg-white transition-all duration-200"} />
+            <span className={open ? "block h-0.5 w-5 -translate-y-2 -rotate-45 bg-white transition-all duration-200" : "block h-0.5 w-5 bg-white transition-all duration-200"} />
           </button>
         </div>
       </div>
-
-      {/* Mobile menu */}
       {open && (
-        <div className="md:hidden border-t border-slate-800 bg-[#030712]/95 backdrop-blur-sm">
-          <nav className="max-w-6xl mx-auto px-6 py-4 flex flex-col gap-1">
+        <div className="border-t border-slate-800 bg-[#030712]/95 backdrop-blur-sm lg:hidden">
+          <nav className="mx-auto flex max-w-6xl flex-col gap-1 px-6 py-4" aria-label="Mobile navigation">
             {links.map(({ href, label }) => (
-              <a
-                key={href}
-                href={href}
-                onClick={() => setOpen(false)}
-                className={`py-3 text-sm border-b border-slate-800/50 last:border-0 transition-colors hover:text-white ${pathname === href ? 'text-white' : 'text-slate-400'}`}
-              >
+              <Link key={href} href={href} onClick={() => setOpen(false)} className={pathname === href ? "border-b border-slate-800/50 py-3 text-sm text-white transition-colors last:border-0 hover:text-white" : "border-b border-slate-800/50 py-3 text-sm text-slate-400 transition-colors last:border-0 hover:text-white"}>
                 {label}
-              </a>
+              </Link>
             ))}
           </nav>
         </div>

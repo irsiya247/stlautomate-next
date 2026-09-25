@@ -22,7 +22,7 @@ export default function Intake() {
       const res = await fetch('/api/lead', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(form),
+        body: JSON.stringify({ ...form, formType: "intake" }),
       });
       const data = await res.json();
       setStatus(data.success ? 'success' : 'error');

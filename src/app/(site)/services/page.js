@@ -24,6 +24,19 @@ export default function Services() {
           </p>
 
           {/* ── PRODUCT 1: AI RECEPTIONIST SUITE ── */}
+          <div className="mb-20 grid gap-6 rounded-3xl border border-sky-400/25 bg-sky-400/[0.06] p-7 md:grid-cols-[1fr_auto] md:items-center md:p-9">
+            <div>
+              <div className="mb-3 text-xs tracking-widest text-sky-300 uppercase">Custom Automation Projects</div>
+              <h2 className="text-2xl font-extrabold md:text-3xl">Have a workflow that does not fit a standard service?</h2>
+              <p className="mt-3 max-w-2xl leading-relaxed text-slate-400">Bring us the process, tools, and outcome you have in mind. Start with a short project brief and we&apos;ll review the fit.</p>
+              <div className="mt-4 flex flex-wrap gap-x-5 gap-y-2 text-sm text-slate-300">
+                <a href="/automation-fix-sprint" className="text-sky-300 hover:text-sky-200">Repair a broken workflow &rarr;</a>
+                <a href="/start-project" className="text-sky-300 hover:text-sky-200">Describe a custom build &rarr;</a>
+              </div>
+            </div>
+            <a href="/start-project" className="inline-block rounded-full bg-sky-600 px-7 py-4 text-center font-semibold text-white transition-colors hover:bg-sky-500">Start a Custom Project</a>
+          </div>
+
           <div id="receptionist" className="mb-28 scroll-mt-24">
             <div className="grid md:grid-cols-2 gap-12 items-start">
               <div>
@@ -190,8 +203,8 @@ export default function Services() {
             <p className="text-slate-500 text-base mb-8 max-w-xl mx-auto">
               If you have something in mind, tell us about it on the call. We&apos;ll be straight with you about whether we can build it.
             </p>
-            <a href="/intake" className="bg-sky-600 text-white px-8 py-4 rounded-full font-semibold text-lg inline-block hover:bg-sky-500 transition-colors">
-              Book a Free Call
+            <a href="/start-project" className="bg-sky-600 text-white px-8 py-4 rounded-full font-semibold text-lg inline-block hover:bg-sky-500 transition-colors">
+              Start a Custom Project
             </a>
           </div>
 

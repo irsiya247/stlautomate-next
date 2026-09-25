@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Header from "../components/Header";
 
 export default function SiteLayout({ children }) {
@@ -11,14 +12,14 @@ export default function SiteLayout({ children }) {
 
             {/* Brand */}
             <div className="max-w-xs">
-              <a href="/" className="text-white font-bold text-xl tracking-tight mb-4 inline-block">
+              <Link href="/" className="text-white font-bold text-xl tracking-tight mb-4 inline-block">
                 STL <span className="text-sky-400">Automate</span>
-              </a>
+              </Link>
               <p className="text-slate-500 text-sm leading-relaxed mb-6">
                 Automation systems for small businesses. Built in St. Louis, MO.
               </p>
-              <a href="/intake" className="bg-sky-600 text-white px-5 py-2.5 rounded-full text-sm font-semibold hover:bg-sky-500 transition-colors inline-block">
-                Book a Free Call
+              <a href="/start-project" className="bg-sky-600 text-white px-5 py-2.5 rounded-full text-sm font-semibold hover:bg-sky-500 transition-colors inline-block">
+                Start a Custom Project
               </a>
             </div>
 
@@ -30,7 +31,8 @@ export default function SiteLayout({ children }) {
                   <li><a href="/services#receptionist" className="hover:text-white transition-colors">Receptionist Suite</a></li>
                   <li><a href="/services#vapi" className="hover:text-white transition-colors">Phone Receptionist</a></li>
                   <li><a href="/services#sdr" className="hover:text-white transition-colors">Sales Outreach</a></li>
-                  <li><a href="/services#custom" className="hover:text-white transition-colors">Custom Automation</a></li>
+                  <li><a href="/automation-fix-sprint" className="hover:text-white transition-colors">Automation Fix Sprint</a></li>
+                  <li><a href="/start-project" className="hover:text-white transition-colors">Start a Custom Project</a></li>
                 </ul>
               </div>
               <div>
