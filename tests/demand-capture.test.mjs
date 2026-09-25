@@ -81,3 +81,30 @@ test("incomplete project briefs are rejected before webhook forwarding", async (
   assert.equal(response.status, 400);
   assert.equal(called, false);
 });
+
+test("Automation Fix Sprint intake preserves service, CTA, and full first-touch URL attribution", async () => {
+  process.env.N8N_WEBHOOK_URL = "https://n8n.example.invalid/webhook/demand-capture";
+  let forwardedLead = null;
+  globalThis.fetch = async (_url, options) => {
+    forwardedLead = JSON.parse(options.body);
+    return new Response(null, { status: 204 });
+  };
+
+  const fullUrl = "https://www.stlautomate.com/start-project?type=automation-fix-sprint&utm_source=campaign";
+  const response = await post({
+    ...validProject,
+    formType: "automation-fix-sprint",
+    cta: "Automation Fix Sprint",
+    source_page: "https://www.stlautomate.com/start-project",
+    page_url: fullUrl,
+    landing_page: fullUrl
+  });
+
+  assert.equal(response.status, 200);
+  assert.equal(forwardedLead.form_type, "automation-fix-sprint");
+  assert.equal(forwardedLead.service, "automation-fix-sprint");
+  assert.equal(forwardedLead.cta, "Automation Fix Sprint");
+  assert.equal(forwardedLead.source_page, "https://www.stlautomate.com/start-project");
+  assert.equal(forwardedLead.page_url, fullUrl);
+  assert.equal(forwardedLead.landing_page, fullUrl);
+});

@@ -16,7 +16,7 @@ export default function PostHogPageView() {
       if (!window.sessionStorage.getItem(attributionKey)) {
         const params = currentUrl.searchParams;
         window.sessionStorage.setItem(attributionKey, JSON.stringify({
-          landing_page: `${currentUrl.origin}${currentUrl.pathname}`,
+          landing_page: currentUrl.href,
           referrer: document.referrer,
           utm_source: params.get("utm_source") || "",
           utm_medium: params.get("utm_medium") || "",

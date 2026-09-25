@@ -32,8 +32,8 @@ function getAttribution() {
   return {
     source_page: `${window.location.origin}${window.location.pathname}`,
     page_url: window.location.href,
+    landing_page: firstTouch.landing_page || window.location.href,
     referrer: firstTouch.referrer || document.referrer,
-    landing_page: firstTouch.landing_page || `${window.location.origin}${window.location.pathname}`,
     utm_source: firstTouch.utm_source || "",
     utm_medium: firstTouch.utm_medium || "",
     utm_campaign: firstTouch.utm_campaign || "",
@@ -74,6 +74,8 @@ export default function ProjectIntakeForm({ formType = "custom-project" }) {
         body: JSON.stringify({
           ...form,
           formType,
+          service: formType,
+          cta: formType === "automation-fix-sprint" ? "Automation Fix Sprint" : "Custom Project",
           message: details,
           submission_id: window.crypto.randomUUID(),
           ...getAttribution()

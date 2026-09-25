@@ -98,6 +98,7 @@ export async function POST(request) {
     const lead = {
       submission_id: submissionId,
       form_type: formType,
+      service: formType,
       name,
       email,
       phone,
@@ -116,6 +117,7 @@ export async function POST(request) {
       budget_range: clean(body.budget_range, 120),
       message,
       source: `stlautomate.com ${formType.replaceAll("-", " ")} form`,
+      cta: formType === "automation-fix-sprint" ? "Automation Fix Sprint" : formType === "custom-project" ? "Custom Project" : clean(body.cta, 200),
       source_detail: clean(body.utm_source, 160) || clean(body.referrer, 500) || "direct",
       source_page: clean(body.source_page || body.page_url, 1000) || "https://www.stlautomate.com/",
       page_url: clean(body.page_url, 1000),
