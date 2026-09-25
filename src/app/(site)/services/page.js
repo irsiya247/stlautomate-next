@@ -30,7 +30,7 @@ export default function Services() {
               <h2 className="text-2xl font-extrabold md:text-3xl">Have a workflow that does not fit a standard service?</h2>
               <p className="mt-3 max-w-2xl leading-relaxed text-slate-400">Bring us the process, tools, and outcome you have in mind. Start with a short project brief and we&apos;ll review the fit.</p>
               <div className="mt-4 flex flex-wrap gap-x-5 gap-y-2 text-sm text-slate-300">
-                <a href="/automation-fix-sprint" className="text-sky-300 hover:text-sky-200">Repair a broken workflow &rarr;</a>
+                <a href="/services/automation-repair" className="text-sky-300 hover:text-sky-200">Repair a broken workflow &rarr;</a>
                 <a href="/start-project" className="text-sky-300 hover:text-sky-200">Describe a custom build &rarr;</a>
               </div>
             </div>

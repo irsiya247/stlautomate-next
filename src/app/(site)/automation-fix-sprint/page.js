@@ -157,6 +157,10 @@ export default function AutomationFixSprintPage() {
           </div>
         </section>
 
+        <section className="mx-auto max-w-6xl px-6 pt-12">
+          <p className="text-sm text-slate-400">Need help identifying a failure? <Link href="/services/automation-repair" className="text-sky-300 underline underline-offset-4">See common automation repair issues</Link>.</p>
+        </section>
+
         <section className="mx-auto max-w-6xl px-6 py-20 md:py-28">
           <div className="grid gap-12 lg:grid-cols-[0.72fr_1.28fr] lg:gap-16">
             <div>

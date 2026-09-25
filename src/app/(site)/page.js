@@ -39,9 +39,9 @@ export default function Home() {
             <TrackedLink href="/start-project" placement="homepage_hero" className="bg-sky-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-sky-500 transition-colors">
               Start a Custom Project
             </TrackedLink>
-            <a href="/automation-fix-sprint" className="border border-slate-700 px-6 py-3 rounded-full text-slate-300 hover:border-slate-500 transition-colors">
+            <TrackedLink href="/services/automation-repair" placement="homepage_repair_intent" className="border border-slate-700 px-6 py-3 rounded-full text-slate-300 hover:border-slate-500 transition-colors">
               Fix a Broken Workflow
-            </a>
+            </TrackedLink>
             <a href="#video" className="border border-slate-700 px-6 py-3 rounded-full text-slate-300 hover:border-slate-500 transition-colors">
               See It In Action
             </a>
