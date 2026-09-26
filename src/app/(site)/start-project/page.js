@@ -1,4 +1,5 @@
 import ProjectIntakeForm from "../../components/ProjectIntakeForm";
+import Link from "next/link";
 
 export const metadata = {
   title: "Start a Custom Automation Project | STL Automate",
@@ -25,6 +26,7 @@ export default async function StartProjectPage({ searchParams }) {
               {isRepair ? "Share the broken workflow, where it fails, and the systems involved. The focused repair sprint starts at $750; we'll review the scope with you before any work begins." : "Bring the process, integration, or idea that does not fit a standard service. A few details help us understand the problem before we talk."}
             </p>
             <p className="mt-6 text-sm leading-relaxed text-slate-500">We&apos;ll review your request and follow up by email. Sending this form does not commit you to a project.</p>
+            {!isRepair && <p className="mt-4 text-sm"><Link href="/services/custom-automation" className="text-sky-300 underline underline-offset-4">Review custom automation scope and process</Link></p>}
           </div>
           <ProjectIntakeForm formType={formType} />
         </div>

@@ -1,5 +1,25 @@
 # STL Automate Website Status
 
+## Customer Acquisition Phase 6: custom automation landing page
+
+### Current goal
+
+Implement `/services/custom-automation` in the canonical production website repository. Keep the work local; do not deploy or publish.
+
+### Implementation checkpoint
+
+- Added the custom automation landing page with buyer-led positioning, process/scope sections, verified and scoped examples, packaged-offer links, FAQs, and tracked top/bottom CTAs.
+- Added the canonical route to the sitemap and natural internal links from the homepage, services page, automation repair page, and project intake page.
+- Reused the existing `custom-project` intake and attribution path without changing `/api/lead` behavior.
+- Added regression coverage for route metadata, sitemap, internal links, and click-to-intake attribution. `git diff --check` passed; lint passed with three existing unrelated warnings; all nine tests passed; production build passed and generated `/services/custom-automation`.
+- Credibility review: active n8n phrasing is scoped to internal production use; the existing verified GoHighLevel review is described within its documented scope; no vendor marks or pending Twilio/OpenAI association claims are used.
+- No external publication, deployment, or account changes made.
+
+### Next steps
+
+1. Review the final repository status and report the local changes and warnings.
+2. Do not deploy, publish, or push until separately requested.
+
 ## Credibility association rule
 
 - Added the canonical machine-readable credibility ledger at `docs/marketing/credibility-ledger.json` and the content review checklist at `docs/marketing/content-review-checklist.md`.

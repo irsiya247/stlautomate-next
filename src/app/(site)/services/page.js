@@ -31,10 +31,10 @@ export default function Services() {
               <p className="mt-3 max-w-2xl leading-relaxed text-slate-400">Bring us the process, tools, and outcome you have in mind. Start with a short project brief and we&apos;ll review the fit.</p>
               <div className="mt-4 flex flex-wrap gap-x-5 gap-y-2 text-sm text-slate-300">
                 <a href="/services/automation-repair" className="text-sky-300 hover:text-sky-200">Repair a broken workflow &rarr;</a>
-                <a href="/start-project" className="text-sky-300 hover:text-sky-200">Describe a custom build &rarr;</a>
+                <a href="/services/custom-automation" className="text-sky-300 hover:text-sky-200">Explore custom automation &rarr;</a>
               </div>
             </div>
-            <a href="/start-project" className="inline-block rounded-full bg-sky-600 px-7 py-4 text-center font-semibold text-white transition-colors hover:bg-sky-500">Start a Custom Project</a>
+            <a href="/services/custom-automation" className="inline-block rounded-full bg-sky-600 px-7 py-4 text-center font-semibold text-white transition-colors hover:bg-sky-500">Explore Custom Automation</a>
           </div>
 
           <div id="receptionist" className="mb-28 scroll-mt-24">
@@ -203,8 +203,8 @@ export default function Services() {
             <p className="text-slate-500 text-base mb-8 max-w-xl mx-auto">
               If you have something in mind, tell us about it on the call. We&apos;ll be straight with you about whether we can build it.
             </p>
-            <a href="/start-project" className="bg-sky-600 text-white px-8 py-4 rounded-full font-semibold text-lg inline-block hover:bg-sky-500 transition-colors">
-              Start a Custom Project
+            <a href="/services/custom-automation" className="bg-sky-600 text-white px-8 py-4 rounded-full font-semibold text-lg inline-block hover:bg-sky-500 transition-colors">
+              Explore Custom Automation
             </a>
           </div>
 

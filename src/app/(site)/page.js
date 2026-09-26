@@ -36,8 +36,8 @@ export default function Home() {
           </p>
 
           <div className="mt-10 flex flex-wrap gap-4">
-            <TrackedLink href="/start-project" placement="homepage_hero" className="bg-sky-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-sky-500 transition-colors">
-              Start a Custom Project
+            <TrackedLink href="/services/custom-automation" placement="homepage_hero_custom_automation" className="bg-sky-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-sky-500 transition-colors">
+              Explore Custom Automation
             </TrackedLink>
             <TrackedLink href="/services/automation-repair" placement="homepage_repair_intent" className="border border-slate-700 px-6 py-3 rounded-full text-slate-300 hover:border-slate-500 transition-colors">
               Fix a Broken Workflow
@@ -86,7 +86,7 @@ export default function Home() {
               <h2 className="text-3xl font-extrabold">Your workflow does not need to fit a preset.</h2>
               <p className="mt-4 max-w-2xl leading-relaxed text-slate-300">Tell us what is happening today, what should happen instead, and which systems are involved. We build custom projects around the process your business needs.</p>
             </div>
-            <TrackedLink href="/start-project" placement="homepage_custom_project" className="rounded-full bg-sky-600 px-7 py-4 text-center font-semibold text-white transition-colors hover:bg-sky-500">Start a Custom Project</TrackedLink>
+            <TrackedLink href="/services/custom-automation" placement="homepage_custom_project" className="rounded-full bg-sky-600 px-7 py-4 text-center font-semibold text-white transition-colors hover:bg-sky-500">Explore Custom Automation</TrackedLink>
           </div>
         </section>
 

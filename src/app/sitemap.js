@@ -17,6 +17,7 @@ const routes = [
   "/proof",
   "/services",
   "/services/automation-repair",
+  "/services/custom-automation",
   "/start-project",
   "/tech",
   "/terms",

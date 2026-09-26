@@ -122,7 +122,7 @@ export default function AutomationRepairPage() {
             <div><p className="text-xs font-semibold tracking-[0.25em] text-sky-300 uppercase">Start with the failure</p><h2 className="mt-4 text-3xl font-bold">Tell us what stopped working.</h2><p className="mt-3 max-w-2xl leading-relaxed text-slate-300">Share the failure, intended result, and systems involved. We will review whether it fits the $750 Automation Fix Sprint.</p></div>
             <TrackedLink href={bookingHref} placement="automation_repair_footer" cta="Automation Fix Sprint" className="rounded-full bg-sky-500 px-7 py-4 text-center font-bold text-slate-950 transition-colors hover:bg-sky-300 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-sky-300">Start an Automation Fix Sprint</TrackedLink>
           </div>
-          <p className="mt-5 text-center text-sm text-slate-500">Looking for a new workflow build? <a href="/start-project" className="text-sky-300 underline underline-offset-4">Describe a custom project</a>.</p>
+          <p className="mt-5 text-center text-sm text-slate-500">Looking for a new workflow build? <a href="/services/custom-automation" className="text-sky-300 underline underline-offset-4">Explore custom automation</a>.</p>
         </section>
       </div>
     </main>
