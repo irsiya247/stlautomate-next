@@ -261,6 +261,9 @@ export default function Home() {
           <TrackedLink href="/start-project" placement="homepage_footer" className="bg-sky-600 text-white px-8 py-4 rounded-full font-semibold text-lg inline-block hover:bg-sky-500 transition-colors">
             Start a Custom Project
           </TrackedLink>
+          <p className="mt-5 text-sm text-slate-500">
+            Need web leads routed into HubSpot? Explore the <a href="/services/hubspot-lead-automation" className="text-sky-300 underline underline-offset-4">$1,500 Lead-to-HubSpot System</a>.
+          </p>
         </section>
 
       </div>

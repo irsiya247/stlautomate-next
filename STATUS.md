@@ -1,5 +1,14 @@
 # STL Automate Website Status
 
+## Customer Acquisition Phase 7: Lead-to-HubSpot package page
+
+### Implementation checkpoint
+
+- Added a dedicated $1,500 Lead-to-HubSpot System page with bounded one-source/one-portal scope, test and verification steps, exclusions, internal Customer Zero evidence, FAQs, and tracked top/bottom intake CTAs.
+- Added the `lead-to-hubspot` intake type to the existing project form and `/api/lead` payload. Canonical CTA text and attribution remain attached through the existing flow; the n8n normalizer preserves the type, service, and CTA without workflow changes.
+- Added contextual links from the homepage, services, Custom Automation, Automation Repair, and project intake pages, plus sitemap inclusion and regression coverage.
+- Local implementation only. Do not push, deploy, or publish until separately requested.
+
 ## Customer Acquisition Phase 6: custom automation landing page
 
 ### Current goal

@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import posthog from "posthog-js";
-import { buildIntakeAnalyticsProperties, getCtaContext } from "./attribution.mjs";
+import { buildIntakeAnalyticsProperties, getCtaContext, getServiceCta } from "./attribution.mjs";
 
 const initialForm = {
   name: "",
@@ -48,6 +48,7 @@ function getAttribution() {
 export default function ProjectIntakeForm({ formType = "custom-project" }) {
   const [form, setForm] = useState(initialForm);
   const [status, setStatus] = useState("idle");
+  const isLeadToHubSpot = formType === "lead-to-hubspot";
 
   const handleChange = (event) => {
     const { name, value } = event.target;
@@ -76,7 +77,7 @@ export default function ProjectIntakeForm({ formType = "custom-project" }) {
           ...form,
           formType,
           service: formType,
-          cta: formType === "automation-fix-sprint" ? "Automation Fix Sprint" : "Custom Project",
+          cta: getServiceCta(formType),
           message: details,
           submission_id: window.crypto.randomUUID(),
           ...getAttribution()
@@ -161,12 +162,18 @@ export default function ProjectIntakeForm({ formType = "custom-project" }) {
 
       <div className="grid gap-5 sm:grid-cols-3">
         <div>
-          <label htmlFor="project-broken" className="mb-2 block text-sm text-slate-300">Is something broken? <span className="text-sky-400">*</span></label>
+          <label htmlFor="project-broken" className="mb-2 block text-sm text-slate-300">{isLeadToHubSpot ? "How established is this lead flow?" : "Is something broken?"} <span className="text-sky-400">*</span></label>
           <select id="project-broken" name="is_broken" required value={form.is_broken} onChange={handleChange} className={inputClass}>
             <option value="">Choose one</option>
-            <option value="yes">Yes, a workflow is broken</option>
-            <option value="partly">Partly or intermittently</option>
-            <option value="no">No, I need a new workflow</option>
+            {isLeadToHubSpot ? <>
+              <option value="yes">An existing flow needs repair or extension</option>
+              <option value="partly">Leads arrive inconsistently</option>
+              <option value="no">This is a new lead flow</option>
+            </> : <>
+              <option value="yes">Yes, a workflow is broken</option>
+              <option value="partly">Partly or intermittently</option>
+              <option value="no">No, I need a new workflow</option>
+            </>}
           </select>
         </div>
         <div>

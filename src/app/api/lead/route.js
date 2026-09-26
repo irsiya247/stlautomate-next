@@ -1,10 +1,12 @@
 import { randomUUID } from "node:crypto";
+import { getServiceCta } from "../../components/attribution.mjs";
 
 const FORM_TYPES = new Set([
   "missed-lead-audit",
   "intake",
   "custom-project",
-  "automation-fix-sprint"
+  "automation-fix-sprint",
+  "lead-to-hubspot"
 ]);
 const ATTRIBUTION_FIELDS = [
   "utm_source",
@@ -84,7 +86,7 @@ export async function POST(request) {
       return Response.json({ success: false, message: "Invalid form type." }, { status: 400 });
     }
     const formType = requestedFormType;
-    const projectRequest = formType === "custom-project" || formType === "automation-fix-sprint";
+    const projectRequest = ["custom-project", "automation-fix-sprint", "lead-to-hubspot"].includes(formType);
     const submissionId = normalizeSubmissionId(body.submission_id || body.submissionId);
     const name = clean(body.name, 120);
     const email = clean(body.email, 254).toLowerCase();
@@ -117,7 +119,7 @@ export async function POST(request) {
       budget_range: clean(body.budget_range, 120),
       message,
       source: `stlautomate.com ${formType.replaceAll("-", " ")} form`,
-      cta: formType === "automation-fix-sprint" ? "Automation Fix Sprint" : formType === "custom-project" ? "Custom Project" : clean(body.cta, 200),
+      cta: projectRequest ? getServiceCta(formType) : clean(body.cta, 200),
       source_detail: clean(body.utm_source, 160) || clean(body.referrer, 500) || "direct",
       source_page: clean(body.source_page || body.page_url, 1000) || "https://www.stlautomate.com/",
       page_url: clean(body.page_url, 1000),

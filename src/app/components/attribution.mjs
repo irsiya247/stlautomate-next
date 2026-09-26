@@ -1,5 +1,15 @@
 export const CTA_ATTRIBUTION_KEY = "stl-website-cta-attribution";
 
+const CTA_BY_FORM_TYPE = {
+  "automation-fix-sprint": "Automation Fix Sprint",
+  "custom-project": "Custom Project",
+  "lead-to-hubspot": "Lead-to-HubSpot System"
+};
+
+export function getServiceCta(formType) {
+  return CTA_BY_FORM_TYPE[formType] || "Custom Project";
+}
+
 export function getCtaContext(storage = window.sessionStorage) {
   try {
     return JSON.parse(storage.getItem(CTA_ATTRIBUTION_KEY) || "{}");
@@ -33,7 +43,7 @@ export function buildIntakeAnalyticsProperties({ formType, location, attribution
   return {
     form_type: formType,
     service: formType,
-    cta: ctaContext.cta || (formType === "automation-fix-sprint" ? "Automation Fix Sprint" : "Custom Project"),
+    cta: ctaContext.cta || getServiceCta(formType),
     source_path: location.pathname,
     ...(ctaContext.source_path ? { origin_path: ctaContext.source_path } : {}),
     ...(ctaContext.source_url ? { origin_url: ctaContext.source_url } : {}),

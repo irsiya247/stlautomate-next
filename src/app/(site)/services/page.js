@@ -190,6 +190,12 @@ export default function Services() {
                     Configured lead, email, approval, and reply events are logged to HubSpot so your team has one CRM record of what happened.
                   </p>
                 </div>
+                <div className="border border-slate-700 bg-slate-900/40 rounded-xl p-5">
+                  <h3 className="font-semibold text-white mb-2">Need inbound leads routed into HubSpot?</h3>
+                  <p className="text-slate-400 text-sm leading-relaxed">
+                    See the <a href="/services/hubspot-lead-automation" className="text-sky-300 underline underline-offset-4">$1,500 Lead-to-HubSpot System</a> for one scoped lead intake path.
+                  </p>
+                </div>
               </div>
             </div>
           </div>

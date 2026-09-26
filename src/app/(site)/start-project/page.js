@@ -9,7 +9,8 @@ export const metadata = {
 export default async function StartProjectPage({ searchParams }) {
   const query = await searchParams;
   const isRepair = query?.type === "automation-fix-sprint";
-  const formType = isRepair ? "automation-fix-sprint" : "custom-project";
+  const isLeadToHubSpot = query?.type === "lead-to-hubspot";
+  const formType = isRepair ? "automation-fix-sprint" : isLeadToHubSpot ? "lead-to-hubspot" : "custom-project";
 
   return (
     <main className="relative min-h-screen overflow-hidden bg-[#030712] text-white">
@@ -20,13 +21,19 @@ export default async function StartProjectPage({ searchParams }) {
       <div className="relative z-10 px-6 pb-24 pt-36">
         <div className="mx-auto grid max-w-6xl items-start gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:gap-16">
           <div className="lg:sticky lg:top-28">
-            <p className="mb-4 text-[11px] tracking-[0.35em] text-sky-400 uppercase">{isRepair ? "Automation Fix Sprint" : "Custom Automation Project"}</p>
-            <h1 className="text-4xl font-extrabold leading-tight md:text-5xl">{isRepair ? "Tell us what stopped working." : "Tell us what you need built."}</h1>
+            <p className="mb-4 text-[11px] tracking-[0.35em] text-sky-400 uppercase">{isRepair ? "Automation Fix Sprint" : isLeadToHubSpot ? "Lead-to-HubSpot System" : "Custom Automation Project"}</p>
+            <h1 className="text-4xl font-extrabold leading-tight md:text-5xl">{isRepair ? "Tell us what stopped working." : isLeadToHubSpot ? "Get your leads into HubSpot reliably." : "Tell us what you need built."}</h1>
             <p className="mt-5 text-lg leading-relaxed text-slate-400">
-              {isRepair ? "Share the broken workflow, where it fails, and the systems involved. The focused repair sprint starts at $750; we'll review the scope with you before any work begins." : "Bring the process, integration, or idea that does not fit a standard service. A few details help us understand the problem before we talk."}
+              {isRepair
+                ? "Share the broken workflow, where it fails, and the systems involved. The focused repair sprint starts at $750; we'll review the scope with you before any work begins."
+                : isLeadToHubSpot
+                  ? "Share the lead source, current field map, HubSpot portal, and routing you need. The fixed-scope Lead-to-HubSpot System is $1,500; we'll confirm the one-path fit before work begins."
+                  : "Bring the process, integration, or idea that does not fit a standard service. A few details help us understand the problem before we talk."}
             </p>
             <p className="mt-6 text-sm leading-relaxed text-slate-500">We&apos;ll review your request and follow up by email. Sending this form does not commit you to a project.</p>
-            {!isRepair && <p className="mt-4 text-sm"><Link href="/services/custom-automation" className="text-sky-300 underline underline-offset-4">Review custom automation scope and process</Link></p>}
+            {isLeadToHubSpot
+              ? <p className="mt-4 text-sm"><Link href="/services/hubspot-lead-automation" className="text-sky-300 underline underline-offset-4">Review the Lead-to-HubSpot package scope</Link></p>
+              : !isRepair && <p className="mt-4 text-sm"><Link href="/services/custom-automation" className="text-sky-300 underline underline-offset-4">Review custom automation scope and process</Link></p>}
           </div>
           <ProjectIntakeForm formType={formType} />
         </div>
