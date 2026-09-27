@@ -9,7 +9,7 @@ export default function Privacy() {
       <div className="max-w-3xl mx-auto px-6 pt-36 pb-24">
         <div className="text-[11px] tracking-[0.35em] text-sky-400 uppercase mb-4">Legal</div>
         <h1 className="text-4xl font-extrabold mb-2">Privacy Policy</h1>
-        <p className="text-slate-500 text-sm mb-12">Last updated: September 21, 2026</p>
+        <p className="text-slate-500 text-sm mb-12">Last updated: September 27, 2026</p>
 
         <div className="space-y-10 text-slate-300 leading-relaxed">
           <section>
@@ -42,7 +42,7 @@ export default function Privacy() {
           <section>
             <h2 className="text-xl font-bold text-white mb-3">5. Storage, Sharing, and Retention</h2>
             <p className="mb-3">Relevant parsed job and application information may be stored in the user&apos;s Google Sheets tracker and in limited n8n workflow or data-table state used to operate the automation. We retain information only while it is reasonably needed to provide and maintain the requested features, resolve operational issues, or meet applicable legal obligations.</p>
-            <p className="mb-3">We do not sell Google user data or other personal information. We do not use Google user data for advertising. We do not transfer Google user data except as necessary to provide the user-authorized automation, maintain its security, comply with applicable law, or with the user&apos;s consent.</p>
+            <p className="mb-3">We do not sell Google user data or other personal information. We do not use information accessed from a connected Google account for advertising. We do not transfer Google user data except as necessary to provide the user-authorized automation, maintain its security, comply with applicable law, or with the user&apos;s consent.</p>
             <p className="mb-3">Project intake submissions are sent to our server-side lead endpoint and forwarded through our n8n integration so we can review and respond. We may record project inquiries in our customer relationship management system. Information is shared with service providers only as needed to operate this process.</p>
             <p>To request deletion of stored information, contact us at <a href="mailto:contact@stlautomate.com" className="text-sky-400 hover:text-sky-300 transition-colors">contact@stlautomate.com</a>. We will evaluate and handle the request based on the information held and any applicable obligations.</p>
           </section>
@@ -64,7 +64,10 @@ export default function Privacy() {
 
           <section>
             <h2 className="text-xl font-bold text-white mb-3">9. Website Analytics and Cookies</h2>
-            <p>Our website may collect standard technical and analytics information, such as pages visited, browser type, and referring URLs, and may use cookies for basic functionality and analytics. You can manage cookies through your browser settings.</p>
+            <p className="mb-3">Our website may collect standard technical and analytics information, such as pages visited, browser type, and referring URLs, and may use cookies for basic functionality and analytics. You can manage cookies through your browser settings.</p>
+            <p className="mb-3">If you choose to allow Google Ads conversion measurement, we load Google&apos;s Ads tag to measure whether advertising visits result in a successfully submitted project inquiry. Google may use cookies or similar identifiers for this measurement. We store your choice in your browser for up to six months; after that, we ask you again. The six-month period is our browser-storage setting. You can change or withdraw your Google Ads measurement choice at any time using Google Ads measurement choices. The conversion event reports successful intake only and does not include form fields such as your name, email, phone number, company, or project details. This choice controls Google Ads measurement only. PostHog site analytics remains separate and is not controlled by this choice.</p>
+            <p className="mb-3">If you withdraw consent after the Google tag has loaded, the site sends a consent update marking all four Google consent signals as denied; that update may itself involve a request to Google. The site stops calling future Google Ads conversion events. The tag code may remain loaded in the current browser tab until you reload the page or close the tab. After your declined choice is saved, reloading starts a page where the Google Ads tag is not loaded. Withdrawing consent does not delete information Google may already have received.</p>
+            <p>For information about how Google handles data from sites that use its services, see <a href="https://business.safety.google/privacy/" className="text-sky-400 hover:text-sky-300 transition-colors">Google&apos;s Business Data Responsibility information</a> and <a href="https://policies.google.com/privacy" className="text-sky-400 hover:text-sky-300 transition-colors">Google&apos;s Privacy Policy</a>.</p>
           </section>
 
           <section>

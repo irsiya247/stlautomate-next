@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Header from "../components/Header";
+import { GoogleAdsPrivacyChoicesButton } from "../components/GoogleAdsConsentManager";
 
 export default function SiteLayout({ children }) {
   return (
@@ -61,6 +62,7 @@ export default function SiteLayout({ children }) {
             <div className="flex items-center gap-6">
               <a href="/terms" className="text-slate-600 text-sm hover:text-slate-400 transition-colors">Terms of Service</a>
               <a href="/privacy" className="text-slate-600 text-sm hover:text-slate-400 transition-colors">Privacy Policy</a>
+              <GoogleAdsPrivacyChoicesButton />
             </div>
           </div>
         </div>

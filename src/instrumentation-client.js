@@ -1,8 +1,5 @@
 import * as Sentry from "@sentry/nextjs";
 import posthog from "posthog-js";
-import { initializeGoogleAdsTag } from "./app/components/google-ads-conversion.mjs";
-
-initializeGoogleAdsTag(window);
 
 const sentryDsn = process.env.NEXT_PUBLIC_SENTRY_DSN;
 
