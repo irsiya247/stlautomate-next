@@ -1,5 +1,6 @@
 import "./globals.css";
 import { Suspense } from "react";
+import Script from "next/script";
 import PostHogPageView from "./components/PostHogPageView";
 
 export const metadata = {
@@ -16,6 +17,11 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className="antialiased">
+        <Script
+          id="google-ads-gtag-loader"
+          src="https://www.googletagmanager.com/gtag/js?id=AW-18477400140"
+          strategy="afterInteractive"
+        />
         <Suspense fallback={null}>
           <PostHogPageView />
         </Suspense>

@@ -93,3 +93,10 @@ Complete the public website prerequisites for the existing STL Automate Google O
 - `src/app/(site)/terms/page.js`
 - `src/app/(site)/layout.js`
 - `STATUS.md`
+
+## Google Ads intake conversion measurement
+
+- Added a locally scoped Google Ads conversion definition for successful supported project-intake submissions. The conversion action is configured in Google Ads as `Project Intake Submitted`, Secondary, count One, data-driven attribution, with a $0 fallback when no value is supplied. Enhanced conversions remain off.
+- Local implementation uses the existing `submission_id` UUID, preserves the existing PostHog `lead_intake_submitted` event, and sends only `send_to` to Google Ads after a successful `/api/lead` response.
+- No consent interface or Content Security Policy is defined in the repository. The current privacy policy describes general analytics and browser cookie controls but does not specifically describe Google Ads conversion measurement. Record privacy/consent disclosure review as a human pre-deployment decision; do not deploy until resolved.
+- Current implementation remains local only. Do not push or deploy until separately approved.

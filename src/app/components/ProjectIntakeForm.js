@@ -1,8 +1,9 @@
 "use client";
 
-import { useState } from "react";
+import { useRef, useState } from "react";
 import posthog from "posthog-js";
 import { buildIntakeAnalyticsProperties, getCtaContext, getServiceCta } from "./attribution.mjs";
+import { trackAcceptedProjectIntakeConversion } from "./google-ads-conversion.mjs";
 
 const initialForm = {
   name: "",
@@ -48,6 +49,7 @@ function getAttribution() {
 export default function ProjectIntakeForm({ formType = "custom-project" }) {
   const [form, setForm] = useState(initialForm);
   const [status, setStatus] = useState("idle");
+  const submissionLockRef = useRef(false);
   const isLeadToHubSpot = formType === "lead-to-hubspot";
   const isPhoneReceptionist = formType === "phone-receptionist";
 
@@ -58,6 +60,8 @@ export default function ProjectIntakeForm({ formType = "custom-project" }) {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
+    if (submissionLockRef.current) return;
+    submissionLockRef.current = true;
     setStatus("loading");
 
     const details = [
@@ -71,6 +75,7 @@ export default function ProjectIntakeForm({ formType = "custom-project" }) {
     ].join("\n");
 
     try {
+      const submissionId = window.crypto.randomUUID();
       const response = await fetch("/api/lead", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -80,22 +85,33 @@ export default function ProjectIntakeForm({ formType = "custom-project" }) {
           service: formType,
           cta: getServiceCta(formType),
           message: details,
-          submission_id: window.crypto.randomUUID(),
+          submission_id: submissionId,
           ...getAttribution()
         })
       });
       const result = await response.json().catch(() => ({ success: false }));
       if (!response.ok || !result.success) throw new Error("Lead submission failed");
 
-      posthog.capture("lead_intake_submitted", buildIntakeAnalyticsProperties({
+      trackAcceptedProjectIntakeConversion({
+        response,
+        result,
         formType,
-        location: window.location,
-        attribution: getAttribution(),
-        ctaContext: getCtaContext()
-      }));
+        submissionId
+      });
+      try {
+        posthog.capture("lead_intake_submitted", buildIntakeAnalyticsProperties({
+          formType,
+          location: window.location,
+          attribution: getAttribution(),
+          ctaContext: getCtaContext()
+        }));
+      } catch {
+        // Analytics is observational and cannot undo an accepted intake.
+      }
       setStatus("success");
       setForm(initialForm);
     } catch {
+      submissionLockRef.current = false;
       setStatus("error");
     }
   };
