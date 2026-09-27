@@ -11,9 +11,11 @@ export function getServiceCta(formType) {
   return CTA_BY_FORM_TYPE[formType] || "Custom Project";
 }
 
-export function getCtaContext(storage = window.sessionStorage) {
+export function getCtaContext(storage) {
   try {
-    return JSON.parse(storage.getItem(CTA_ATTRIBUTION_KEY) || "{}");
+    const contextStorage = storage ?? window.sessionStorage;
+    const context = JSON.parse(contextStorage.getItem(CTA_ATTRIBUTION_KEY) || "{}");
+    return context && typeof context === "object" && !Array.isArray(context) ? context : {};
   } catch {
     return {};
   }
@@ -32,9 +34,10 @@ export function buildCtaAttribution({ href, placement, cta, location }) {
   };
 }
 
-export function saveCtaContext(context, storage = window.sessionStorage) {
+export function saveCtaContext(context, storage) {
   try {
-    storage.setItem(CTA_ATTRIBUTION_KEY, JSON.stringify(context));
+    const contextStorage = storage ?? window.sessionStorage;
+    contextStorage.setItem(CTA_ATTRIBUTION_KEY, JSON.stringify(context));
   } catch {
     // Analytics attribution is optional when session storage is unavailable.
   }

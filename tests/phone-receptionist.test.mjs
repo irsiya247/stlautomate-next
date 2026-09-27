@@ -2,6 +2,7 @@ import assert from "node:assert/strict";
 import { readFile } from "node:fs/promises";
 import { test } from "node:test";
 import { POST } from "../src/app/api/lead/route.js";
+import { resolveProjectIntakeType } from "../src/app/components/project-intake-routing.mjs";
 import {
   buildCtaAttribution,
   buildIntakeAnalyticsProperties,
@@ -67,7 +68,7 @@ test("tracked Phone Receptionist CTA preserves service attribution through intak
 
   assert.equal((page.match(/placement="phone_receptionist_(?:hero|footer)"/g) || []).length, 2);
   assert.match(page, /const intakeHref = "\/start-project\?type=phone-receptionist"/);
-  assert.match(start, /query\?\.type === "phone-receptionist"/);
+  assert.match(start, /resolveProjectIntakeType\(query\)/);
   assert.match(form, /getServiceCta\(formType\)/);
   assert.match(form, /What should the receptionist handle\?/);
   assert.match(form, /We miss calls when our team is working or after hours/);
@@ -106,6 +107,63 @@ test("Phone Receptionist intake is supported while existing service CTAs remain 
   assert.equal(getServiceCta("automation-fix-sprint"), "Automation Fix Sprint");
   assert.equal(getServiceCta("custom-project"), "Custom Project");
   assert.equal(getServiceCta("lead-to-hubspot"), "Lead-to-HubSpot System");
+});
+
+test("direct intake routes unknown and duplicate types to an explicit safe state", () => {
+  assert.deepEqual(resolveProjectIntakeType(undefined), { formType: "custom-project", unsupported: false });
+  assert.deepEqual(resolveProjectIntakeType({}), { formType: "custom-project", unsupported: false });
+  for (const type of ["automation-fix-sprint", "custom-project", "lead-to-hubspot", "phone-receptionist"]) {
+    assert.deepEqual(resolveProjectIntakeType({ type }), { formType: type, unsupported: false });
+  }
+  assert.deepEqual(resolveProjectIntakeType({ type: "future-service" }), { formType: null, unsupported: true });
+  assert.deepEqual(resolveProjectIntakeType({ type: ["phone-receptionist", "custom-project"] }), { formType: null, unsupported: true });
+  assert.deepEqual(resolveProjectIntakeType({ type: "" }), { formType: null, unsupported: true });
+});
+
+test("Phone Receptionist attribution degrades safely when sessionStorage is unavailable or corrupt", () => {
+  const originalWindow = Object.getOwnPropertyDescriptor(globalThis, "window");
+  const installStorage = (storageGetter) => {
+    const fakeWindow = {};
+    Object.defineProperty(fakeWindow, "sessionStorage", { configurable: true, get: storageGetter });
+    Object.defineProperty(globalThis, "window", { configurable: true, value: fakeWindow });
+  };
+
+  try {
+    installStorage(() => { throw new Error("sessionStorage is disabled"); });
+    assert.deepEqual(getCtaContext(), {});
+    assert.doesNotThrow(() => saveCtaContext({ cta: "Phone Receptionist" }));
+
+    installStorage(() => ({
+      getItem: () => "{invalid json",
+      setItem: () => { throw new Error("sessionStorage is read-only"); }
+    }));
+    const ctaContext = getCtaContext();
+    assert.deepEqual(ctaContext, {});
+    assert.doesNotThrow(() => saveCtaContext({ cta: "Phone Receptionist" }));
+    assert.deepEqual(buildIntakeAnalyticsProperties({
+      formType: "phone-receptionist",
+      location: { pathname: "/start-project" },
+      attribution: {},
+      ctaContext
+    }), {
+      form_type: "phone-receptionist",
+      service: "phone-receptionist",
+      cta: "Phone Receptionist",
+      source_path: "/start-project"
+    });
+
+    installStorage(() => ({ getItem: () => "null", setItem: () => {} }));
+    assert.deepEqual(getCtaContext(), {});
+    assert.doesNotThrow(() => buildIntakeAnalyticsProperties({
+      formType: "phone-receptionist",
+      location: { pathname: "/start-project" },
+      attribution: {},
+      ctaContext: getCtaContext()
+    }));
+  } finally {
+    if (originalWindow) Object.defineProperty(globalThis, "window", originalWindow);
+    else delete globalThis.window;
+  }
 });
 
 test("Phone Receptionist project submission forwards explicit type, CTA, and call-handling context", async () => {
@@ -152,5 +210,26 @@ test("Phone Receptionist project submission forwards explicit type, CTA, and cal
     globalThis.fetch = originalFetch;
     if (originalWebhook === undefined) delete process.env.N8N_WEBHOOK_URL;
     else process.env.N8N_WEBHOOK_URL = originalWebhook;
+  }
+});
+
+test("lead API rejects an unexpected form type before forwarding", async () => {
+  const originalFetch = globalThis.fetch;
+  let called = false;
+  globalThis.fetch = async () => {
+    called = true;
+    return new Response(null, { status: 204 });
+  };
+
+  try {
+    const response = await POST(new Request("http://localhost/api/lead", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ formType: "phone-receptionist-unknown", service: "phone-receptionist" })
+    }));
+    assert.equal(response.status, 400);
+    assert.equal(called, false);
+  } finally {
+    globalThis.fetch = originalFetch;
   }
 });

@@ -3,6 +3,7 @@ import { readFile } from "node:fs/promises";
 import { test } from "node:test";
 import { POST } from "../src/app/api/lead/route.js";
 import { buildCtaAttribution, buildIntakeAnalyticsProperties, getServiceCta, getCtaContext, saveCtaContext } from "../src/app/components/attribution.mjs";
+import { resolveProjectIntakeType } from "../src/app/components/project-intake-routing.mjs";
 
 const pagePath = new URL("../src/app/(site)/services/hubspot-lead-automation/page.js", import.meta.url);
 const sitemapPath = new URL("../src/app/sitemap.js", import.meta.url);
@@ -37,7 +38,8 @@ test("Lead-to-HubSpot CTA and intake events preserve canonical type, origin, and
   assert.match(page,/const intakeHref\s*=\s*"\/start-project\?type=lead-to-hubspot"/);
   assert.match(page,/placement="hubspot_lead_hero"/);
   assert.match(page,/placement="hubspot_lead_footer"/);
-  assert.match(start,/query\?\.type === "lead-to-hubspot"/);
+  assert.match(start,/resolveProjectIntakeType\(query\)/);
+  assert.deepEqual(resolveProjectIntakeType({ type: "lead-to-hubspot" }), { formType: "lead-to-hubspot", unsupported: false });
   assert.match(form,/getServiceCta\(formType\)/);
   assert.deepEqual(click,{source_path:"/services/hubspot-lead-automation",source_url:location.href,placement:"hubspot_lead_hero",destination:"/start-project?type=lead-to-hubspot",service:"lead-to-hubspot",form_type:"lead-to-hubspot",cta:"Lead-to-HubSpot System"});
   assert.deepEqual(buildIntakeAnalyticsProperties({formType:"lead-to-hubspot",location:{pathname:"/start-project"},attribution:{referrer:location.href,utm_source:"partner",utm_campaign:"crm"},ctaContext:getCtaContext(storage)}),{
@@ -69,7 +71,8 @@ test("Lead-to-HubSpot service and CTA reach the existing n8n-facing payload", as
 
 test("Automation Fix Sprint and Custom Project remain supported", async () => {
   const [start,api]=await Promise.all([readFile(startPath,"utf8"),readFile(apiPath,"utf8")]);
-  assert.match(start,/query\?\.type === "automation-fix-sprint"/);
-  assert.match(start,/: "custom-project"/);
+  assert.match(start,/resolveProjectIntakeType\(query\)/);
+  assert.deepEqual(resolveProjectIntakeType({ type: "automation-fix-sprint" }), { formType: "automation-fix-sprint", unsupported: false });
+  assert.deepEqual(resolveProjectIntakeType({ type: "custom-project" }), { formType: "custom-project", unsupported: false });
   assert.match(api,/"custom-project",\s*"automation-fix-sprint",\s*"lead-to-hubspot"/);
 });
