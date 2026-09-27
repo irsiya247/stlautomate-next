@@ -246,6 +246,15 @@ test("first-layer notice clearly scopes the choice and links to Google data info
 
 test("privacy notice describes the choice, scope, retention, and withdrawal behavior accurately", async () => {
   const privacy = await readFile(privacyPath, "utf8");
+  assert.match(privacy, /We use PostHog for website analytics/);
+  assert.match(privacy, /automatically captures some page-element interactions, including clicks, input changes, and form submissions/);
+  assert.match(privacy, /autocapture does not include values entered in input, select, or textarea fields/);
+  assert.match(privacy, /PostHog session recording is disabled/);
+  assert.match(privacy, /uses local storage with a cookie fallback to retain an analytics identifier across visits/);
+  assert.match(privacy, /default cookie lifetime is 365 days/);
+  assert.match(privacy, /no expiration is configured for its local-storage entry/);
+  assert.match(privacy, /explicit analytics events report page views, CTA clicks, and successful intake milestones/);
+  assert.match(privacy, /do not include intake field values such as your name, email, phone number, company, or free-text project details/);
   assert.match(privacy, /Google Ads conversion measurement/);
   assert.match(privacy, /up to six months/);
   assert.match(privacy, /six-month period is our browser-storage setting/);
