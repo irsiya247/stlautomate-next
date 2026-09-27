@@ -49,6 +49,7 @@ export default function ProjectIntakeForm({ formType = "custom-project" }) {
   const [form, setForm] = useState(initialForm);
   const [status, setStatus] = useState("idle");
   const isLeadToHubSpot = formType === "lead-to-hubspot";
+  const isPhoneReceptionist = formType === "phone-receptionist";
 
   const handleChange = (event) => {
     const { name, value } = event.target;
@@ -64,7 +65,7 @@ export default function ProjectIntakeForm({ formType = "custom-project" }) {
       `Current state: ${form.current_state.trim()}`,
       `Desired state: ${form.desired_state.trim()}`,
       `Systems and tools: ${form.systems_tools.trim()}`,
-      `Something broken: ${form.is_broken}`,
+      `${isPhoneReceptionist ? "Call-handling priority" : "Something broken"}: ${form.is_broken}`,
       `Target timing: ${form.timing}`,
       `Budget range: ${form.budget_range}`
     ].join("\n");
@@ -141,31 +142,36 @@ export default function ProjectIntakeForm({ formType = "custom-project" }) {
 
       <div>
         <label htmlFor="project-problem" className="mb-2 block text-sm text-slate-300">What problem are you trying to solve? <span className="text-sky-400">*</span></label>
-        <textarea id="project-problem" name="problem" required rows={3} value={form.problem} onChange={handleChange} placeholder="Leads arrive from several places, and some never make it into our CRM." className={`${inputClass} resize-y`} />
+        <textarea id="project-problem" name="problem" required rows={3} value={form.problem} onChange={handleChange} placeholder={isPhoneReceptionist ? "We miss calls when our team is working or after hours." : isLeadToHubSpot ? "Leads arrive from several places, and some never make it into our CRM." : "Describe the process you want to improve."} className={`${inputClass} resize-y`} />
       </div>
 
       <div className="grid gap-5 sm:grid-cols-2">
         <div>
           <label htmlFor="project-current" className="mb-2 block text-sm text-slate-300">What happens today? <span className="text-sky-400">*</span></label>
-          <textarea id="project-current" name="current_state" required rows={3} value={form.current_state} onChange={handleChange} placeholder="Describe the current process and where it stalls." className={`${inputClass} resize-y`} />
+          <textarea id="project-current" name="current_state" required rows={3} value={form.current_state} onChange={handleChange} placeholder={isPhoneReceptionist ? "Describe how calls are answered today and when callers reach voicemail." : "Describe the current process and where it stalls."} className={`${inputClass} resize-y`} />
         </div>
         <div>
           <label htmlFor="project-desired" className="mb-2 block text-sm text-slate-300">What should happen instead? <span className="text-sky-400">*</span></label>
-          <textarea id="project-desired" name="desired_state" required rows={3} value={form.desired_state} onChange={handleChange} placeholder="Describe the outcome you want." className={`${inputClass} resize-y`} />
+          <textarea id="project-desired" name="desired_state" required rows={3} value={form.desired_state} onChange={handleChange} placeholder={isPhoneReceptionist ? "Describe the next step callers should receive." : "Describe the outcome you want."} className={`${inputClass} resize-y`} />
         </div>
       </div>
 
       <div>
         <label htmlFor="project-tools" className="mb-2 block text-sm text-slate-300">Which systems or tools are involved? <span className="text-sky-400">*</span></label>
-        <input id="project-tools" name="systems_tools" required value={form.systems_tools} onChange={handleChange} placeholder="HubSpot, Gmail, forms, spreadsheets, Zapier..." className={inputClass} />
+        <input id="project-tools" name="systems_tools" required value={form.systems_tools} onChange={handleChange} placeholder={isPhoneReceptionist ? "Phone provider, CRM, calendar, or other tools..." : "HubSpot, Gmail, forms, spreadsheets, Zapier..."} className={inputClass} />
       </div>
 
       <div className="grid gap-5 sm:grid-cols-3">
         <div>
-          <label htmlFor="project-broken" className="mb-2 block text-sm text-slate-300">{isLeadToHubSpot ? "How established is this lead flow?" : "Is something broken?"} <span className="text-sky-400">*</span></label>
+          <label htmlFor="project-broken" className="mb-2 block text-sm text-slate-300">{isLeadToHubSpot ? "How established is this lead flow?" : isPhoneReceptionist ? "What should the receptionist handle?" : "Is something broken?"} <span className="text-sky-400">*</span></label>
           <select id="project-broken" name="is_broken" required value={form.is_broken} onChange={handleChange} className={inputClass}>
             <option value="">Choose one</option>
-            {isLeadToHubSpot ? <>
+            {isPhoneReceptionist ? <>
+              <option value="answer-capture">Answer calls and capture caller details</option>
+              <option value="qualify-route">Qualify callers and route the next step</option>
+              <option value="appointment-intent">Capture appointment intent</option>
+              <option value="scope">I need help defining the call flow</option>
+            </> : isLeadToHubSpot ? <>
               <option value="yes">An existing flow needs repair or extension</option>
               <option value="partly">Leads arrive inconsistently</option>
               <option value="no">This is a new lead flow</option>

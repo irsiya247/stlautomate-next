@@ -6,7 +6,8 @@ const FORM_TYPES = new Set([
   "intake",
   "custom-project",
   "automation-fix-sprint",
-  "lead-to-hubspot"
+  "lead-to-hubspot",
+  "phone-receptionist"
 ]);
 const ATTRIBUTION_FIELDS = [
   "utm_source",
@@ -59,13 +60,14 @@ function logOperationalFailure(reason, status) {
   console.error("Lead API operational failure", { reason, status });
 }
 
-function makeProjectMessage(body) {
+function makeProjectMessage(body, formType) {
+  const callHandlingLabel = formType === "phone-receptionist" ? "Call-handling priority" : "Something broken";
   return [
     `Problem: ${clean(body.problem, 1500)}`,
     `Current state: ${clean(body.current_state, 1500)}`,
     `Desired state: ${clean(body.desired_state, 1500)}`,
     `Systems and tools: ${clean(body.systems_tools, 500)}`,
-    `Something broken: ${clean(body.is_broken, 80)}`,
+    `${callHandlingLabel}: ${clean(body.is_broken, 80)}`,
     `Target timing: ${clean(body.timing, 120)}`,
     `Budget range: ${clean(body.budget_range, 120)}`
   ].join("\n");
@@ -86,7 +88,7 @@ export async function POST(request) {
       return Response.json({ success: false, message: "Invalid form type." }, { status: 400 });
     }
     const formType = requestedFormType;
-    const projectRequest = ["custom-project", "automation-fix-sprint", "lead-to-hubspot"].includes(formType);
+    const projectRequest = ["custom-project", "automation-fix-sprint", "lead-to-hubspot", "phone-receptionist"].includes(formType);
     const submissionId = normalizeSubmissionId(body.submission_id || body.submissionId);
     const name = clean(body.name, 120);
     const email = clean(body.email, 254).toLowerCase();
@@ -96,7 +98,7 @@ export async function POST(request) {
       160
     );
     const website = normalizeWebsite(body.website);
-    const message = clean(body.message, 5000) || (projectRequest ? makeProjectMessage(body) : "");
+    const message = clean(body.message, 5000) || (projectRequest ? makeProjectMessage(body, formType) : "");
     const lead = {
       submission_id: submissionId,
       form_type: formType,

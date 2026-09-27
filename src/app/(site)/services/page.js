@@ -51,6 +51,9 @@ export default function Services() {
                 <a href="/intake" className="bg-sky-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-sky-500 transition-colors inline-block">
                   Get This For My Business
                 </a>
+                <a href="/services/phone-receptionist" className="mt-4 inline-block text-sky-300 underline underline-offset-4">
+                  Review the $2,500 Phone Receptionist package
+                </a>
               </div>
 
               <div className="space-y-4">

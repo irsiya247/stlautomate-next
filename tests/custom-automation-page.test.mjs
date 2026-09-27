@@ -27,7 +27,7 @@ test("custom automation route exists with targeted metadata, canonical, and key 
   }
   assert.ok(source.includes("/automation-fix-sprint#upwork-review"));
   assert.ok(source.includes("/services#sdr"));
-  assert.ok(source.includes("/services#vapi"));
+  assert.ok(source.includes("/services/phone-receptionist"));
   assert.ok(source.includes("/services#receptionist"));
   assert.doesNotMatch(source, /Twilio/);
 });

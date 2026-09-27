@@ -3,7 +3,8 @@ export const CTA_ATTRIBUTION_KEY = "stl-website-cta-attribution";
 const CTA_BY_FORM_TYPE = {
   "automation-fix-sprint": "Automation Fix Sprint",
   "custom-project": "Custom Project",
-  "lead-to-hubspot": "Lead-to-HubSpot System"
+  "lead-to-hubspot": "Lead-to-HubSpot System",
+  "phone-receptionist": "Phone Receptionist"
 };
 
 export function getServiceCta(formType) {

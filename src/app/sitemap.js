@@ -19,6 +19,7 @@ const routes = [
   "/services/automation-repair",
   "/services/custom-automation",
   "/services/hubspot-lead-automation",
+  "/services/phone-receptionist",
   "/start-project",
   "/tech",
   "/terms",

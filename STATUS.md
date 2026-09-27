@@ -1,5 +1,15 @@
 # STL Automate Website Status
 
+## Customer Acquisition Phase 8: Phone Receptionist package page
+
+### Implementation checkpoint
+
+- Added /services/phone-receptionist for the fixed $2,500, one-number/one-use-case Phone Receptionist implementation, with scope limits, exclusions, FAQs, call-flow steps, buyer scoping details, testing, verification, and handoff.
+- Used the existing HVAC demonstration/pilot materials and verified Upwork review as related evidence, clearly separated from results for this package. No partner, endorsement, or external deployment claim was added.
+- Added the phone-receptionist type, service, and canonical CTA to the existing project intake, /api/lead payload, and attribution helpers. The existing n8n normalizer passes through explicit form_type, service, and cta; no n8n change is needed.
+- Added contextual links from the homepage, Services, Custom Automation, Automation Repair, Lead-to-HubSpot, and project intake, plus sitemap inclusion and regression coverage.
+- Local implementation only. Do not push or deploy; stop at Release Ready for the human release decision.
+
 ## Customer Acquisition Phase 7: Lead-to-HubSpot package page
 
 ### Implementation checkpoint

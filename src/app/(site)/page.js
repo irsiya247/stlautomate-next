@@ -172,8 +172,8 @@ export default function Home() {
                   CRM, calendar, and notification integrations where configured
                 </li>
               </ul>
-              <a href="/services#vapi" className="mt-6 bg-sky-600 text-white px-5 py-2.5 rounded-full font-semibold text-sm text-center hover:bg-sky-500 transition-colors">
-                Learn More
+              <a href="/services/phone-receptionist" className="mt-6 bg-sky-600 text-white px-5 py-2.5 rounded-full font-semibold text-sm text-center hover:bg-sky-500 transition-colors">
+                See the $2,500 package
               </a>
             </div>
 
