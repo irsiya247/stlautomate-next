@@ -5,6 +5,7 @@
 - Repository: `C:\\Projects\\STL-Automate\\stlautomate-next-rc-recovery-20260928`
 - Branch: `codex/release-candidate-fix-build-grow`
 - Base commit: `48158a32ff2f55d33171b208f908564d85d037c4`
+- Release candidate commit: `c7626c729e24d409c3fd0e94d6c629b4c31fc2e8`
 - Terminal state: website release candidate prepared; production deploy and advertising activation remain approval-gated.
 
 ## Website changes

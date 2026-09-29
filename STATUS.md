@@ -4,6 +4,7 @@
 
 - Branch: `codex/release-candidate-fix-build-grow`
 - Base commit: `48158a32ff2f55d33171b208f908564d85d037c4`
+- Release candidate commit: `c7626c729e24d409c3fd0e94d6c629b4c31fc2e8`
 - Website RC is implemented and verified in the clean recovery checkout.
 - Google Ads has a non-serving Search draft, but final draft-save verification is blocked by native account identity verification.
 - No production deploy, ad publish, activation, spend, CRM mutation, or external communication occurred.
