@@ -1,7 +1,6 @@
 ﻿@
 node_modules/
 .next/
+.next.prebuild/
+node_modules.prebuild/
 .env
-
-.vercel/
-.env.local

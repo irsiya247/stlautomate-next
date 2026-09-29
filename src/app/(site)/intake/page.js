@@ -2,6 +2,26 @@
 
 import { useState } from 'react';
 
+function getAttribution() {
+  if (typeof window === 'undefined') return {};
+
+  const params = new URLSearchParams(window.location.search);
+  return {
+    formType: params.get('formType') || 'intake',
+    source_page: window.location.href,
+    page_url: window.location.href,
+    landing_page: document.referrer || window.location.href,
+    referrer: document.referrer || '',
+    utm_source: params.get('utm_source') || '',
+    utm_medium: params.get('utm_medium') || '',
+    utm_campaign: params.get('utm_campaign') || '',
+    utm_term: params.get('utm_term') || '',
+    utm_content: params.get('utm_content') || '',
+    gclid: params.get('gclid') || '',
+    fbclid: params.get('fbclid') || '',
+  };
+}
+
 export default function Intake() {
   const [form, setForm] = useState({
     name: '',
@@ -12,6 +32,7 @@ export default function Intake() {
     message: '',
   });
   const [status, setStatus] = useState('idle');
+  const [attribution] = useState(getAttribution);
 
   const handleChange = (e) => setForm({ ...form, [e.target.name]: e.target.value });
 
@@ -22,7 +43,7 @@ export default function Intake() {
       const res = await fetch('/api/lead', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ ...form, formType: "intake" }),
+        body: JSON.stringify({ ...form, ...attribution, formType: attribution.formType || "intake" }),
       });
       const data = await res.json();
       setStatus(data.success ? 'success' : 'error');

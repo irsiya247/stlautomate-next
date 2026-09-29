@@ -9,12 +9,16 @@ export default function Header() {
   const [open, setOpen] = useState(false);
   const pathname = usePathname();
   const links = [
+    { href: "/fix", label: "Fix" },
+    { href: "/build", label: "Build" },
+    { href: "/grow", label: "Grow" },
     { href: "/services", label: "Services" },
     { href: "/products", label: "Products" },
     { href: "/start-project", label: "Custom Projects" },
     { href: "/automation-fix-sprint", label: "Fix Sprint" },
     { href: "/how-it-works", label: "How It Works" },
     { href: "/proof", label: "Proof" },
+    { href: "/agent-floor", label: "Agent Floor" },
     { href: "/about", label: "About" },
     { href: "/tech", label: "Tech" },
     { href: "/faq", label: "FAQ" }

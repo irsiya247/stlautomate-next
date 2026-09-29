@@ -29,6 +29,9 @@ export default function SiteLayout({ children }) {
               <div>
                 <div className="text-slate-400 text-xs tracking-widest uppercase mb-4">Services</div>
                 <ul className="space-y-3 text-sm text-slate-500">
+                  <li><a href="/fix" className="hover:text-white transition-colors">Fix</a></li>
+                  <li><a href="/build" className="hover:text-white transition-colors">Build</a></li>
+                  <li><a href="/grow" className="hover:text-white transition-colors">Grow</a></li>
                   <li><a href="/services#receptionist" className="hover:text-white transition-colors">Receptionist Suite</a></li>
                   <li><a href="/services#vapi" className="hover:text-white transition-colors">Phone Receptionist</a></li>
                   <li><a href="/services#sdr" className="hover:text-white transition-colors">Sales Outreach</a></li>
@@ -39,6 +42,7 @@ export default function SiteLayout({ children }) {
               <div>
                 <div className="text-slate-400 text-xs tracking-widest uppercase mb-4">Company</div>
                 <ul className="space-y-3 text-sm text-slate-500">
+                  <li><a href="/agent-floor" className="hover:text-white transition-colors">Agent Floor</a></li>
                   <li><a href="/products" className="hover:text-white transition-colors">Products / R&amp;D</a></li>
                   <li><a href="/how-it-works" className="hover:text-white transition-colors">How It Works</a></li>
                   <li><a href="/about" className="hover:text-white transition-colors">About</a></li>

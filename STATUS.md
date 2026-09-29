@@ -1,105 +1,38 @@
-# STL Automate Website Status
+# STL Automate Release Candidate Status
 
-## Customer Acquisition Phase 8: Phone Receptionist package page
+## Current state
 
-### Implementation checkpoint
+- Branch: `codex/release-candidate-fix-build-grow`
+- Base commit: `48158a32ff2f55d33171b208f908564d85d037c4`
+- Website RC is implemented and verified in the clean recovery checkout.
+- Google Ads has a non-serving Search draft, but final draft-save verification is blocked by native account identity verification.
+- No production deploy, ad publish, activation, spend, CRM mutation, or external communication occurred.
 
-- Added /services/phone-receptionist for the fixed $2,500, one-number/one-use-case Phone Receptionist implementation, with scope limits, exclusions, FAQs, call-flow steps, buyer scoping details, testing, verification, and handoff.
-- Used the existing HVAC demonstration/pilot materials and verified Upwork review as related evidence, clearly separated from results for this package. No partner, endorsement, or external deployment claim was added.
-- Added the phone-receptionist type, service, and canonical CTA to the existing project intake, /api/lead payload, and attribution helpers. The existing n8n normalizer passes through explicit form_type, service, and cta; no n8n change is needed.
-- Added contextual links from the homepage, Services, Custom Automation, Automation Repair, Lead-to-HubSpot, and project intake, plus sitemap inclusion and regression coverage.
-- Local implementation only. Do not push or deploy; stop at Release Ready for the human release decision.
+## Website acceptance
 
-## Customer Acquisition Phase 7: Lead-to-HubSpot package page
+- Routes added: `/fix`, `/build`, `/grow`, `/agent-floor`.
+- Existing service routes and intake behavior preserved.
+- Attribution capture added without expanding the API supported form-type contract.
+- Lint passed with three pre-existing warnings.
+- Tests: 35 passed, 0 failed.
+- Build: passed, 34/34 routes generated.
+- Local HTTP, malformed-input, unsupported-form, 404, homepage-link, and injection-reflection checks passed.
 
-### Implementation checkpoint
+## Google Ads draft
 
-- Added a dedicated $1,500 Lead-to-HubSpot System page with bounded one-source/one-portal scope, test and verification steps, exclusions, internal Customer Zero evidence, FAQs, and tracked top/bottom intake CTAs.
-- Added the `lead-to-hubspot` intake type to the existing project form and `/api/lead` payload. Canonical CTA text and attribution remain attached through the existing flow; the n8n normalizer preserves the type, service, and CTA without workflow changes.
-- Added contextual links from the homepage, services, Custom Automation, Automation Repair, and project intake pages, plus sitemap inclusion and regression coverage.
-- Local implementation only. Do not push, deploy, or publish until separately requested.
+- Account: `655-935-8299`.
+- Campaign: `STL Automate - FIX - Automation Repair`.
+- Campaign ID: `281499270175396`.
+- Draft ID: `10216026239`.
+- Native settings observed: Search, St. Louis city, presence-only targeting, English, Search Partners off, Display off, Maximize Clicks, `$5.00` CPC ceiling, `$300.00` campaign-total budget, September 28 to October 11, 2026, website lead-form goal, `/fix` landing page.
+- One responsive search ad was prepared with approved n8n/GHL repair copy.
+- Keywords were entered with phrase/exact syntax, but Google review still reported `Add keywords` after a save failure, so server-side persistence is not certified.
+- AI Max campaign control was set to off; ad-group UI remained contradictory and requires recheck after identity verification.
 
-## Customer Acquisition Phase 6: custom automation landing page
+## Blocker and human boundary
 
-### Current goal
+The native builder displayed `Changes failed to save` and required `Confirm it's you`. I did not perform identity verification and did not click `Publish campaign`. The remaining action is Matthew's account-security step, followed by read-only verification of the saved draft. Only then can the website and campaign bundle reach launch approval.
 
-Implement `/services/custom-automation` in the canonical production website repository. Keep the work local; do not deploy or publish.
+## Next safe action
 
-### Implementation checkpoint
-
-- Added the custom automation landing page with buyer-led positioning, process/scope sections, verified and scoped examples, packaged-offer links, FAQs, and tracked top/bottom CTAs.
-- Added the canonical route to the sitemap and natural internal links from the homepage, services page, automation repair page, and project intake page.
-- Reused the existing `custom-project` intake and attribution path without changing `/api/lead` behavior.
-- Added regression coverage for route metadata, sitemap, internal links, and click-to-intake attribution. `git diff --check` passed; lint passed with three existing unrelated warnings; all nine tests passed; production build passed and generated `/services/custom-automation`.
-- Credibility review: active n8n phrasing is scoped to internal production use; the existing verified GoHighLevel review is described within its documented scope; no vendor marks or pending Twilio/OpenAI association claims are used.
-- No external publication, deployment, or account changes made.
-
-### Next steps
-
-1. Review the final repository status and report the local changes and warnings.
-2. Do not deploy, publish, or push until separately requested.
-
-## Credibility association rule
-
-- Added the canonical machine-readable credibility ledger at `docs/marketing/credibility-ledger.json` and the content review checklist at `docs/marketing/content-review-checklist.md`.
-- Added a global marketing and publishing rule to `AGENTS.md` covering all requested public and sales content surfaces.
-- Approved claims include internal self-hosted n8n use, HubSpot source-of-truth/one-write Customer Zero validation, Vercel website hosting, and STL Automate's user-confirmed approval for AWS Activate. Do not imply AWS Partner/Amazon Partner status, AWS backing, endorsement, sponsorship, an AWS customer/investor/client relationship, or any specific credits-awarded amount without separate evidence. AWS logo/mark rights remain unverified; OpenAI and Twilio remain pending for public association claims, and logo/mark rights remain unverified for all entries.
-- Audited current site copy. The technology page already gives the scoped internal n8n claim, and the product page already states the exact HubSpot Customer Zero milestone. Left site copy unchanged because these claims are already visible in context and no additional verified association offered a material low-risk improvement.
-- No external publication or account changes made.
-
-## Current goal
-
-Complete the public website prerequisites for the existing STL Automate Google OAuth application without changing scopes, credentials, DNS, or workflow code.
-
-## Done
-
-- Confirmed `https://stlautomate.com` redirects to the canonical production origin `https://www.stlautomate.com`.
-- Identified the production source as `github.com/irsiya247/stlautomate-next`.
-- Identified the framework as Next.js 16.2.6 App Router and the deployment provider as Vercel.
-- Recorded production rollback revision `8219524718d4def3d5804ed10059678a04192517` and deployment `EnRJPDhZrVz63U4yc7H6mQR1hNTi`.
-- Confirmed `/privacy` and `/terms` already exist and are linked from the homepage footer.
-- Checked current Google OAuth branding, homepage, privacy, authorized-domain, and Limited Use requirements in official Google documentation.
-- Updated the Privacy Policy to disclose the actual Gmail and Google Sheets job-search automation data practices and Google API Limited Use compliance.
-- Updated the Terms of Service with proportionate service, permitted-use, misuse, availability, intellectual-property, third-party-service, disclaimer, liability, termination, governing-law, and contact terms.
-- Expanded the existing footer labels to `Privacy Policy` and `Terms of Service` without changing its structure.
-- Ran the Next.js production build successfully; `/`, `/privacy`, and `/terms` are generated as static routes.
-- Ran targeted ESLint successfully on both policy pages. Repository-wide lint still reports two pre-existing internal-link errors and three unrelated warnings.
-- Verified the homepage and both policy routes locally, including footer navigation and the Google Limited Use statement.
-- Confirmed the updated pages produce no browser-console errors.
-- Checked a 390px mobile viewport. Policy content and the new legal links fit; the pre-existing footer contact email extends 35px beyond the viewport and was left unchanged as unrelated scope.
-- Captured the Google OAuth baseline: Audience `External`, status `Testing`, authorized domains `openai.com` and `stlautomate.com`, blank app-domain URL fields, and no scopes listed on the Data Access page.
-- Captured the existing client baseline: client ID `404753221615-rrd2vnjchjlrhnn6971hclra9vs8kgi0.apps.googleusercontent.com` and two redirect URIs (ChatGPT callback and the existing n8n callback).
-- Confirmed n8n credential `Gmail account` is currently connected, uses the expected client ID and callback, and has Custom Scopes disabled.
-- Confirmed `Job Search — Master Pipeline` is published and active on version `29d0049e-2171-4d53-881b-74575d99646e`.
-- Confirmed all four named Gmail nodes reference `Gmail account` without executing any node or workflow.
-
-## Next steps
-
-1. Review the exact changed files and confirm no unrelated changes.
-2. Commit the minimal change locally.
-3. Obtain the action-time confirmation required before publishing public website text.
-4. Push `main` so Vercel deploys it.
-5. Verify all three public URLs.
-6. Complete Google OAuth branding and publish the app if no DNS or verification blocker appears.
-7. Reconnect the existing n8n Gmail credential once, then re-verify the production workflow references without running it.
-
-## Open questions
-
-- Whether Google already recognizes `stlautomate.com` as an authorized and verified domain. This will be checked in Google Cloud after the website deploy.
-
-## Relevant files
-
-- `src/app/(site)/privacy/page.js`
-- `src/app/(site)/terms/page.js`
-- `src/app/(site)/layout.js`
-- `STATUS.md`
-
-## Google Ads intake conversion measurement
-
-- Added a locally scoped Google Ads conversion definition for successful supported project-intake submissions. The conversion action is configured in Google Ads as `Project Intake Submitted`, Secondary, count One, data-driven attribution, with a $0 fallback when no value is supplied. Enhanced conversions remain off.
-- Local implementation uses the existing `submission_id` UUID, preserves the existing PostHog `lead_intake_submitted` event, and sends only `send_to` to Google Ads after a successful `/api/lead` response.
-- Added a global Google Ads measurement choice with allow/decline controls, a persistent `Google Ads measurement choices` footer entry point, and six-calendar-month browser persistence. The tag is not loaded and Google requests are not initiated before a saved allow choice; on withdrawal the code sends denied consent updates and blocks further conversion events, while an already-loaded tag can remain in the tab until reload or close.
-- The first-layer notice links to the privacy policy and Google Business Data Responsibility information, identifies cookies/similar identifiers and the inquiry-measurement purpose, and says the conversion event contains no form-field content. The privacy policy distinguishes Google Ads measurement from existing PostHog analytics, describes withdrawal behavior, and avoids claims that Google receives no data or that consent revocation deletes prior Google data.
-- PostHog settings and behavior remain unchanged and independent of this Google Ads choice.
-- Owner/privacy review remains required for the Google-only scope of the choice, existing PostHog autocapture/persistence, the six-month choice period, and final disclosure wording. No legal-compliance determination is made here.
-- Current implementation remains local only. Do not push or deploy until the owner/privacy review and release are separately approved.
+Matthew completes Google Ads identity verification in the open handoff tab. After that, re-open draft `10216026239`, verify keywords and AI Max, confirm the draft is paused and non-serving with no spend, and return for the bundled launch approval.
