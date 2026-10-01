@@ -1,5 +1,14 @@
 # STL Automate Release Candidate Status
 
+## Canonical sitemap route correction, 2026-10-01
+
+- Defect: Production sitemap advertised `/intake`, which redirects to `/start-project?type=custom-project`, and omitted the live public routes `/fix`, `/build`, `/grow`, and `/agent-floor`.
+- Correction: Removed `/intake`; added `/agent-floor`, `/build`, `/fix`, and `/grow`. All other existing sitemap routes were preserved. No `lastModified` values or other route behavior were added.
+- Regression coverage: Added a focused sitemap route test for required canonical paths, `/intake` absence, and duplicate prevention. Existing `/start-project` and all four monitored service routes are asserted.
+- Verification: Focused sitemap and monitored service tests passed (20/20); full `npm test` passed (43/43); lint passed with 0 errors and 3 existing warnings; production build passed with 34/34 static pages generated; `git diff --check` passed.
+- Release state: local only. Nothing was pushed, merged, published, or deployed.
+- Base: `9b271db9758047d122ba5468d521cd46e9952f14`.
+
 ## St. Louis local-intent metadata hardening, 2026-10-01
 
 - Rationale: Public search sampling supplied for this task shows location-explicit St. Louis automation and receptionist pages surfacing for generic local buyer-intent searches. Search Console query/ranking data is not yet authoritative, so this is a conservative update to existing pages, not a new-page or keyword expansion.
