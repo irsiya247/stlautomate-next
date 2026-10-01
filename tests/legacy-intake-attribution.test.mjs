@@ -8,6 +8,7 @@ const homePath = new URL("../src/app/(site)/page.js", import.meta.url);
 const siteLayoutPath = new URL("../src/app/(site)/layout.js", import.meta.url);
 const intakePath = new URL("../src/app/(site)/intake/page.js", import.meta.url);
 const intakeFormPath = new URL("../src/app/components/ProjectIntakeForm.js", import.meta.url);
+const trackedLinkPath = new URL("../src/app/components/TrackedLink.js", import.meta.url);
 const servicePaths = [
   ["../src/app/(site)/services/automation-repair/page.js", '"/start-project?type=automation-fix-sprint"'],
   ["../src/app/(site)/services/custom-automation/page.js", '"/start-project?type=custom-project"'],
@@ -16,8 +17,12 @@ const servicePaths = [
 ];
 
 test("homepage acquisition CTAs use tracked custom-project intake with unique placements", async () => {
-  const source = await readFile(homePath, "utf8");
+  const [source, trackedLink] = await Promise.all([
+    readFile(homePath, "utf8"),
+    readFile(trackedLinkPath, "utf8")
+  ]);
   assert.match(source, /import TrackedLink from "\.\.\/components\/TrackedLink"/);
+  assert.match(trackedLink, /posthog\.capture\("lead_capture_cta_clicked"/);
   assert.doesNotMatch(source, /href="\/intake(?:["?])/);
 
   const placements = [...source.matchAll(/placement="([^"]+)"/g)].map((match) => match[1]);
