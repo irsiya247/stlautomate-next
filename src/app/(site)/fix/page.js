@@ -1,3 +1,7 @@
+import TrackedLink from "../../components/TrackedLink";
+
+const bookingHref = "/start-project?type=automation-fix-sprint";
+
 const problems = [
   "n8n workflow failures",
   "GoHighLevel automation and pipeline issues",
@@ -20,7 +24,14 @@ export default function FixPage() {
           <div>
             <h1 className="text-5xl font-extrabold leading-tight md:text-7xl">Broken workflow? Failed integration? Let&apos;s fix the problem.</h1>
             <p className="mt-6 max-w-2xl text-lg leading-relaxed text-slate-400">We help businesses diagnose and repair automation problems across n8n, GoHighLevel, CRMs, APIs, and webhooks.</p>
-            <a href="/intake?formType=intake&amp;lane=fix" className="mt-8 inline-block rounded-full bg-sky-600 px-6 py-3 font-semibold text-white hover:bg-sky-500">Describe what&apos;s broken</a>
+            <TrackedLink
+              href={bookingHref}
+              placement="fix_hero"
+              cta="Automation Fix Sprint"
+              className="mt-8 inline-block rounded-full bg-sky-600 px-6 py-3 font-semibold text-white hover:bg-sky-500"
+            >
+              Describe what&apos;s broken
+            </TrackedLink>
           </div>
           <div className="rounded-2xl border border-slate-800 bg-slate-900/40 p-7">
             <p className="text-sm font-semibold text-white">Common failure patterns</p>
