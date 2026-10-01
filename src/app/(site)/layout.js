@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Header from "../components/Header";
 import { GoogleAdsPrivacyChoicesButton } from "../components/GoogleAdsConsentManager";
+import TrackedLink from "../components/TrackedLink";
 
 export default function SiteLayout({ children }) {
   return (
@@ -54,7 +55,7 @@ export default function SiteLayout({ children }) {
                 <div className="text-slate-400 text-xs tracking-widest uppercase mb-4">Contact</div>
                 <ul className="space-y-3 text-sm text-slate-500">
                   <li><a href="mailto:contact@stlautomate.com" className="hover:text-white transition-colors">contact@stlautomate.com</a></li>
-                  <li><a href="/intake" className="hover:text-white transition-colors">Free Consultation</a></li>
+                  <li><TrackedLink href="/start-project?type=custom-project" placement="footer_consultation_custom_project" cta="Custom Project" className="hover:text-white transition-colors">Free Consultation</TrackedLink></li>
                 </ul>
               </div>
             </div>

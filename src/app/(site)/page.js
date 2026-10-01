@@ -1,3 +1,5 @@
+import TrackedLink from "../components/TrackedLink";
+
 const lanes = [
   {
     label: "FIX",
@@ -47,7 +49,7 @@ export default function Home() {
               Bring us the business problem. We will work out the technology, scope the work clearly, and test the result before handoff.
             </p>
             <div className="mt-9 flex flex-wrap gap-4">
-              <a href="/intake" className="rounded-full bg-sky-600 px-6 py-3 font-semibold text-white transition-colors hover:bg-sky-500">Tell us what you need</a>
+              <TrackedLink href="/start-project?type=custom-project" placement="homepage_hero_custom_project" cta="Custom Project" className="rounded-full bg-sky-600 px-6 py-3 font-semibold text-white transition-colors hover:bg-sky-500">Tell us what you need</TrackedLink>
               <a href="/proof" className="rounded-full border border-slate-700 px-6 py-3 font-semibold text-slate-200 transition-colors hover:border-slate-500">See our work</a>
             </div>
           </div>
@@ -110,7 +112,7 @@ export default function Home() {
           <p className="text-[11px] uppercase tracking-[0.35em] text-sky-400">Custom projects available</p>
           <h2 className="mt-4 text-3xl font-extrabold md:text-5xl">Start with the thing that is costing you time.</h2>
           <p className="mx-auto mt-5 max-w-2xl text-base leading-relaxed text-slate-400">Tell us what is broken, what needs to exist, or what should work better. We will help identify the smallest useful next step.</p>
-          <a href="/intake" className="mt-8 inline-block rounded-full bg-sky-600 px-7 py-4 text-lg font-semibold text-white transition-colors hover:bg-sky-500">Tell us what you need</a>
+          <TrackedLink href="/start-project?type=custom-project" placement="homepage_footer_custom_project" cta="Custom Project" className="mt-8 inline-block rounded-full bg-sky-600 px-7 py-4 text-lg font-semibold text-white transition-colors hover:bg-sky-500">Tell us what you need</TrackedLink>
         </section>
       </div>
     </main>

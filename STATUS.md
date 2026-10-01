@@ -1,5 +1,15 @@
 # STL Automate Release Candidate Status
 
+## Customer acquisition legacy intake convergence, 2026-10-01
+
+- Defect: Homepage acquisition CTAs and the footer Free Consultation link sent visitors to `/intake`, whose legacy form bypassed the tracked CTA context and `lead_intake_submitted` event.
+- Correction: Homepage and footer acquisition links now use uniquely placed `TrackedLink` CTAs to `/start-project?type=custom-project`. The `/intake` route remains available and redirects to the existing custom-project form while carrying `utm_source`, `utm_medium`, `utm_campaign`, `utm_term`, `utm_content`, `gclid`, and `fbclid` when present.
+- Form, PostHog, Google Ads conversion, and server intake behavior are unchanged. No second project form was added.
+- Regression coverage checks homepage/footer tracking, the compatibility redirect and attribution allowlist, current offer destinations, and the intake event/conversion contract.
+- Verification: `git diff --check` passed; targeted acquisition, service-route, and Google Ads conversion tests passed (38 tests); full `npm test` passed (40 tests); lint passed with 0 errors and 3 existing warnings; production build passed and generated the dynamic `/intake` redirect route.
+- Release state: local only. No push, merge, publish, or deployment.
+- Base: `bfef80c76b4c55490b17e70199a305f11acd66f9`. Fetch was attempted but GitHub DNS was unavailable; the cached `origin/main` ref matched this base at worktree creation.
+
 ## Current state
 
 - Branch: `codex/release-candidate-fix-build-grow`
