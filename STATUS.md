@@ -1,5 +1,18 @@
 # STL Automate Release Candidate Status
 
+## St. Louis local-intent metadata hardening, 2026-10-01
+
+- Rationale: Public search sampling supplied for this task shows location-explicit St. Louis automation and receptionist pages surfacing for generic local buyer-intent searches. Search Console query/ranking data is not yet authoritative, so this is a conservative update to existing pages, not a new-page or keyword expansion.
+- Credibility review: `docs/marketing/credibility-ledger.json` reviewed. No partner, customer, results, address, review, certification, or LocalBusiness/schema claims were added.
+- Homepage metadata: title changed from `STL Automate | FIX. BUILD. GROW.` to `Business Automation Services in St. Louis | STL Automate`. Description changed from `STL Automate helps St. Louis businesses fix broken workflows, build practical systems, and improve the path from lead to customer.` to `Custom business automation for St. Louis businesses and remote teams, plus workflow repair, lead systems, and Phone Receptionist services.`
+- Automation Repair title changed from `Automation Repair for Broken Workflows | STL Automate` to `Workflow Automation Repair in St. Louis | STL Automate`. Description changed to `Repair broken n8n, Zapier, or Make workflows, webhooks, APIs, and HubSpot handoffs with STL Automate in St. Louis or remotely. Focused repair sprint starts at $750.` Existing St. Louis/remote eyebrow retained.
+- Custom Automation title changed from `Custom Workflow & Business Process Automation | STL Automate` to `Custom Automation in St. Louis | STL Automate`. Description changed to `Custom business process automation and system integrations for St. Louis businesses and remote teams. STL Automate scopes, builds, tests, and hands off workflows.` Eyebrow: `Custom automation · St. Louis and remote`.
+- Lead-to-HubSpot title changed from `HubSpot Lead Capture & Automation | STL Automate` to `HubSpot Lead Automation in St. Louis | STL Automate`. Description changed to `Build a reliable website-to-HubSpot lead path with field mapping, duplicate protection, testing, and handoff. STL Automate serves St. Louis and remote teams.` Existing eyebrow retained.
+- Phone Receptionist title changed from `Phone Receptionist & Missed Call Automation | STL Automate` to `Phone Receptionist in St. Louis | STL Automate`. Description changed to `A scoped Phone Receptionist for missed-call follow-up and lead capture, serving St. Louis businesses and remote teams. Includes agreed routing, testing, and handoff.` Eyebrow: `Phone Receptionist · St. Louis and remote`.
+- Pricing, canonical URLs, CTA destinations, page scope, tracking, intake, and integrations are unchanged. No location pages were added.
+- Verification: `git diff --check` passed; focused SEO/service tests passed (21/21); full `npm test` passed (42/42); lint passed with 0 errors and 3 existing warnings; production build passed with all 34 routes generated.
+- Release state: local only. Nothing was pushed, merged, published, or deployed.
+
 ## Customer acquisition legacy intake convergence, 2026-10-01
 
 - Defect: Homepage acquisition CTAs and the footer Free Consultation link sent visitors to `/intake`, whose legacy form bypassed the tracked CTA context and `lead_intake_submitted` event.

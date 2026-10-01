@@ -17,7 +17,7 @@ const apiPath = new URL("../src/app/api/lead/route.js", import.meta.url);
 
 test("HubSpot lead page has buyer-intent sections, bounded $1,500 scope, and canonical metadata", async () => {
   const page = await readFile(pagePath, "utf8");
-  assert.match(page, /title\s*:\s*"HubSpot Lead Capture & Automation \| STL Automate"/);
+  assert.match(page, /title\s*:\s*"HubSpot Lead Automation in St\. Louis \| STL Automate"/);
   assert.match(page, /canonical\s*:\s*"https:\/\/www\.stlautomate\.com\/services\/hubspot-lead-automation"/);
   assert.match(page, /\$1,500/);
   for (const section of ["The problem", "What the system does", "Common starting points", "The $1,500 engagement", "Outside this package", "Customer Zero / internal evidence", "Implementation steps", "What we need from you", "Choose the right starting point", "Lead-to-HubSpot questions"]) assert.ok(page.includes(section), "missing section: " + section);

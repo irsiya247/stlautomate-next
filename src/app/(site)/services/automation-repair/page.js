@@ -3,9 +3,9 @@ import TrackedLink from "../../../components/TrackedLink";
 const bookingHref = "/start-project?type=automation-fix-sprint";
 
 export const metadata = {
-  title: "Automation Repair for Broken Workflows | STL Automate",
+  title: "Workflow Automation Repair in St. Louis | STL Automate",
   description:
-    "Repair a broken n8n, Zapier, or Make workflow, webhook, API, or HubSpot handoff. One focused Automation Fix Sprint starts at $750.",
+    "Repair broken n8n, Zapier, or Make workflows, webhooks, APIs, and HubSpot handoffs with STL Automate in St. Louis or remotely. Focused repair sprint starts at $750.",
   alternates: {
     canonical: "https://www.stlautomate.com/services/automation-repair"
   }

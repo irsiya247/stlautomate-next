@@ -19,8 +19,8 @@ const intakeFormPath = new URL("../src/app/components/ProjectIntakeForm.js", imp
 test("custom automation route exists with targeted metadata, canonical, and key sections", async () => {
   const source = await readFile(routePath, "utf8");
 
-  assert.match(source, /title: "Custom Workflow & Business Process Automation \| STL Automate"/);
-  assert.match(source, /description:[\s\S]*?custom business process automation, workflow automation, and system integrations/);
+  assert.match(source, /title: "Custom Automation in St\. Louis \| STL Automate"/);
+  assert.match(source, /description:[\s\S]*?Custom business process automation and system integrations for St\. Louis businesses and remote teams/);
   assert.match(source, /canonical: "https:\/\/www\.stlautomate\.com\/services\/custom-automation"/);
   for (const section of ["What we automate", "Relevant work and systems", "What a custom project includes", "How custom scoping works", "What helps us scope it", "Choose the right starting point", "Custom project questions"]) {
     assert.ok(source.includes(section), `missing section: ${section}`);

@@ -4,9 +4,9 @@ import TrackedLink from "../../../components/TrackedLink";
 const projectHref = "/start-project?type=custom-project";
 
 export const metadata = {
-  title: "Custom Workflow & Business Process Automation | STL Automate",
+  title: "Custom Automation in St. Louis | STL Automate",
   description:
-    "Plan and build custom business process automation, workflow automation, and system integrations around the way your business works.",
+    "Custom business process automation and system integrations for St. Louis businesses and remote teams. STL Automate scopes, builds, tests, and hands off workflows.",
   alternates: {
     canonical: "https://www.stlautomate.com/services/custom-automation"
   }
@@ -70,7 +70,7 @@ export default function CustomAutomationPage() {
         <section className="mx-auto max-w-6xl px-6 pb-16 pt-28 md:pb-24 md:pt-36">
           <div className="grid items-center gap-12 lg:grid-cols-[1.1fr_0.9fr]">
             <div>
-              <p className="text-xs font-semibold tracking-[0.25em] text-sky-400 uppercase">Custom business process automation</p>
+              <p className="text-xs font-semibold tracking-[0.25em] text-sky-400 uppercase">Custom automation · St. Louis and remote</p>
               <h1 className="mt-5 max-w-4xl text-4xl font-extrabold leading-tight tracking-tight sm:text-5xl md:text-6xl">Tell us what needs to happen. We&apos;ll build the automation around your process.</h1>
               <p className="mt-6 max-w-2xl text-lg leading-relaxed text-slate-300">Already know what your business needs automated? STL Automate takes custom projects alongside packaged services, from workflow automation to system integrations and operational handoffs.</p>
               <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:items-center">

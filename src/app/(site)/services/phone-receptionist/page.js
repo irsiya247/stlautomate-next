@@ -4,9 +4,9 @@ import TrackedLink from "../../../components/TrackedLink";
 const intakeHref = "/start-project?type=phone-receptionist";
 
 export const metadata = {
-  title: "Phone Receptionist & Missed Call Automation | STL Automate",
+  title: "Phone Receptionist in St. Louis | STL Automate",
   description:
-    "A bounded Phone Receptionist for missed-call automation, after-hours phone answering, and lead capture from business calls, with agreed routing, testing, and handoff.",
+    "A scoped Phone Receptionist for missed-call follow-up and lead capture, serving St. Louis businesses and remote teams. Includes agreed routing, testing, and handoff.",
   alternates: {
     canonical: "https://www.stlautomate.com/services/phone-receptionist"
   }
@@ -76,7 +76,7 @@ export default function PhoneReceptionistPage() {
         <section className="mx-auto max-w-6xl px-6 pb-16 pt-28 md:pb-24 md:pt-36">
           <div className="grid items-center gap-12 lg:grid-cols-[1.1fr_0.9fr]">
             <div>
-              <p className="text-xs font-semibold tracking-[0.25em] text-sky-400 uppercase">Inbound call answering and missed-call follow-up</p>
+              <p className="text-xs font-semibold tracking-[0.25em] text-sky-400 uppercase">Phone Receptionist · St. Louis and remote</p>
               <h1 className="mt-5 max-w-4xl text-4xl font-extrabold leading-tight tracking-tight sm:text-5xl md:text-6xl">Give every caller a clear next step, even when your team cannot answer.</h1>
               <p className="mt-6 max-w-2xl text-lg leading-relaxed text-slate-300">Missed calls, slow callbacks, and incomplete caller details can cost a service business its next conversation. STL Automate builds a Phone Receptionist around one agreed call flow, your business rules, and the systems that need the handoff.</p>
               <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:items-center">

@@ -24,7 +24,7 @@ const apiPath = new URL("../src/app/api/lead/route.js", import.meta.url);
 
 test("Phone Receptionist page has buyer-intent scope, proof labels, and canonical metadata", async () => {
   const page = await readFile(pagePath, "utf8");
-  assert.match(page, /title:\s*"Phone Receptionist & Missed Call Automation \| STL Automate"/);
+  assert.match(page, /title:\s*"Phone Receptionist in St\. Louis \| STL Automate"/);
   assert.match(page, /canonical:\s*"https:\/\/www\.stlautomate\.com\/services\/phone-receptionist"/);
   assert.match(page, /\$2,500/);
   for (const section of [

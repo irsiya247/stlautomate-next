@@ -8,7 +8,7 @@ const sitemapPath = new URL("../src/app/sitemap.js", import.meta.url);
 test("automation repair landing page has focused metadata, canonical URL, and sprint CTAs", async () => {
   const source = await readFile(routePath, "utf8");
 
-  assert.match(source, /title: "Automation Repair for Broken Workflows \| STL Automate"/);
+  assert.match(source, /title: "Workflow Automation Repair in St\. Louis \| STL Automate"/);
   assert.match(source, /description:[\s\S]*?broken n8n, Zapier, or Make workflow/);
   assert.match(source, /canonical: "https:\/\/www\.stlautomate\.com\/services\/automation-repair"/);
   assert.equal((source.match(/href=\{bookingHref\}/g) ?? []).length, 2);
