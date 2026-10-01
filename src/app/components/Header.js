@@ -9,19 +9,11 @@ export default function Header() {
   const [open, setOpen] = useState(false);
   const pathname = usePathname();
   const links = [
-    { href: "/fix", label: "Fix" },
-    { href: "/build", label: "Build" },
-    { href: "/grow", label: "Grow" },
     { href: "/services", label: "Services" },
     { href: "/products", label: "Products" },
-    { href: "/start-project", label: "Custom Projects" },
-    { href: "/automation-fix-sprint", label: "Fix Sprint" },
-    { href: "/how-it-works", label: "How It Works" },
-    { href: "/proof", label: "Proof" },
+    { href: "/proof", label: "Projects" },
     { href: "/agent-floor", label: "Agent Floor" },
-    { href: "/about", label: "About" },
-    { href: "/tech", label: "Tech" },
-    { href: "/faq", label: "FAQ" }
+    { href: "/about", label: "About" }
   ];
 
   return (
@@ -37,7 +29,7 @@ export default function Header() {
         </nav>
         <div className="flex items-center gap-3">
           <TrackedLink href="/start-project" placement="header" className="rounded-full bg-sky-600 px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-sky-500">
-            Start a Custom Project
+            Start a Project
           </TrackedLink>
           <button className="flex h-8 w-8 flex-col items-center justify-center gap-1.5 lg:hidden" onClick={() => setOpen(!open)} aria-label="Toggle menu" aria-expanded={open}>
             <span className={open ? "block h-0.5 w-5 translate-y-2 rotate-45 bg-white transition-all duration-200" : "block h-0.5 w-5 bg-white transition-all duration-200"} />
