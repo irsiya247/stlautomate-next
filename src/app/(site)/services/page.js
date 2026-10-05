@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 export const metadata = {
-  title: "Business Automation Services in St. Louis | STL Automate",
+  title: "Automation Services in St. Louis | STL Automate",
   description: "Repair broken workflows, route leads into HubSpot, build custom business automation, or improve phone lead capture. STL Automate serves St. Louis and remote teams.",
   alternates: { canonical: "https://www.stlautomate.com/services" },
 };

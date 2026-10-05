@@ -23,7 +23,7 @@ test("homepage and services have descriptive canonical metadata and current serv
   ]);
   assert.match(home, /title: "Business Automation Services in St\. Louis \| STL Automate"/);
   assert.match(home, /canonical: "https:\/\/www\.stlautomate\.com\/"/);
-  assert.match(services, /title: "Business Automation Services in St\. Louis \| STL Automate"/);
+  assert.match(services, /title: "Automation Services in St\. Louis \| STL Automate"/);
   assert.match(services, /canonical: "https:\/\/www\.stlautomate\.com\/services"/);
   for (const path of [
     "/services/automation-repair",
