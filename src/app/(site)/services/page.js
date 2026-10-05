@@ -1,224 +1,84 @@
+import Link from "next/link";
+
+export const metadata = {
+  title: "Business Automation Services in St. Louis | STL Automate",
+  description: "Repair broken workflows, route leads into HubSpot, build custom business automation, or improve phone lead capture. STL Automate serves St. Louis and remote teams.",
+  alternates: { canonical: "https://www.stlautomate.com/services" },
+};
+
+const offers = [
+  {
+    title: "Automation Fix Sprint",
+    description: "Diagnose and repair a broken n8n, Make, or Zapier workflow, webhook, API connection, or CRM handoff. The sprint has a bounded repair scope, representative testing, verification, and handoff.",
+    detail: "Starts at $750",
+    href: "/services/automation-repair",
+    link: "Review automation repair scope",
+  },
+  {
+    title: "Lead-to-HubSpot System",
+    description: "Connect one website lead source to one HubSpot portal with agreed field mapping, duplicate protection, routing, testing, and handoff.",
+    detail: "$1,500 fixed scope",
+    href: "/services/hubspot-lead-automation",
+    link: "Review the HubSpot lead system",
+  },
+  {
+    title: "Phone Receptionist",
+    description: "Set up a bounded phone intake path for one number and one agreed use case, with caller routing, testing, and a documented handoff.",
+    detail: "$2,500 fixed scope",
+    href: "/services/phone-receptionist",
+    link: "Review the Phone Receptionist scope",
+  },
+  {
+    title: "Custom Automation",
+    description: "Design and build a business process automation or system integration when the work does not fit a packaged service. Scope is agreed before implementation.",
+    detail: "Scoped to the process",
+    href: "/services/custom-automation",
+    link: "Explore custom automation",
+  },
+];
+
 export default function Services() {
   return (
-    <main className="min-h-screen bg-[#030712] text-white relative overflow-hidden">
+    <main className="min-h-screen bg-[#030712] text-white">
+      <section className="mx-auto max-w-6xl px-6 pb-16 pt-36">
+        <p className="text-xs uppercase tracking-[0.3em] text-sky-400">Services · St. Louis and remote</p>
+        <h1 className="mt-5 max-w-4xl text-4xl font-extrabold leading-tight md:text-6xl">Business automation, workflow repair, and system integrations</h1>
+        <p className="mt-6 max-w-3xl text-lg leading-relaxed text-slate-300">STL Automate helps small businesses repair broken workflows, connect business systems, and automate repetitive processes. Each engagement starts with a defined problem, agreed scope, and a plan to test and hand off the result.</p>
+      </section>
 
-      {/* BACKGROUND GRID */}
-      <div className="absolute inset-0 opacity-[0.05] pointer-events-none">
-        <div className="w-full h-full" style={{
-          backgroundImage: "linear-gradient(rgba(56,189,248,0.12) 1px, transparent 1px), linear-gradient(90deg, rgba(56,189,248,0.12) 1px, transparent 1px)",
-          backgroundSize: "60px 60px"
-        }} />
-      </div>
-      <div className="absolute top-[-250px] left-1/2 w-[700px] h-[700px] bg-sky-500/10 blur-[160px] rounded-full -translate-x-1/2 pointer-events-none" />
+      <section aria-label="Automation services" className="mx-auto grid max-w-6xl gap-5 px-6 pb-20 md:grid-cols-2">
+        {offers.map((offer) => (
+          <article key={offer.title} className="rounded-2xl border border-slate-800 bg-slate-900/40 p-7">
+            <p className="text-sm font-semibold text-sky-300">{offer.detail}</p>
+            <h2 className="mt-3 text-2xl font-bold">{offer.title}</h2>
+            <p className="mt-4 leading-relaxed text-slate-400">{offer.description}</p>
+            <Link href={offer.href} className="mt-6 inline-block font-semibold text-sky-300 underline underline-offset-4">{offer.link}</Link>
+          </article>
+        ))}
+      </section>
 
-      <div className="relative z-10 pt-36 pb-24">
-        <div className="max-w-6xl mx-auto px-6">
-
-          {/* PAGE HEADER */}
-          <div className="text-[11px] tracking-[0.35em] text-sky-400 uppercase mb-4">What We Build</div>
-          <h1 className="text-5xl md:text-6xl font-extrabold leading-tight mb-6">
-            Three tools <span className="text-sky-400">zero guesswork</span>
-          </h1>
-          <p className="text-slate-400 text-lg max-w-2xl mb-20">
-            Every product is built, configured, and tested by STL Automate. Our team handles the technical setup and shows you how the workflow operates before it goes live.
-          </p>
-
-          {/* ── PRODUCT 1: AI RECEPTIONIST SUITE ── */}
-          <div className="mb-20 grid gap-6 rounded-3xl border border-sky-400/25 bg-sky-400/[0.06] p-7 md:grid-cols-[1fr_auto] md:items-center md:p-9">
-            <div>
-              <div className="mb-3 text-xs tracking-widest text-sky-300 uppercase">Custom Automation Projects</div>
-              <h2 className="text-2xl font-extrabold md:text-3xl">Have a workflow that does not fit a standard service?</h2>
-              <p className="mt-3 max-w-2xl leading-relaxed text-slate-400">Bring us the process, tools, and outcome you have in mind. Start with a short project brief and we&apos;ll review the fit.</p>
-              <div className="mt-4 flex flex-wrap gap-x-5 gap-y-2 text-sm text-slate-300">
-                <a href="/services/automation-repair" className="text-sky-300 hover:text-sky-200">Repair a broken workflow &rarr;</a>
-                <a href="/services/custom-automation" className="text-sky-300 hover:text-sky-200">Explore custom automation &rarr;</a>
-              </div>
-            </div>
-            <a href="/services/custom-automation" className="inline-block rounded-full bg-sky-600 px-7 py-4 text-center font-semibold text-white transition-colors hover:bg-sky-500">Explore Custom Automation</a>
-          </div>
-
-          <div id="receptionist" className="mb-28 scroll-mt-24">
-            <div className="grid md:grid-cols-2 gap-12 items-start">
-              <div>
-                <div className="text-sky-400 text-xs tracking-widest uppercase mb-3">Product 01</div>
-                <h2 className="text-4xl font-extrabold mb-4">Automated <span className="text-sky-400">Receptionist Suite</span></h2>
-                <p className="text-slate-400 text-lg leading-relaxed mb-6">
-                  Your inbox becomes a structured lead-response queue. The system can classify inquiries, prepare response drafts, flag follow-up, and detect bookings so your team knows what needs attention.
-                </p>
-                <p className="text-slate-300 text-base leading-relaxed mb-8">
-                  The goal is to reduce slow responses and missed follow-up while keeping your team in control of external messages.
-                </p>
-                <a href="/intake" className="bg-sky-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-sky-500 transition-colors inline-block">
-                  Get This For My Business
-                </a>
-                <a href="/services/phone-receptionist" className="mt-4 inline-block text-sky-300 underline underline-offset-4">
-                  Review the $2,500 Phone Receptionist package
-                </a>
-              </div>
-
-              <div className="space-y-4">
-                {/* Three workflow cards */}
-                <div className="border border-slate-700 bg-slate-900/40 rounded-xl p-5">
-                  <div className="flex items-center gap-3 mb-3">
-                    <div className="w-8 h-8 rounded-full bg-sky-400/10 border border-sky-400/30 flex items-center justify-center text-sky-400 text-xs font-bold">1</div>
-                    <h3 className="font-semibold text-white">Email Receptionist</h3>
-                  </div>
-                  <p className="text-slate-400 text-sm leading-relaxed">
-                    Reviews configured inbound emails, uses your approved business information to prepare a response draft, and scores each lead as Hot, Warm, or Cold for your team.
-                  </p>
-                </div>
-
-                <div className="border border-slate-700 bg-slate-900/40 rounded-xl p-5">
-                  <div className="flex items-center gap-3 mb-3">
-                    <div className="w-8 h-8 rounded-full bg-sky-400/10 border border-sky-400/30 flex items-center justify-center text-sky-400 text-xs font-bold">2</div>
-                    <h3 className="font-semibold text-white">Follow-Up Draft Queue</h3>
-                  </div>
-                  <p className="text-slate-400 text-sm leading-relaxed">
-                    Follow-up drafts can be scheduled by lead status and routed for human approval. When a booking is detected, pending follow-up is removed from the approval queue.
-                  </p>
-                </div>
-
-                <div className="border border-slate-700 bg-slate-900/40 rounded-xl p-5">
-                  <div className="flex items-center gap-3 mb-3">
-                    <div className="w-8 h-8 rounded-full bg-sky-400/10 border border-sky-400/30 flex items-center justify-center text-sky-400 text-xs font-bold">3</div>
-                    <h3 className="font-semibold text-white">Booking Detector</h3>
-                  </div>
-                  <p className="text-slate-400 text-sm leading-relaxed">
-                    Checks the connected calendar on a defined interval. When a lead books, the CRM status is updated and pending follow-up is flagged to stop before another message is approved.
-                  </p>
-                </div>
-
-                <div className="border border-sky-400/20 bg-sky-400/5 rounded-xl p-4">
-                  <p className="text-sky-300 text-sm font-medium">🔔 Hot-lead and workflow alerts can be routed to your team in Slack.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className="border-t border-slate-800 mb-28" />
-
-          {/* ── PRODUCT 2: VAPI RECEPTIONIST ── */}
-          <div id="vapi" className="mb-28 scroll-mt-24">
-            <div className="grid md:grid-cols-2 gap-12 items-start">
-              <div>
-                <div className="text-sky-400 text-xs tracking-widest uppercase mb-3">Product 02</div>
-                <h2 className="text-4xl font-extrabold mb-4">Phone <span className="text-sky-400">Receptionist</span></h2>
-                <p className="text-slate-400 text-lg leading-relaxed mb-6">
-                  A Phone Receptionist that answers your phone line, talks with callers, captures their needs, and helps your team prioritize callbacks.
-                </p>
-                <p className="text-slate-300 text-base leading-relaxed mb-8">
-                  Missed calls can become lost opportunities. The Phone Receptionist is designed to reduce voicemail drop-off and give each caller a clear next step.
-                </p>
-                <a href="/intake" className="bg-sky-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-sky-500 transition-colors inline-block">
-                  Get This For My Business
-                </a>
-              </div>
-
-              <div className="space-y-4">
-                <div className="border border-slate-700 bg-slate-900/40 rounded-xl p-5">
-                  <h3 className="font-semibold text-white mb-2">Provides 24/7 call coverage</h3>
-                  <p className="text-slate-400 text-sm leading-relaxed">
-                    The Phone Receptionist can be configured to answer during business hours, after hours, and on weekends so callers receive a guided response instead of a generic voicemail.
-                  </p>
-                </div>
-                <div className="border border-slate-700 bg-slate-900/40 rounded-xl p-5">
-                  <h3 className="font-semibold text-white mb-2">Scores the call after it ends</h3>
-                  <p className="text-slate-400 text-sm leading-relaxed">
-                    When the call is over, the system can review the transcript, score the lead as Hot, Warm, or Cold, and log the result to HubSpot.
-                  </p>
-                </div>
-                <div className="border border-slate-700 bg-slate-900/40 rounded-xl p-5">
-                  <h3 className="font-semibold text-white mb-2">Alerts you on the right calls</h3>
-                  <p className="text-slate-400 text-sm leading-relaxed">
-                    Hot and Warm callers can trigger a Slack alert with the captured details so your team can prioritize the callback.
-                  </p>
-                </div>
-                <div className="border border-slate-700 bg-slate-900/40 rounded-xl p-5">
-                  <h3 className="font-semibold text-white mb-2">Custom script, your voice</h3>
-                  <p className="text-slate-400 text-sm leading-relaxed">
-                    We write the script, configure the persona, and test it against real call scenarios before it ever touches a customer. Works with your existing phone number.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className="border-t border-slate-800 mb-28" />
-
-          {/* ── PRODUCT 3: AI SDR ── */}
-          <div id="sdr" className="mb-20 scroll-mt-24">
-            <div className="grid md:grid-cols-2 gap-12 items-start">
-              <div>
-                <div className="text-sky-400 text-xs tracking-widest uppercase mb-3">Product 03</div>
-                <h2 className="text-4xl font-extrabold mb-4">Automated <span className="text-sky-400">Sales Outreach</span></h2>
-                <p className="text-slate-400 text-lg leading-relaxed mb-6">
-                  Give STL Automate an approved list of businesses you want to reach. The system prepares personalized drafts, routes them for human approval, detects replies, and keeps the next action visible.
-                </p>
-                <p className="text-slate-300 text-base leading-relaxed mb-8">
-                  Research, drafting, follow-up planning, and CRM logging can be automated. External outreach remains under your team&apos;s approval.
-                </p>
-                <a href="/intake" className="bg-sky-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-sky-500 transition-colors inline-block">
-                  Get This For My Business
-                </a>
-              </div>
-
-              <div className="space-y-4">
-                <div className="border border-slate-700 bg-slate-900/40 rounded-xl p-5">
-                  <h3 className="font-semibold text-white mb-2">Scores prospects before approval</h3>
-                  <p className="text-slate-400 text-sm leading-relaxed">
-                    Before a draft enters the approval queue, the system scores each prospect using approved fit criteria. Higher-fit prospects can receive a more specific draft.
-                  </p>
-                </div>
-                <div className="border border-slate-700 bg-slate-900/40 rounded-xl p-5">
-                  <h3 className="font-semibold text-white mb-2">Prepares follow-up for approval</h3>
-                  <p className="text-slate-400 text-sm leading-relaxed">
-                    The system prepares the first message and later follow-up drafts. A person reviews and approves each external send.
-                  </p>
-                </div>
-                <div className="border border-slate-700 bg-slate-900/40 rounded-xl p-5">
-                  <h3 className="font-semibold text-white mb-2">Detects interest and books the meeting</h3>
-                  <p className="text-slate-400 text-sm leading-relaxed">
-                    When someone replies with interest, the system alerts your team in Slack and prepares a booking response with your calendar link for approval.
-                  </p>
-                </div>
-                <div className="border border-slate-700 bg-slate-900/40 rounded-xl p-5">
-                  <h3 className="font-semibold text-white mb-2">Every email is written for that recipient</h3>
-                  <p className="text-slate-400 text-sm leading-relaxed">
-                    Not a template with a name swapped in. The system reads each prospect&apos;s company, industry, and likely pain points and writes a message specific to them.
-                  </p>
-                </div>
-                <div className="border border-slate-700 bg-slate-900/40 rounded-xl p-5">
-                  <h3 className="font-semibold text-white mb-2">Logs everything to your CRM</h3>
-                  <p className="text-slate-400 text-sm leading-relaxed">
-                    Configured lead, email, approval, and reply events are logged to HubSpot so your team has one CRM record of what happened.
-                  </p>
-                </div>
-                <div className="border border-slate-700 bg-slate-900/40 rounded-xl p-5">
-                  <h3 className="font-semibold text-white mb-2">Need inbound leads routed into HubSpot?</h3>
-                  <p className="text-slate-400 text-sm leading-relaxed">
-                    See the <a href="/services/hubspot-lead-automation" className="text-sky-300 underline underline-offset-4">$1,500 Lead-to-HubSpot System</a> for one scoped lead intake path.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* BOTTOM CTA */}
-          <div id="custom" className="border-t border-slate-800 pt-20 text-center scroll-mt-24">
-            <h2 className="text-3xl font-bold mb-4">Don&apos;t see exactly <span className="text-sky-400">what you need?</span></h2>
-            <p className="text-slate-400 text-lg mb-4 max-w-xl mx-auto">
-              These three are our most common builds. We also take on custom projects for businesses with specific workflows, integrations, or ideas that don&apos;t fit a standard product.
-            </p>
-            <p className="text-slate-500 text-base mb-8 max-w-xl mx-auto">
-              If you have something in mind, tell us about it on the call. We&apos;ll be straight with you about whether we can build it.
-            </p>
-            <a href="/services/custom-automation" className="bg-sky-600 text-white px-8 py-4 rounded-full font-semibold text-lg inline-block hover:bg-sky-500 transition-colors">
-              Explore Custom Automation
-            </a>
-          </div>
-
+      <section className="mx-auto max-w-4xl px-6 pb-24">
+        <h2 className="text-3xl font-bold">How a project works</h2>
+        <ol className="mt-6 grid gap-4 md:grid-cols-2">
+          {[
+            ["Describe the process", "Share what happens today, what should happen instead, and where the current process fails."],
+            ["Agree on scope", "Identify the systems, access needs, constraints, acceptance checks, and project boundaries before build work begins."],
+            ["Build or repair", "Implement the agreed workflow or integration using the systems and architecture selected for the scope."],
+            ["Test and hand off", "Run representative paths, verify the expected result, and document the relevant operating and handoff details."],
+          ].map(([title, text], index) => (
+            <li key={title} className="rounded-xl border border-slate-800 p-5">
+              <p className="text-xs font-semibold uppercase tracking-widest text-sky-400">Step 0{index + 1}</p>
+              <h3 className="mt-2 font-bold">{title}</h3>
+              <p className="mt-2 text-sm leading-relaxed text-slate-400">{text}</p>
+            </li>
+          ))}
+        </ol>
+        <div className="mt-10 rounded-2xl border border-sky-400/20 bg-sky-400/5 p-7">
+          <h2 className="text-2xl font-bold">Not sure which service fits?</h2>
+          <p className="mt-3 leading-relaxed text-slate-300">Tell us what is broken, what needs to connect, or what takes too much manual work. We will review the fit and identify a useful next step.</p>
+          <Link href="/start-project?type=custom-project" className="mt-5 inline-block rounded-full bg-sky-600 px-6 py-3 font-semibold hover:bg-sky-500">Describe your project</Link>
         </div>
-      </div>
+      </section>
     </main>
   );
 }

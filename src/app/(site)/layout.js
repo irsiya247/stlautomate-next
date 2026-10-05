@@ -33,11 +33,11 @@ export default function SiteLayout({ children }) {
                   <li><a href="/fix" className="hover:text-white transition-colors">Fix</a></li>
                   <li><a href="/build" className="hover:text-white transition-colors">Build</a></li>
                   <li><a href="/grow" className="hover:text-white transition-colors">Grow</a></li>
-                  <li><a href="/services#receptionist" className="hover:text-white transition-colors">Receptionist Suite</a></li>
-                  <li><a href="/services#vapi" className="hover:text-white transition-colors">Phone Receptionist</a></li>
-                  <li><a href="/services#sdr" className="hover:text-white transition-colors">Sales Outreach</a></li>
-                  <li><a href="/automation-fix-sprint" className="hover:text-white transition-colors">Automation Fix Sprint</a></li>
-                  <li><a href="/start-project" className="hover:text-white transition-colors">Start a Custom Project</a></li>
+                  <li><a href="/services/automation-repair" className="hover:text-white transition-colors">Automation Repair</a></li>
+                  <li><a href="/services/hubspot-lead-automation" className="hover:text-white transition-colors">Lead-to-HubSpot System</a></li>
+                  <li><a href="/services/phone-receptionist" className="hover:text-white transition-colors">Phone Receptionist</a></li>
+                  <li><a href="/services/custom-automation" className="hover:text-white transition-colors">Custom Automation</a></li>
+                  <li><a href="/services" className="hover:text-white transition-colors">All services</a></li>
                 </ul>
               </div>
               <div>

@@ -1,3 +1,9 @@
+export const metadata = {
+  title: "About STL Automate | Business Automation in St. Louis",
+  description: "Meet STL Automate, a St. Louis-based business automation and systems implementation company serving local businesses and remote teams.",
+  alternates: { canonical: "https://www.stlautomate.com/about" },
+};
+
 export default function About() {
   return (
     <main className="min-h-screen bg-[#030712] text-white relative overflow-hidden">

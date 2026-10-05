@@ -26,9 +26,8 @@ test("custom automation route exists with targeted metadata, canonical, and key 
     assert.ok(source.includes(section), `missing section: ${section}`);
   }
   assert.ok(source.includes("/automation-fix-sprint#upwork-review"));
-  assert.ok(source.includes("/services#sdr"));
   assert.ok(source.includes("/services/phone-receptionist"));
-  assert.ok(source.includes("/services#receptionist"));
+  assert.doesNotMatch(source, /\/services#(?:sdr|receptionist)/);
   assert.doesNotMatch(source, /Twilio/);
 });
 
@@ -43,7 +42,7 @@ test("custom automation route appears in sitemap and relevant pages link to it",
 
   assert.match(sitemap, /"\/services\/custom-automation"/);
   assert.match(home, /href="\/services\/custom-automation"/);
-  assert.match(services, /href="\/services\/custom-automation"/);
+  assert.ok(services.includes('href: "/services/custom-automation"'));
   assert.match(repair, /href="\/services\/custom-automation"/);
   assert.match(startProject, /href="\/services\/custom-automation"/);
 });

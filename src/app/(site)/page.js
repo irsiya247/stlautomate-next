@@ -1,5 +1,16 @@
 import TrackedLink from "../components/TrackedLink";
 
+export const metadata = {
+  title: "Business Automation Services in St. Louis | STL Automate",
+  description: "Custom business automation for St. Louis businesses and remote teams, plus workflow repair, lead systems, and Phone Receptionist services.",
+  alternates: { canonical: "https://www.stlautomate.com/" },
+  openGraph: {
+    title: "Business Automation Services in St. Louis | STL Automate",
+    description: "Custom business automation for St. Louis businesses and remote teams, plus workflow repair, lead systems, and Phone Receptionist services.",
+    url: "https://www.stlautomate.com/",
+  },
+};
+
 const lanes = [
   {
     label: "FIX",

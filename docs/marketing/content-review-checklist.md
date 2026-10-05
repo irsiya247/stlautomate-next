@@ -35,3 +35,22 @@ Use this checklist for every website page, LinkedIn/social post, proposal, case 
 **Logo/mark rights evidence (or “not used”):** Not used.
 
 **Reviewer/date:** Implementation content review / 2026-09-26.
+
+## Completed review: Services and FAQ discoverability refresh
+
+- [x] Credibility check completed. No vendor endorsement, customer result, or external deployment claims were added.
+- [x] Current packaged offer scopes and prices were checked against their service pages: Automation Fix Sprint starts at $750, Lead-to-HubSpot System is $1,500, and Phone Receptionist is $2,500.
+- [x] n8n, Make, Zapier, and HubSpot are named only as technologies relevant to the stated service scope; no logos or partner claims are used.
+- [x] Removed legacy package descriptions and unsupported claims about universal integrations, fixed timelines, proactive monitoring, monthly retainers, and guaranteed support.
+- [x] Organization and WebSite structured data use only the documented legal/business name, site URL, service description, and St. Louis location cue. No street address, phone, review, or social profile was inferred.
+- [x] No vendor logos or marks are used.
+
+**Asset/surface:** `/`, `/services`, `/faq`, global footer and metadata.
+
+**Relevant ledger entries (or “none”):** n8n and HubSpot, for technology references only. Exact relationship scope in `credibility-ledger.json` was preserved.
+
+**Evidence/phrasing checked:** Current service pages and `credibility-ledger.json`; no customer outcomes or vendor affiliations asserted.
+
+**Logo/mark rights evidence (or “not used”):** Not used.
+
+**Reviewer/date:** Implementation content review / 2026-10-05.
