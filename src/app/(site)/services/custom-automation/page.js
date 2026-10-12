@@ -1,16 +1,17 @@
 import Link from "next/link";
 import TrackedLink from "../../../components/TrackedLink";
+import { socialImages, withSocialPreview } from "../../../social-preview.mjs";
 
 const projectHref = "/start-project?type=custom-project";
 
-export const metadata = {
+export const metadata = withSocialPreview({
   title: "Custom Automation in St. Louis | STL Automate",
   description:
     "Custom business process automation and system integrations for St. Louis businesses and remote teams. STL Automate scopes, builds, tests, and hands off workflows.",
   alternates: {
     canonical: "https://www.stlautomate.com/services/custom-automation"
   }
-};
+}, socialImages.customAutomation);
 
 const automationAreas = [
   "Repetitive business processes",

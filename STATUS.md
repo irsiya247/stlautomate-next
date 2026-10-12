@@ -1,5 +1,17 @@
 # STL Automate Release Candidate Status
 
+## NP03-WEB-01 social-preview candidate, 2026-10-12
+
+- Scope: root branded image fallback plus complete homepage, Automation Repair, Lead-to-HubSpot, and Custom Automation Open Graph/Twitter cards. Four original opaque RGB PNGs at 1200x630 are tracked in `public/og/`.
+- Exact source: `irsiya247/stlautomate-next` main commit `775333a5f40c89cc02adfc897df2c267ebc6d8ed`, read from GitHub and checked out separately. The older issue-audit SHA was not reused.
+- Existing titles, descriptions, canonical source values, prices, CTAs, page bodies, structured data, tracking, and integrations are preserved. No customer proof, provider logos, new prices, or outcome claims were added. The credibility ledger was reviewed.
+- Verification: full tests PASS (53/53); lint PASS (0 errors, 3 warnings in unchanged files); Next.js 16.2.6 Webpack production build PASS (34/34 pages generated); `git diff --check` PASS.
+- Rendered verification PASS: 4 generated static pages, 16 localhost requests across normal/LinkedIn/Twitter/Facebook user agents, 4 image responses (HTTP 200, image/png, 1200x630, matching file bytes), and 3 NP03 tracked-URL variants. Metadata is in the document head, with correct image URL/alt/dimensions, OG title/description/url/type/site name, and Twitter summary_large_image. Homepage origin trailing slash is normalized by Next.js in emitted URLs; canonical source values and URL meaning are unchanged.
+- Build environment: default Turbopack attempt stopped after remaining in compilation; sandboxed Webpack compiled but could not create generated files (EPERM). A credential-free local Webpack run outside that filesystem restriction completed. Local HTTP checks ran in the same process context after sandbox networking prevented access. No source/config changes were made to work around the environment.
+- Source/assets passed an independent read-only review. Detailed logs, original SVG artwork, generated HTML, rendered-evidence.json, binary patch, source archive, candidate commit, and artifact hashes are in the accompanying NP03-WEB-01 review package.
+- State: VERIFIED LOCAL CANDIDATE, awaiting Portfolio Controller acceptance and separate release/deploy authority. No push, PR creation, merge, deployment, publication, activation, production change, credential/security change, spending, or outreach occurred. NP04-B01 was not touched. Public social-platform scrape/rendering remains unverified until a separately authorized deployment and rescrape.
+
+
 ## Canonical sitemap route correction, 2026-10-01
 
 - Defect: Production sitemap advertised `/intake`, which redirects to `/start-project?type=custom-project`, and omitted the live public routes `/fix`, `/build`, `/grow`, and `/agent-floor`.

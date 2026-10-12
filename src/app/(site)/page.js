@@ -1,6 +1,7 @@
 import TrackedLink from "../components/TrackedLink";
+import { socialImages, withSocialPreview } from "../social-preview.mjs";
 
-export const metadata = {
+export const metadata = withSocialPreview({
   title: "Business Automation Services in St. Louis | STL Automate",
   description: "Custom business automation for St. Louis businesses and remote teams, plus workflow repair, lead systems, and Phone Receptionist services.",
   alternates: { canonical: "https://www.stlautomate.com/" },
@@ -9,7 +10,7 @@ export const metadata = {
     description: "Custom business automation for St. Louis businesses and remote teams, plus workflow repair, lead systems, and Phone Receptionist services.",
     url: "https://www.stlautomate.com/",
   },
-};
+}, socialImages.home);
 
 const lanes = [
   {

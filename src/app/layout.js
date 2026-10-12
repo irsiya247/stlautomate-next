@@ -2,6 +2,7 @@ import "./globals.css";
 import { Suspense } from "react";
 import PostHogPageView from "./components/PostHogPageView";
 import GoogleAdsConsentManager from "./components/GoogleAdsConsentManager";
+import { socialImages } from "./social-preview.mjs";
 
 export const metadata = {
   metadataBase: new URL("https://www.stlautomate.com"),
@@ -10,6 +11,11 @@ export const metadata = {
   openGraph: {
     type: "website",
     siteName: "STL Automate",
+    images: [socialImages.home],
+  },
+  twitter: {
+    card: "summary_large_image",
+    images: [socialImages.home],
   },
   icons: {
     icon: '/favicon.ico',
