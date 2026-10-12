@@ -1,15 +1,16 @@
 import TrackedLink from "../../../components/TrackedLink";
+import { socialImages, withSocialPreview } from "../../../social-preview.mjs";
 
 const bookingHref = "/start-project?type=automation-fix-sprint";
 
-export const metadata = {
+export const metadata = withSocialPreview({
   title: "Workflow Automation Repair in St. Louis | STL Automate",
   description:
     "Repair broken n8n, Zapier, or Make workflows, webhooks, APIs, and HubSpot handoffs with STL Automate in St. Louis or remotely. Focused repair sprint starts at $750.",
   alternates: {
     canonical: "https://www.stlautomate.com/services/automation-repair"
   }
-};
+}, socialImages.automationRepair);
 
 const failureModes = [
   "A workflow stops after a trigger or a specific step.",
