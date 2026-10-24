@@ -13,6 +13,7 @@ export default async function StartProjectPage({ searchParams }) {
   const isRepair = formType === "automation-fix-sprint";
   const isLeadToHubSpot = formType === "lead-to-hubspot";
   const isPhoneReceptionist = formType === "phone-receptionist";
+  const isHvacFounderPilot = formType === "hvac-founder-pilot";
 
   return (
     <main className="relative min-h-screen overflow-hidden bg-[#030712] text-white">
@@ -23,8 +24,8 @@ export default async function StartProjectPage({ searchParams }) {
       <div className="relative z-10 px-6 pb-24 pt-36">
         <div className="mx-auto grid max-w-6xl items-start gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:gap-16">
           <div className="lg:sticky lg:top-28">
-            <p className="mb-4 text-[11px] tracking-[0.35em] text-sky-400 uppercase">{unsupported ? "Project type not recognized" : isRepair ? "Automation Fix Sprint" : isLeadToHubSpot ? "Lead-to-HubSpot System" : isPhoneReceptionist ? "Phone Receptionist" : "Custom Automation Project"}</p>
-            <h1 className="text-4xl font-extrabold leading-tight md:text-5xl">{unsupported ? "Choose the project that fits." : isRepair ? "Tell us what stopped working." : isLeadToHubSpot ? "Get your leads into HubSpot reliably." : isPhoneReceptionist ? "Give callers a clear next step." : "Tell us what you need built."}</h1>
+            <p className="mb-4 text-[11px] tracking-[0.35em] text-sky-400 uppercase">{unsupported ? "Project type not recognized" : isRepair ? "Automation Fix Sprint" : isLeadToHubSpot ? "Lead-to-HubSpot System" : isHvacFounderPilot ? "HVAC Phone Receptionist Paid Pilot" : isPhoneReceptionist ? "Phone Receptionist Build & Handoff" : "Custom Automation Project"}</p>
+            <h1 className="text-4xl font-extrabold leading-tight md:text-5xl">{unsupported ? "Choose the project that fits." : isRepair ? "Tell us what stopped working." : isLeadToHubSpot ? "Get your leads into HubSpot reliably." : isHvacFounderPilot ? "Tell us about your HVAC call coverage." : isPhoneReceptionist ? "Plan your Phone Receptionist build." : "Tell us what you need built."}</h1>
             {unsupported ? <div className="mt-5 space-y-3 text-lg leading-relaxed text-slate-300" role="alert"><p>The project link is incomplete or no longer supported, so this form has not been assigned to a service.</p><p><Link href="/start-project" className="text-sky-300 underline underline-offset-4">Continue with a custom project</Link> or review the <Link href="/services" className="text-sky-300 underline underline-offset-4">available services</Link>.</p></div> : <p className="mt-5 text-lg leading-relaxed text-slate-400">
               {isRepair
                 ? "Share the broken workflow, where it fails, and the systems involved. The focused repair sprint starts at $750; we'll review the scope with you before any work begins."
@@ -32,11 +33,15 @@ export default async function StartProjectPage({ searchParams }) {
                   ? "Share the lead source, current field map, HubSpot portal, and routing you need. The fixed-scope Lead-to-HubSpot System is $1,500; we'll confirm the one-path fit before work begins."
                 : isPhoneReceptionist
                   ? "Share when calls go unanswered, what callers need, and where the follow-up should go. The bounded Phone Receptionist implementation is $2,500; we will confirm the one-number, one-use-case fit before work begins."
+                  : isHvacFounderPilot
+                    ? "Share how your HVAC calls are handled today and what you need from call coverage. The paid pilot is $250/month; we will review fit and the published terms with you."
                   : "Bring the process, integration, or idea that does not fit a standard service. A few details help us understand the problem before we talk."}
             </p>}
             <p className="mt-6 text-sm leading-relaxed text-slate-500">We&apos;ll review your request and follow up by email. Sending this form does not commit you to a project.</p>
             {!unsupported && (isPhoneReceptionist
               ? <p className="mt-4 text-sm"><Link href="/services/phone-receptionist" className="text-sky-300 underline underline-offset-4">Review the Phone Receptionist package scope</Link></p>
+              : isHvacFounderPilot
+                ? <p className="mt-4 text-sm"><Link href="/hvac-founder-pilot" className="text-sky-300 underline underline-offset-4">Review the HVAC pilot offer and terms</Link></p>
               : isLeadToHubSpot
                 ? <p className="mt-4 text-sm"><Link href="/services/hubspot-lead-automation" className="text-sky-300 underline underline-offset-4">Review the Lead-to-HubSpot package scope</Link></p>
                 : !isRepair && <p className="mt-4 text-sm"><Link href="/services/custom-automation" className="text-sky-300 underline underline-offset-4">Review custom automation scope and process</Link></p>)}

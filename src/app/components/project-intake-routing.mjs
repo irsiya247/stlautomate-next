@@ -2,7 +2,8 @@ const FORM_TYPE_BY_QUERY = {
   "automation-fix-sprint": "automation-fix-sprint",
   "custom-project": "custom-project",
   "lead-to-hubspot": "lead-to-hubspot",
-  "phone-receptionist": "phone-receptionist"
+  "phone-receptionist": "phone-receptionist",
+  "hvac-founder-pilot": "hvac-founder-pilot"
 };
 
 export function resolveProjectIntakeType(query) {

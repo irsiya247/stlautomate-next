@@ -61,7 +61,7 @@ test("tracked Phone Receptionist CTA preserves service attribution through intak
   const click = buildCtaAttribution({
     href: "/start-project?type=phone-receptionist",
     placement: "phone_receptionist_hero",
-    cta: "Phone Receptionist",
+    cta: "Phone Receptionist Build & Handoff",
     location
   });
   saveCtaContext(click, storage);
@@ -80,7 +80,7 @@ test("tracked Phone Receptionist CTA preserves service attribution through intak
     destination: "/start-project?type=phone-receptionist",
     service: "phone-receptionist",
     form_type: "phone-receptionist",
-    cta: "Phone Receptionist"
+    cta: "Phone Receptionist Build & Handoff"
   });
   assert.deepEqual(buildIntakeAnalyticsProperties({
     formType: "phone-receptionist",
@@ -90,7 +90,7 @@ test("tracked Phone Receptionist CTA preserves service attribution through intak
   }), {
     form_type: "phone-receptionist",
     service: "phone-receptionist",
-    cta: "Phone Receptionist",
+    cta: "Phone Receptionist Build & Handoff",
     source_path: "/start-project",
     origin_path: "/services/phone-receptionist",
     origin_url: sourceUrl,
@@ -103,7 +103,7 @@ test("tracked Phone Receptionist CTA preserves service attribution through intak
 });
 
 test("Phone Receptionist intake is supported while existing service CTAs remain stable", () => {
-  assert.equal(getServiceCta("phone-receptionist"), "Phone Receptionist");
+  assert.equal(getServiceCta("phone-receptionist"), "Phone Receptionist Build & Handoff");
   assert.equal(getServiceCta("automation-fix-sprint"), "Automation Fix Sprint");
   assert.equal(getServiceCta("custom-project"), "Custom Project");
   assert.equal(getServiceCta("lead-to-hubspot"), "Lead-to-HubSpot System");
@@ -148,7 +148,7 @@ test("Phone Receptionist attribution degrades safely when sessionStorage is unav
     }), {
       form_type: "phone-receptionist",
       service: "phone-receptionist",
-      cta: "Phone Receptionist",
+      cta: "Phone Receptionist Build & Handoff",
       source_path: "/start-project"
     });
 
@@ -202,7 +202,7 @@ test("Phone Receptionist project submission forwards explicit type, CTA, and cal
     assert.equal(response.status, 200);
     assert.equal(forwarded.form_type, "phone-receptionist");
     assert.equal(forwarded.service, "phone-receptionist");
-    assert.equal(forwarded.cta, "Phone Receptionist");
+    assert.equal(forwarded.cta, "Phone Receptionist Build & Handoff");
     assert.match(forwarded.message, /Call-handling priority: qualify-route/);
     assert.equal(forwarded.landing_page, "https://www.stlautomate.com/services/phone-receptionist");
     assert.match(api, /"lead-to-hubspot",\s*"phone-receptionist"/);
