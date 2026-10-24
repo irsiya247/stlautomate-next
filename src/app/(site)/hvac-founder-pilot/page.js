@@ -1,5 +1,8 @@
+import TrackedLink from "../../components/TrackedLink";
+
 const phoneReceptionistDisplay = "(314) 864-9065";
 const phoneReceptionistTel = "+13148649065";
+const pilotIntakeHref = "/start-project?type=hvac-founder-pilot";
 
 const standardPricing = [
   {
@@ -79,9 +82,9 @@ export default function HVACFounderPilot() {
                 <a href={`tel:${phoneReceptionistTel}`} className="bg-sky-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-sky-500 transition-colors">
                   Call Our 24/7 Phone Receptionist
                 </a>
-                <a href="/intake" className="border border-slate-700 px-6 py-3 rounded-full text-slate-300 hover:border-slate-500 transition-colors">
+                <TrackedLink href={pilotIntakeHref} placement="hvac_founder_pilot_hero" cta="HVAC Phone Receptionist Paid Pilot" className="border border-slate-700 px-6 py-3 rounded-full text-slate-300 hover:border-slate-500 transition-colors">
                   Request HVAC Pilot Spot
-                </a>
+                </TrackedLink>
               </div>
               <p className="mt-4 text-slate-500 text-sm leading-relaxed max-w-2xl">
                 The number above is provided as a demonstration contact. Tap to call on mobile, or dial {phoneReceptionistDisplay} directly from any phone.
@@ -89,7 +92,7 @@ export default function HVACFounderPilot() {
             </div>
 
             <div className="border border-sky-400/30 bg-sky-400/10 rounded-2xl p-7">
-              <div className="text-sky-300 text-xs tracking-widest uppercase mb-3">Founder Pilot Rate</div>
+              <div className="text-sky-300 text-xs tracking-widest uppercase mb-3">HVAC Phone Receptionist Paid Pilot</div>
               <div className="text-4xl md:text-5xl font-extrabold leading-none">$250</div>
               <p className="text-slate-300 mt-2 font-semibold">/month, setup waived</p>
               <p className="text-slate-400 text-sm leading-relaxed mt-5">
@@ -97,6 +100,9 @@ export default function HVACFounderPilot() {
               </p>
               <p className="text-slate-400 text-sm leading-relaxed mt-3">
                 30-day guarantee: if it does not book you at least one job you would have otherwise missed, your monthly fee is refunded and you can cancel on the spot. No contract.
+              </p>
+              <p className="text-slate-400 text-sm leading-relaxed mt-3">
+                This $250/month pilot is a separate offer from the $2,500 Phone Receptionist Build &amp; Handoff package. <a href="/services/phone-receptionist" className="text-sky-300 underline underline-offset-4">Compare the fixed-scope build</a>.
               </p>
               <div className="mt-6 border-t border-sky-400/20 pt-5">
                 <p className="text-slate-500 text-xs tracking-widest uppercase mb-1">Standard Phone Receptionist Pricing</p>
@@ -181,9 +187,9 @@ export default function HVACFounderPilot() {
             <a href={`tel:${phoneReceptionistTel}`} className="bg-sky-600 text-white px-8 py-4 rounded-full font-semibold text-lg inline-block hover:bg-sky-500 transition-colors">
               Call Our 24/7 Phone Receptionist
             </a>
-            <a href="/intake" className="border border-slate-700 px-8 py-4 rounded-full text-slate-300 font-semibold text-lg inline-block hover:border-slate-500 transition-colors">
+            <TrackedLink href={pilotIntakeHref} placement="hvac_founder_pilot_footer" cta="HVAC Phone Receptionist Paid Pilot" className="border border-slate-700 px-8 py-4 rounded-full text-slate-300 font-semibold text-lg inline-block hover:border-slate-500 transition-colors">
               Request HVAC Pilot Spot
-            </a>
+            </TrackedLink>
           </div>
           <p className="mt-4 text-slate-500 text-sm leading-relaxed">
             This is the demonstration number. Tap to call on mobile, or dial {phoneReceptionistDisplay} directly from any phone.

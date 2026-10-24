@@ -10,7 +10,8 @@ const SUPPORTED_PROJECT_INTAKES = new Set([
   "automation-fix-sprint",
   "custom-project",
   "lead-to-hubspot",
-  "phone-receptionist"
+  "phone-receptionist",
+  "hvac-founder-pilot"
 ]);
 const recordedSubmissionIds = new Set();
 

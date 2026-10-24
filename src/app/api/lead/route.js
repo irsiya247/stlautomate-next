@@ -7,7 +7,8 @@ const FORM_TYPES = new Set([
   "custom-project",
   "automation-fix-sprint",
   "lead-to-hubspot",
-  "phone-receptionist"
+  "phone-receptionist",
+  "hvac-founder-pilot"
 ]);
 const ATTRIBUTION_FIELDS = [
   "utm_source",
@@ -61,7 +62,7 @@ function logOperationalFailure(reason, status) {
 }
 
 function makeProjectMessage(body, formType) {
-  const callHandlingLabel = formType === "phone-receptionist" ? "Call-handling priority" : "Something broken";
+  const callHandlingLabel = ["phone-receptionist", "hvac-founder-pilot"].includes(formType) ? "Call-handling priority" : "Something broken";
   return [
     `Problem: ${clean(body.problem, 1500)}`,
     `Current state: ${clean(body.current_state, 1500)}`,
@@ -88,7 +89,7 @@ export async function POST(request) {
       return Response.json({ success: false, message: "Invalid form type." }, { status: 400 });
     }
     const formType = requestedFormType;
-    const projectRequest = ["custom-project", "automation-fix-sprint", "lead-to-hubspot", "phone-receptionist"].includes(formType);
+    const projectRequest = ["custom-project", "automation-fix-sprint", "lead-to-hubspot", "phone-receptionist", "hvac-founder-pilot"].includes(formType);
     const submissionId = normalizeSubmissionId(body.submission_id || body.submissionId);
     const name = clean(body.name, 120);
     const email = clean(body.email, 254).toLowerCase();
@@ -124,6 +125,10 @@ export async function POST(request) {
       cta: projectRequest ? getServiceCta(formType) : clean(body.cta, 200),
       source_detail: clean(body.utm_source, 160) || clean(body.referrer, 500) || "direct",
       source_page: clean(body.source_page || body.page_url, 1000) || "https://www.stlautomate.com/",
+      ...(clean(body.origin_path, 500) ? { origin_path: clean(body.origin_path, 500) } : {}),
+      ...(clean(body.origin_url, 1000) ? { origin_url: clean(body.origin_url, 1000) } : {}),
+      ...(clean(body.destination, 1000) ? { destination: clean(body.destination, 1000) } : {}),
+      ...(clean(body.placement, 160) ? { placement: clean(body.placement, 160) } : {}),
       page_url: clean(body.page_url, 1000),
       landing_page: clean(body.landing_page, 1000),
       referrer: clean(body.referrer, 1000),

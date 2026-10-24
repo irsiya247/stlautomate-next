@@ -4,7 +4,8 @@ const CTA_BY_FORM_TYPE = {
   "automation-fix-sprint": "Automation Fix Sprint",
   "custom-project": "Custom Project",
   "lead-to-hubspot": "Lead-to-HubSpot System",
-  "phone-receptionist": "Phone Receptionist"
+  "phone-receptionist": "Phone Receptionist Build & Handoff",
+  "hvac-founder-pilot": "HVAC Phone Receptionist Paid Pilot"
 };
 
 export function getServiceCta(formType) {
@@ -40,6 +41,18 @@ export function saveCtaContext(context, storage) {
     contextStorage.setItem(CTA_ATTRIBUTION_KEY, JSON.stringify(context));
   } catch {
     // Analytics attribution is optional when session storage is unavailable.
+  }
+}
+
+export function clearCtaContext(expectedContext, storage) {
+  try {
+    const contextStorage = storage ?? window.sessionStorage;
+    const current = getCtaContext(contextStorage);
+    if (JSON.stringify(current) !== JSON.stringify(expectedContext)) return false;
+    contextStorage.removeItem(CTA_ATTRIBUTION_KEY);
+    return true;
+  } catch {
+    return false;
   }
 }
 

@@ -2,7 +2,7 @@
 
 import { useRef, useState } from "react";
 import posthog from "posthog-js";
-import { buildIntakeAnalyticsProperties, getCtaContext, getServiceCta } from "./attribution.mjs";
+import { buildIntakeAnalyticsProperties, clearCtaContext, getCtaContext, getServiceCta } from "./attribution.mjs";
 import { trackAcceptedProjectIntakeConversion } from "./google-ads-conversion.mjs";
 
 const initialForm = {
@@ -52,6 +52,7 @@ export default function ProjectIntakeForm({ formType = "custom-project" }) {
   const submissionLockRef = useRef(false);
   const isLeadToHubSpot = formType === "lead-to-hubspot";
   const isPhoneReceptionist = formType === "phone-receptionist";
+  const isHvacFounderPilot = formType === "hvac-founder-pilot";
 
   const handleChange = (event) => {
     const { name, value } = event.target;
@@ -63,13 +64,16 @@ export default function ProjectIntakeForm({ formType = "custom-project" }) {
     if (submissionLockRef.current) return;
     submissionLockRef.current = true;
     setStatus("loading");
+    const ctaContext = getCtaContext();
+    const matchingCtaContext = ctaContext.form_type === formType ? ctaContext : {};
+    const attribution = getAttribution();
 
     const details = [
       `Problem: ${form.problem.trim()}`,
       `Current state: ${form.current_state.trim()}`,
       `Desired state: ${form.desired_state.trim()}`,
       `Systems and tools: ${form.systems_tools.trim()}`,
-      `${isPhoneReceptionist ? "Call-handling priority" : "Something broken"}: ${form.is_broken}`,
+      `${isPhoneReceptionist || isHvacFounderPilot ? "Call-handling priority" : "Something broken"}: ${form.is_broken}`,
       `Target timing: ${form.timing}`,
       `Budget range: ${form.budget_range}`
     ].join("\n");
@@ -86,7 +90,11 @@ export default function ProjectIntakeForm({ formType = "custom-project" }) {
           cta: getServiceCta(formType),
           message: details,
           submission_id: submissionId,
-          ...getAttribution()
+          ...attribution,
+          ...(matchingCtaContext.source_path ? { origin_path: matchingCtaContext.source_path } : {}),
+          ...(matchingCtaContext.source_url ? { origin_url: matchingCtaContext.source_url } : {}),
+          ...(matchingCtaContext.placement ? { placement: matchingCtaContext.placement } : {}),
+          ...(matchingCtaContext.destination ? { destination: matchingCtaContext.destination } : {})
         })
       });
       const result = await response.json().catch(() => ({ success: false }));
@@ -102,12 +110,13 @@ export default function ProjectIntakeForm({ formType = "custom-project" }) {
         posthog.capture("lead_intake_submitted", buildIntakeAnalyticsProperties({
           formType,
           location: window.location,
-          attribution: getAttribution(),
-          ctaContext: getCtaContext()
+          attribution,
+          ctaContext: matchingCtaContext
         }));
       } catch {
         // Analytics is observational and cannot undo an accepted intake.
       }
+      if (matchingCtaContext.form_type === formType) clearCtaContext(matchingCtaContext);
       setStatus("success");
       setForm(initialForm);
     } catch {
@@ -120,7 +129,7 @@ export default function ProjectIntakeForm({ formType = "custom-project" }) {
     return (
       <div className="rounded-2xl border border-sky-400/30 bg-sky-400/10 p-8 sm:p-10" role="status">
         <div className="mb-6 flex h-12 w-12 items-center justify-center rounded-full border border-sky-400/30 bg-sky-400/10 font-bold text-sky-300">OK</div>
-        <h2 className="text-2xl font-bold">Your project request is in</h2>
+        <h2 className="text-2xl font-bold">{isHvacFounderPilot ? "Your HVAC pilot request is in" : "Your project request is in"}</h2>
         <p className="mt-3 leading-relaxed text-slate-300">Thanks for laying out the details. We&apos;ll review the workflow, tools, and timing you shared and follow up by email.</p>
       </div>
     );
@@ -157,29 +166,29 @@ export default function ProjectIntakeForm({ formType = "custom-project" }) {
       </div>
 
       <div>
-        <label htmlFor="project-problem" className="mb-2 block text-sm text-slate-300">What problem are you trying to solve? <span className="text-sky-400">*</span></label>
-        <textarea id="project-problem" name="problem" required rows={3} value={form.problem} onChange={handleChange} placeholder={isPhoneReceptionist ? "We miss calls when our team is working or after hours." : isLeadToHubSpot ? "Leads arrive from several places, and some never make it into our CRM." : "Describe the process you want to improve."} className={`${inputClass} resize-y`} />
+        <label htmlFor="project-problem" className="mb-2 block text-sm text-slate-300">{isHvacFounderPilot ? "What should the pilot help with?" : "What problem are you trying to solve?"} <span className="text-sky-400">*</span></label>
+        <textarea id="project-problem" name="problem" required rows={3} value={form.problem} onChange={handleChange} placeholder={isHvacFounderPilot ? "Missed calls, after-hours coverage, caller details, or another call-handling need..." : isPhoneReceptionist ? "We miss calls when our team is working or after hours." : isLeadToHubSpot ? "Leads arrive from several places, and some never make it into our CRM." : "Describe the process you want to improve."} className={`${inputClass} resize-y`} />
       </div>
 
       <div className="grid gap-5 sm:grid-cols-2">
         <div>
-          <label htmlFor="project-current" className="mb-2 block text-sm text-slate-300">What happens today? <span className="text-sky-400">*</span></label>
-          <textarea id="project-current" name="current_state" required rows={3} value={form.current_state} onChange={handleChange} placeholder={isPhoneReceptionist ? "Describe how calls are answered today and when callers reach voicemail." : "Describe the current process and where it stalls."} className={`${inputClass} resize-y`} />
+          <label htmlFor="project-current" className="mb-2 block text-sm text-slate-300">{isHvacFounderPilot ? "How are incoming calls handled today?" : "What happens today?"} <span className="text-sky-400">*</span></label>
+          <textarea id="project-current" name="current_state" required rows={3} value={form.current_state} onChange={handleChange} placeholder={isHvacFounderPilot ? "Describe business-hours, after-hours, weekend, or holiday call handling..." : isPhoneReceptionist ? "Describe how calls are answered today and when callers reach voicemail." : "Describe the current process and where it stalls."} className={`${inputClass} resize-y`} />
         </div>
         <div>
-          <label htmlFor="project-desired" className="mb-2 block text-sm text-slate-300">What should happen instead? <span className="text-sky-400">*</span></label>
-          <textarea id="project-desired" name="desired_state" required rows={3} value={form.desired_state} onChange={handleChange} placeholder={isPhoneReceptionist ? "Describe the next step callers should receive." : "Describe the outcome you want."} className={`${inputClass} resize-y`} />
+          <label htmlFor="project-desired" className="mb-2 block text-sm text-slate-300">{isHvacFounderPilot ? "What should happen when your team cannot answer?" : "What should happen instead?"} <span className="text-sky-400">*</span></label>
+          <textarea id="project-desired" name="desired_state" required rows={3} value={form.desired_state} onChange={handleChange} placeholder={isHvacFounderPilot ? "Describe the caller details or next step you want your team to receive." : isPhoneReceptionist ? "Describe the next step callers should receive." : "Describe the outcome you want."} className={`${inputClass} resize-y`} />
         </div>
       </div>
 
       <div>
-        <label htmlFor="project-tools" className="mb-2 block text-sm text-slate-300">Which systems or tools are involved? <span className="text-sky-400">*</span></label>
-        <input id="project-tools" name="systems_tools" required value={form.systems_tools} onChange={handleChange} placeholder={isPhoneReceptionist ? "Phone provider, CRM, calendar, or other tools..." : "HubSpot, Gmail, forms, spreadsheets, Zapier..."} className={inputClass} />
+        <label htmlFor="project-tools" className="mb-2 block text-sm text-slate-300">{isHvacFounderPilot ? "Which phone or follow-up systems are involved?" : "Which systems or tools are involved?"} <span className="text-sky-400">*</span></label>
+        <input id="project-tools" name="systems_tools" required value={form.systems_tools} onChange={handleChange} placeholder={isHvacFounderPilot ? "Phone provider, current number setup, CRM, or calendar..." : isPhoneReceptionist ? "Phone provider, CRM, calendar, or other tools..." : "HubSpot, Gmail, forms, spreadsheets, Zapier..."} className={inputClass} />
       </div>
 
       <div className="grid gap-5 sm:grid-cols-3">
         <div>
-          <label htmlFor="project-broken" className="mb-2 block text-sm text-slate-300">{isLeadToHubSpot ? "How established is this lead flow?" : isPhoneReceptionist ? "What should the receptionist handle?" : "Is something broken?"} <span className="text-sky-400">*</span></label>
+          <label htmlFor="project-broken" className="mb-2 block text-sm text-slate-300">{isLeadToHubSpot ? "How established is this lead flow?" : isHvacFounderPilot ? "Which call coverage should we discuss?" : isPhoneReceptionist ? "What should the receptionist handle?" : "Is something broken?"} <span className="text-sky-400">*</span></label>
           <select id="project-broken" name="is_broken" required value={form.is_broken} onChange={handleChange} className={inputClass}>
             <option value="">Choose one</option>
             {isPhoneReceptionist ? <>
@@ -187,6 +196,12 @@ export default function ProjectIntakeForm({ formType = "custom-project" }) {
               <option value="qualify-route">Qualify callers and route the next step</option>
               <option value="appointment-intent">Capture appointment intent</option>
               <option value="scope">I need help defining the call flow</option>
+            </> : isHvacFounderPilot ? <>
+              <option value="missed-calls">Calls missed during the workday</option>
+              <option value="after-hours">After-hours coverage</option>
+              <option value="weekends-holidays">Weekend or holiday coverage</option>
+              <option value="caller-details">Caller details and callback routing</option>
+              <option value="scope">I need help describing the call flow</option>
             </> : isLeadToHubSpot ? <>
               <option value="yes">An existing flow needs repair or extension</option>
               <option value="partly">Leads arrive inconsistently</option>
@@ -209,14 +224,19 @@ export default function ProjectIntakeForm({ formType = "custom-project" }) {
           </select>
         </div>
         <div>
-          <label htmlFor="project-budget" className="mb-2 block text-sm text-slate-300">Budget range <span className="text-sky-400">*</span></label>
+          <label htmlFor="project-budget" className="mb-2 block text-sm text-slate-300">{isHvacFounderPilot ? "Paid pilot monthly price" : "Budget range"} <span className="text-sky-400">*</span></label>
           <select id="project-budget" name="budget_range" required value={form.budget_range} onChange={handleChange} className={inputClass}>
             <option value="">Choose one</option>
-            <option value="$750-$1500">$750-$1,500</option>
-            <option value="$1500-$3000">$1,500-$3,000</option>
-            <option value="$3000-$7500">$3,000-$7,500</option>
-            <option value="$7500+">$7,500+</option>
-            <option value="unsure">Not sure yet</option>
+            {isHvacFounderPilot ? <>
+              <option value="$250/month">$250/month</option>
+              <option value="unsure">I have a question about fit or terms</option>
+            </> : <>
+              <option value="$750-$1500">$750-$1,500</option>
+              <option value="$1500-$3000">$1,500-$3,000</option>
+              <option value="$3000-$7500">$3,000-$7,500</option>
+              <option value="$7500+">$7,500+</option>
+              <option value="unsure">Not sure yet</option>
+            </>}
           </select>
         </div>
       </div>
@@ -225,7 +245,7 @@ export default function ProjectIntakeForm({ formType = "custom-project" }) {
         {status === "error" && <p className="text-sm text-red-300" role="alert">We couldn&apos;t send your request. Please try again or email contact@stlautomate.com.</p>}
       </div>
       <button type="submit" disabled={status === "loading"} className="w-full rounded-full bg-sky-600 px-6 py-4 text-base font-semibold text-white transition-colors hover:bg-sky-500 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-sky-400 disabled:cursor-not-allowed disabled:opacity-60">
-        {status === "loading" ? "Sending request..." : "Send Project Details"}
+        {status === "loading" ? "Sending request..." : isHvacFounderPilot ? "Send Pilot Request" : "Send Project Details"}
       </button>
       <p className="text-center text-xs leading-relaxed text-slate-500">Your details are used to review and respond to this project request. See our <a href="/privacy" className="text-sky-400 hover:text-sky-300">privacy policy</a>.</p>
     </form>

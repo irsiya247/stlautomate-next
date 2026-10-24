@@ -148,7 +148,8 @@ test("accepted supported intakes send only the conversion destination and no lea
     "automation-fix-sprint",
     "custom-project",
     "lead-to-hubspot",
-    "phone-receptionist"
+    "phone-receptionist",
+    "hvac-founder-pilot"
   ];
 
   for (const [index, formType] of formTypes.entries()) {
