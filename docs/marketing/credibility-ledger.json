@@ -59,6 +59,21 @@
       "notes": "Approval supports stating that STL Automate is approved for/participates in AWS Activate. Do not imply an AWS partnership, backing, endorsement, sponsorship, customer/investor/client relationship, or a specific credits award. Keep logo/mark rights separate and unverified."
     },
     {
+      "entity_name": "Microsoft for Startups",
+      "exact_relationship": "STL Automate participates in Microsoft for Startups, as confirmed by the founder. This is program participation, not a certification, endorsement or formal partnership.",
+      "evidence/reference": [
+        "Founder confirmed STL Automate's approval on 2026-10-13.",
+        "Microsoft for Startups approval email to Matthew Anton dated 2026-10-13, subject: Your request was approved (Gmail message ID 1a136c661e4c9d32).",
+        "Microsoft PR toolkit: https://learn.microsoft.com/en-us/startups/pr-toolkit-for-startups"
+      ],
+      "allowed_phrasing": ["Microsoft for Startups participant.", "STL Automate is part of Microsoft for Startups."],
+      "prohibited_implications": ["Microsoft endorses or certifies STL Automate or its products.", "STL Automate has a formal Microsoft partnership.", "Any specific Azure credit amount."],
+      "logo_usage_status": "The program toolkit provides its general badge for email signatures and websites. Use the intact official badge within current program and brand guidelines; do not use the standalone Microsoft logo as an STL Automate mark.",
+      "eligible_surfaces": ["website", "email signatures", "LinkedIn/social"],
+      "status_active_or_historical": "active",
+      "notes": "The founder identified the startup as STL Automate. The approval email supports program approval but does not establish a specific tier or independently verify present-day account standing. Do not publish credit amounts."
+    },
+    {
       "entity_name": "OpenAI",
       "exact_relationship": "OpenAI/Codex is identified in repository guidance as a logic, drafting, code, and script layer; no specific public-facing vendor relationship or endorsement is documented.",
       "evidence/reference": ["AGENTS.md: Source of truth identifies OpenAI / Codex as the logic, drafting, code, and script layer."],

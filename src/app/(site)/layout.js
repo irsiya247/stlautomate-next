@@ -20,13 +20,17 @@ export default function SiteLayout({ children }) {
               <p className="text-slate-500 text-sm leading-relaxed mb-6">
                 Automation systems for small businesses. Built in St. Louis, MO.
               </p>
+              <div className="mb-6">
+                <p className="text-slate-300 text-sm mb-3">Microsoft for Startups participant</p>
+                <img src="/images/microsoft-for-startups-badge.jpg" alt="Proud to collaborate with Microsoft for Startups" width="240" height="103" className="block h-auto max-w-full" />
+              </div>
               <a href="/start-project" className="bg-sky-600 text-white px-5 py-2.5 rounded-full text-sm font-semibold hover:bg-sky-500 transition-colors inline-block">
                 Start a Custom Project
               </a>
             </div>
 
             {/* Nav columns */}
-            <div className="grid grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 gap-8 sm:grid-cols-3">
               <div>
                 <div className="text-slate-400 text-xs tracking-widest uppercase mb-4">Services</div>
                 <ul className="space-y-3 text-sm text-slate-500">
@@ -54,7 +58,7 @@ export default function SiteLayout({ children }) {
               <div>
                 <div className="text-slate-400 text-xs tracking-widest uppercase mb-4">Contact</div>
                 <ul className="space-y-3 text-sm text-slate-500">
-                  <li><a href="mailto:contact@stlautomate.com" className="hover:text-white transition-colors">contact@stlautomate.com</a></li>
+                  <li><a href="mailto:contact@stlautomate.com" className="break-all hover:text-white transition-colors">contact@stlautomate.com</a></li>
                   <li><TrackedLink href="/start-project?type=custom-project" placement="footer_consultation_custom_project" cta="Custom Project" className="hover:text-white transition-colors">Free Consultation</TrackedLink></li>
                 </ul>
               </div>
